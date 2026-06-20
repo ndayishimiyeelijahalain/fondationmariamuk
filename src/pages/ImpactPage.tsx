@@ -17,6 +17,89 @@ import {
 } from 'lucide-react';
 import { useI18n } from '../i18n';
 
+function ImpactStats({ t }: { t: any }) {
+  const stats = [
+    { value: 76, label: t.impact.children, icon: Heart, color: 'from-rose-500 to-rose-600', description: 'Children currently supported' },
+    { value: 46, label: t.impact.years, icon: Calendar, color: 'from-amber-500 to-orange-500', description: 'Years of service' },
+    { value: 50, suffix: '+', label: t.impact.communities, icon: MapPin, color: 'from-emerald-500 to-emerald-600', description: 'Communities reached' },
+    { value: 1200, suffix: '+', label: 'Women Empowered', icon: Sparkles, color: 'from-pink-500 to-rose-500', description: 'Through vocational programs' },
+  ];
+
+  return (
+    <section className="py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-14"
+        >
+          <span className="inline-block px-4 py-1.5 bg-[#D4AF37]/10 text-[#D4AF37] rounded-full text-sm font-semibold mb-4">
+            Our Impact
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#1E3A5F] mb-4">
+            Making a Difference
+          </h2>
+          <p className="text-gray-500 max-w-xl mx-auto">
+            Transforming lives through dedicated humanitarian efforts in Burundi.
+          </p>
+        </motion.div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {stats.map((stat, idx) => (
+            <AnimatedCounter
+              key={stat.label}
+              end={stat.value}
+              suffix={stat.suffix}
+              label={stat.label}
+              icon={stat.icon}
+              color={stat.color}
+              description={stat.description}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function CtaSection({ t }: { t: any }) {
+  return (
+    <section className="py-20 bg-gradient-to-r from-[#D4AF37] via-[#F5D76E] to-[#D4AF37]">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#1E3A5F] mb-4">
+            Help Us Reach More Children
+          </h2>
+          <p className="text-[#1E3A5F]/80 mb-8 max-w-xl mx-auto">
+            Your contribution creates lasting change. Join us in transforming lives.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/donate"
+              className="group px-8 py-4 bg-[#1E3A5F] text-white rounded-full font-bold hover:bg-[#0F2744] transition-all flex items-center justify-center gap-2 shadow-xl"
+            >
+              <Heart className="w-5 h-5" fill="white" />
+              Donate Now
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/sponsor"
+              className="px-8 py-4 bg-white/30 text-[#1E3A5F] rounded-full font-bold hover:bg-white/50 transition-all border border-[#1E3A5F]/20"
+            >
+              Sponsor a Child
+            </Link>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
 function useCounter(end: number, duration: number = 2) {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
@@ -66,29 +149,60 @@ function AnimatedCounter({ end, suffix = '', label, icon: Icon, color, descripti
 export default function ImpactPage() {
   const { t } = useI18n();
 
+  // Impact statistics data
+  const statsData = [
+    { label: 'Children Supported', value: 76, icon: Heart, color: 'from-[#1E3A5F] to-[#0F2744]', description: 'Currently enrolled in our programs' },
+    { label: 'Years of Service', value: 46, icon: Calendar, color: 'from-amber-500 to-orange-500', description: 'Since 1978' },
+    { label: 'Communities Reached', value: 50, suffix: '+', icon: MapPin, color: 'from-emerald-500 to-emerald-600', description: 'Across Burundi' },
+    { label: 'Women Empowered', value: 1200, suffix: '+', icon: Sparkles, color: 'from-pink-500 to-rose-500', description: 'Through vocational programs' },
+  ];
+
+  // Program-specific impact data
+  const programStats = [
+    { label: 'Students Enrolled', value: '76', icon: BookOpen, color: 'from-blue-500 to-blue-600', sub: 'Current academic year' },
+    { label: 'Medical Treatments', value: '200+', icon: HeartPulse, color: 'from-emerald-500 to-emerald-600', sub: 'Annual beneficiaries' },
+    { label: 'Families Fed Monthly', value: '50+', icon: Utensils, color: 'from-amber-500 to-amber-600', sub: 'Food assistance' },
+    { label: 'Women in Training', value: '30+', icon: GraduationCap, color: 'from-violet-500 to-violet-600', sub: 'Vocational programs' },
+  ];
+
+  // Success stories data
+  const successStories = [
+    {
+      image: '/fondation-mariam/impact-child-portrait-01.jpg', // Placeholder image
+      name: 'Marie-Claire, 19',
+      program: 'Education Program',
+      quote: 'Fondation Mariam gave me the education I needed. Today I am preparing for university and I want to become a doctor to help my community.'
+    },
+    {
+      image: '/fondation-mariam/impact-child-portrait-02.jpg', // Placeholder image
+      name: 'Jean-Baptiste, 14',
+      program: 'Taekwondo Program',
+      quote: 'Through Taekwondo I learned discipline and confidence. We won the regional championship and I am proud to represent our foundation.'
+    },
+    {
+      image: '/fondation-mariam/women-empowerment-training-01.jpg', // Placeholder image
+      name: 'Émilienne',
+      program: "Women's Empowerment",
+      quote: 'The tailoring training changed my life. Now I run my own business and can feed and educate my children with dignity.'
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-white pt-20">
-      {/* Hero */}
+      {/* HERO SECTION */}
       <section className="relative py-20 bg-gradient-to-br from-[#1E3A5F] to-[#0F2744] overflow-hidden">
         <div className="absolute inset-0 opacity-15">
-          <img
-            src="gallery/woman-02.jpg"
-            alt=""
-            className="w-full h-full object-cover"
-          />
+          <img src="/public/hero/hero-main.jpg" alt="" className="w-full h-full object-cover" />
         </div>
         <div className="absolute top-20 right-20 w-72 h-72 bg-[#D4AF37]/10 rounded-full blur-3xl" />
         <div className="absolute bottom-10 left-10 w-64 h-64 bg-[#10B981]/10 rounded-full blur-3xl" />
-
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6">
               <TrendingUp className="w-4 h-4 text-[#D4AF37]" />
               <span className="text-white/90 text-sm font-medium">Verified Impact Data</span>
             </div>
-            <h1 className="text-5xl sm:text-6xl font-serif font-bold text-white mb-6">
-              {t.impact.title}
-            </h1>
+            <h1 className="text-5xl sm:text-6xl font-serif font-bold text-white mb-6">{t.impact.title}</h1>
             <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto">
               Real people. Real transformation. 46 years of dedicated humanitarian service in Burundi.
             </p>
@@ -105,18 +219,10 @@ export default function ImpactPage() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <span className="inline-block px-4 py-1.5 bg-[#D4AF37]/10 text-[#D4AF37] rounded-full text-sm font-semibold mb-4">
-              Current Beneficiaries
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#1E3A5F] mb-4">
-              Children We Support Today
-            </h2>
-            <p className="text-gray-500 max-w-xl mx-auto">
-              Active beneficiaries currently enrolled in our programs
-            </p>
+            <span className="inline-block px-4 py-1.5 bg-[#D4AF37]/10 text-[#D4AF37] rounded-full text-sm font-semibold mb-4">Current Beneficiaries</span>
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#1E3A5F] mb-4">Children We Support Today</h2>
+            <p className="text-gray-500 max-w-xl mx-auto">Active beneficiaries currently enrolled in our programs</p>
           </motion.div>
-
-          {/* Hero stat: 76 children */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -131,25 +237,18 @@ export default function ImpactPage() {
                   <Heart className="w-10 h-10 text-white" fill="white" />
                 </div>
                 <TotalCounter end={76} label="Children Currently Supported" />
-                <p className="text-white/70 text-sm max-w-md mx-auto mt-3">
-                  Every child receives education, nutrition, healthcare, and psychosocial support through our active programs.
-                </p>
+                <p className="text-white/70 text-sm max-w-md mx-auto mt-3">Every child receives education, nutrition, healthcare, and psychosocial support through our active programs.</p>
               </div>
             </div>
           </motion.div>
-
-          {/* Boys vs Girls breakdown */}
           <div className="grid sm:grid-cols-2 gap-8 max-w-2xl mx-auto mb-16">
-            {/* Boys */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 text-center hover:-translate-y-1 transition-all"
             >
-              <div className="w-16 h-16 mx-auto bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg">
-                <Users className="w-8 h-8 text-white" />
-              </div>
+              <div className="w-16 h-16 mx-auto bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg"><Users className="w-8 h-8 text-white" /></div>
               <GenderCounter end={42} label="Boys" color="text-blue-600" />
               <div className="mt-4">
                 <div className="w-full bg-gray-100 rounded-full h-2.5">
@@ -164,17 +263,13 @@ export default function ImpactPage() {
                 <p className="text-xs text-gray-400 mt-1.5">55% of beneficiaries</p>
               </div>
             </motion.div>
-
-            {/* Girls */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 text-center hover:-translate-y-1 transition-all"
             >
-              <div className="w-16 h-16 mx-auto bg-gradient-to-br from-pink-500 to-rose-500 rounded-2xl flex items-center justify-center mb-4 shadow-lg">
-                <Sparkles className="w-8 h-8 text-white" />
-              </div>
+              <div className="w-16 h-16 mx-auto bg-gradient-to-br from-pink-500 to-rose-500 rounded-2xl flex items-center justify-center mb-4 shadow-lg"><Sparkles className="w-8 h-8 text-white" /></div>
               <GenderCounter end={34} label="Girls" color="text-pink-600" />
               <div className="mt-4">
                 <div className="w-full bg-gray-100 rounded-full h-2.5">
@@ -190,8 +285,6 @@ export default function ImpactPage() {
               </div>
             </motion.div>
           </div>
-
-          {/* Visual breakdown bar */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -229,59 +322,7 @@ export default function ImpactPage() {
       </section>
 
       {/* CUMULATIVE HISTORICAL IMPACT */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-14"
-          >
-            <span className="inline-block px-4 py-1.5 bg-[#10B981]/10 text-[#10B981] rounded-full text-sm font-semibold mb-4">
-              Since 1978
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#1E3A5F] mb-4">
-              Cumulative Historical Impact
-            </h2>
-            <p className="text-gray-500 max-w-xl mx-auto">
-              Over 46 years of continuous humanitarian service across Burundi
-            </p>
-          </motion.div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <AnimatedCounter
-              end={46}
-              label={t.impact.years}
-              icon={Calendar}
-              color="from-amber-500 to-orange-500"
-              description="Continuous humanitarian service"
-            />
-            <AnimatedCounter
-              end={50}
-              suffix="+"
-              label={t.impact.communities}
-              icon={MapPin}
-              color="from-emerald-500 to-emerald-600"
-              description="Neighborhoods and communities reached"
-            />
-            <AnimatedCounter
-              end={1200}
-              suffix="+"
-              label="Women Empowered"
-              icon={Sparkles}
-              color="from-pink-500 to-rose-500"
-              description="Through vocational & empowerment programs"
-            />
-            <AnimatedCounter
-              end={4}
-              label="Taekwondo Trophies"
-              icon={Trophy}
-              color="from-[#D4AF37] to-[#B8942E]"
-              description="Regional championship victories"
-            />
-          </div>
-        </div>
-      </section>
+      <ImpactStats t={t} />
 
       {/* PROGRAM-BY-PROGRAM IMPACT */}
       <section className="py-20 bg-gray-50">
@@ -292,21 +333,12 @@ export default function ImpactPage() {
             viewport={{ once: true }}
             className="text-center mb-14"
           >
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#1E3A5F] mb-4">
-              Impact by Program Area
-            </h2>
-            <p className="text-gray-500 max-w-xl mx-auto">
-              Each program creates measurable, lasting change in people's lives
-            </p>
+            <span className="inline-block px-4 py-1.5 bg-[#10B981]/10 text-[#10B981] rounded-full text-sm font-semibold mb-4">Since 1978</span>
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#1E3A5F] mb-4">Cumulative Historical Impact</h2>
+            <p className="text-gray-500 max-w-xl mx-auto">Over 46 years of continuous humanitarian service across Burundi</p>
           </motion.div>
-
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {[
-              { label: 'Students Enrolled', value: '76', icon: BookOpen, color: 'from-blue-500 to-blue-600', sub: 'Current academic year' },
-              { label: 'Medical Treatments', value: '200+', icon: HeartPulse, color: 'from-emerald-500 to-emerald-600', sub: 'Annual beneficiaries' },
-              { label: 'Families Fed Monthly', value: '50+', icon: Utensils, color: 'from-amber-500 to-amber-600', sub: 'Food assistance' },
-              { label: 'Women in Training', value: '30+', icon: GraduationCap, color: 'from-violet-500 to-violet-600', sub: 'Vocational programs' },
-            ].map((stat, idx) => (
+            {programStats.map((stat, idx) => (
               <motion.div
                 key={stat.label}
                 initial={{ opacity: 0, y: 20 }}
@@ -336,33 +368,11 @@ export default function ImpactPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#1E3A5F] mb-4">
-              Stories of Transformation
-            </h2>
+            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#1E3A5F] mb-4">Stories of Transformation</h2>
             <p className="text-gray-500">Real lives changed by your generosity</p>
           </motion.div>
-
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                image: '',
-                name: 'Marie-Claire, 19',
-                program: 'Education Program',
-                quote: 'Fondation Mariam gave me the education I needed. Today I am preparing for university and I want to become a doctor to help my community.'
-              },
-              {
-                image: '',
-                name: 'Jean-Baptiste, 14',
-                program: 'Taekwondo Program',
-                quote: 'Through Taekwondo I learned discipline and confidence. We won the regional championship and I am proud to represent our foundation.'
-              },
-              {
-                image: '',
-                name: 'Émilienne',
-                program: "Women's Empowerment",
-                quote: 'The tailoring training changed my life. Now I run my own business and can feed and educate my children with dignity.'
-              }
-            ].map((story, idx) => (
+            {successStories.map((story, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
@@ -380,9 +390,7 @@ export default function ImpactPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   <div className="absolute bottom-4 left-4">
                     <p className="text-white font-bold">{story.name}</p>
-                    <span className="inline-block bg-[#D4AF37] text-[#1E3A5F] text-xs font-semibold px-2 py-0.5 rounded-full mt-1">
-                      {story.program}
-                    </span>
+                    <span className="inline-block bg-[#D4AF37] text-[#1E3A5F] text-xs font-semibold px-2 py-0.5 rounded-full mt-1">{story.program}</span>
                   </div>
                 </div>
                 <div className="p-6">
@@ -395,38 +403,7 @@ export default function ImpactPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-[#D4AF37] via-[#F5D76E] to-[#D4AF37]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#1E3A5F] mb-4">
-              Help Us Reach More Children
-            </h2>
-            <p className="text-[#1E3A5F]/80 mb-8 max-w-xl mx-auto">
-              76 children are counting on your support. Every donation creates lasting change.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/donate"
-                className="group px-8 py-4 bg-[#1E3A5F] text-white rounded-full font-bold hover:bg-[#0F2744] transition-all flex items-center justify-center gap-2 shadow-xl"
-              >
-                <Heart className="w-5 h-5" fill="white" />
-                Donate Now
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/sponsor"
-                className="px-8 py-4 bg-white/30 text-[#1E3A5F] rounded-full font-bold hover:bg-white/50 transition-all border border-[#1E3A5F]/20"
-              >
-                Sponsor a Child
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+      <CtaSection t={t} />
     </div>
   );
 }
