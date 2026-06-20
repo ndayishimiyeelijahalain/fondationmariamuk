@@ -91,13 +91,13 @@ export default function TermsPage() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6">
               <FileText className="w-4 h-4 text-[#D4AF37]" />
-              <span className="text-white/90 text-sm font-medium">Last updated: January 2026</span>
+              <span className="text-white/90 text-sm font-medium">{t.terms.lastUpdated}</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-serif font-bold text-white mb-4">
-              Terms of Use
+              {t.terms.title}
             </h1>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              Please read these terms carefully before using the Fondation Mariam website.
+              {t.terms.subtitle}
             </p>
           </motion.div>
         </div>
@@ -110,7 +110,7 @@ export default function TermsPage() {
             className="inline-flex items-center gap-2 text-[#1E3A5F] font-medium hover:text-[#D4AF37] transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
-            Back to Home
+            {t.common.back} {t.nav.home}
           </Link>
 
           {/* Introduction */}
@@ -120,11 +120,7 @@ export default function TermsPage() {
             className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 mb-6"
           >
             <p className="text-gray-700 leading-relaxed">
-              These Terms of Use govern your access to and use of the website of{' '}
-              <strong>Fondation Mariam</strong>, a humanitarian non-profit organization
-              registered in Burundi (Ord. Min. N°550/936 du 05/06/2020), headquartered at
-              Kinama, Quartier Ruyigi, 24e Avenue N°57, Bujumbura. These terms apply to all
-              visitors, donors, volunteers, partners, and any other users of the Site.
+              {t.terms.intro}
             </p>
           </motion.div>
 
@@ -144,11 +140,11 @@ export default function TermsPage() {
                   <div className="w-12 h-12 bg-gradient-to-br from-[#1E3A5F] to-[#0F2744] rounded-xl flex items-center justify-center flex-shrink-0">
                     <section.icon className="w-6 h-6 text-[#D4AF37]" />
                   </div>
-                  <h2 className="text-xl font-serif font-bold text-[#1E3A5F]">{section.title}</h2>
+                  <h2 className="text-xl font-serif font-bold text-[#1E3A5F]">{t.terms[`section${section.id.charAt(0).toUpperCase() + section.id.slice(1)}Title` as keyof typeof t.terms]}</h2>
                 </div>
                 <div className="p-6">
                   {section.content && (
-                    <p className="text-gray-600 leading-relaxed mb-4">{section.content}</p>
+                    <p className="text-gray-600 leading-relaxed mb-4">{t.terms[`${section.id}Content` as keyof typeof t.terms]}</p>
                   )}
                   {section.items && (
                     <ul className="space-y-3">
@@ -157,7 +153,7 @@ export default function TermsPage() {
                           <span className="w-6 h-6 bg-[#D4AF37]/10 rounded-full flex items-center justify-center text-[#D4AF37] font-bold text-xs flex-shrink-0 mt-0.5">
                             {i + 1}
                           </span>
-                          <span className="text-gray-600 leading-relaxed">{item}</span>
+                          <span className="text-gray-600 leading-relaxed">{t.terms[`${section.id}Item${i + 1}` as keyof typeof t.terms]}</span>
                         </li>
                       ))}
                     </ul>
@@ -174,13 +170,10 @@ export default function TermsPage() {
             viewport={{ once: true }}
             className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 mt-6"
           >
-            <h2 className="text-xl font-serif font-bold text-[#1E3A5F] mb-4">Governing Law</h2>
+            <h2 className="text-xl font-serif font-bold text-[#1E3A5F] mb-4">{t.terms.governingLawTitle}</h2>
             <p className="text-gray-600 leading-relaxed">
-              These Terms of Use shall be governed by and construed in accordance with the laws
-              of the Republic of Burundi. Any disputes arising from these terms or your use of
-              this Site shall be subject to the exclusive jurisdiction of the courts of Burundi.
-              International users acknowledge that their use of this Site is voluntary and subject
-              to these governing terms.
+              {t.terms.governingLawText1}
+              {t.terms.governingLawText2}
             </p>
           </motion.div>
 
@@ -194,29 +187,28 @@ export default function TermsPage() {
             <div className="flex items-start gap-4">
               <Mail className="w-8 h-8 text-[#D4AF37] flex-shrink-0 mt-1" />
               <div>
-                <h2 className="text-xl font-serif font-bold mb-3">Questions About These Terms?</h2>
+                <h2 className="text-xl font-serif font-bold mb-3">{t.terms.contactTitle}</h2>
                 <p className="text-white/80 mb-4">
-                  If you have questions about these Terms of Use, please contact us:
+                  {t.terms.contactText}
                 </p>
                 <div className="space-y-1 text-white/80">
-                  <p><strong className="text-white">Fondation Mariam</strong></p>
-                  <p>Kinama, Quartier Ruyigi, 24e Avenue N°57</p>
-                  <p>BP 398, Bujumbura, Burundi</p>
+                  <p><strong className="text-white">{t.common.contactOfficeName}</strong></p>
+                  <p>{t.common.contactAddress1}</p>
+                  <p>{t.common.contactAddress2}</p>
                   <p>
-                    Email:{' '}
+                    {t.common.contactEmail}:{' '}
                     <a href="mailto:mariamfondation@gmail.com" className="text-[#D4AF37] hover:underline">
                       mariamfondation@gmail.com
                     </a>
                   </p>
-                  <p>Tel: +257 79 97 64 45</p>
+                  <p>{t.common.contactPhone}: +257 79 97 64 45</p>
                 </div>
               </div>
             </div>
           </motion.div>
 
           <p className="text-center text-gray-500 text-sm mt-8 pb-8">
-            These Terms of Use were last updated on January 1, 2026. Fondation Mariam reserves the
-            right to update these terms at any time by posting a revised version on this page.
+            {t.common.footerTermsUpdated.replace('January 1, 2026', 'January 1, 2026')}
           </p>
         </div>
       </section>

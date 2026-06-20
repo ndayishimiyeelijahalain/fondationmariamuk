@@ -178,7 +178,7 @@ export default function DonatePage() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6">
               <Heart className="w-4 h-4 text-[#D4AF37]" fill="#D4AF37" />
-              <span className="text-white/90 text-sm font-medium">{t.donate.securityNote}</span>
+              <span className="text-white/90 text-sm font-medium">{t.donate.securityNoteHero}</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-white mb-6">
               {t.donate.title}
@@ -189,15 +189,15 @@ export default function DonatePage() {
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <div className="flex items-center gap-2 text-white/70">
                 <Shield className="w-4 h-4 text-[#10B981]" />
-                {t.donate.securePayments}
+                {t.donate.securePaymentsBadge}
               </div>
               <div className="flex items-center gap-2 text-white/70">
                 <Award className="w-4 h-4 text-[#D4AF37]" />
-                {t.donate.recognizedNgoSince}
+                {t.donate.recognizedNgoBadge}
               </div>
               <div className="flex items-center gap-2 text-white/70">
                 <Heart className="w-4 h-4 text-rose-400" />
-                {t.donate.hundredPercentPrograms}
+                {t.donate.hundredPercentBadge}
               </div>
             </div>
           </motion.div>
@@ -372,7 +372,7 @@ export default function DonatePage() {
                       <div className={`w-9 h-9 rounded-lg bg-gradient-to-br ${cat.color} flex items-center justify-center mb-2.5 group-hover:scale-110 transition-transform`}>
                         <cat.icon className="w-4 h-4 text-white" />
                       </div>
-                      <p className="font-medium text-[#1E3A5F] text-xs leading-tight">{cat.desc}</p>
+                      <p className="font-medium text-[#1E3A5F] text-xs leading-tight">{t.donate[cat.key as keyof typeof t.donate]}</p>
                       {selectedFund === cat.key && (
                         <span className="inline-block mt-1 w-4 h-0.5 bg-[#D4AF37] rounded-full" />
                       )}
@@ -404,10 +404,10 @@ export default function DonatePage() {
                   </div>
 
                   <div className="space-y-3 text-sm">
-                    <BankRow label={t.donate.bankName} value="BCB — Banque Commerciale du Burundi" copiedField={copiedField} fieldId="bank" onCopy={copyToClipboard} />
-                    <BankRow label={t.donate.currency} value="USD" copiedField={copiedField} fieldId="currency" onCopy={copyToClipboard} />
-                    <BankRow label={t.donate.accountNumber} value="20311600016" copiedField={copiedField} fieldId="account" onCopy={copyToClipboard} />
-                    <BankRow label={t.donate.swiftCode} value="BCBUBIBI" copiedField={copiedField} fieldId="swift" onCopy={copyToClipboard} />
+                    <BankRow label={t.donate.bankNameLabel} value="BCB — Banque Commerciale du Burundi" copiedField={copiedField} fieldId="bank" onCopy={copyToClipboard} />
+                    <BankRow label={t.donate.currencyLabel} value="USD" copiedField={copiedField} fieldId="currency" onCopy={copyToClipboard} />
+                    <BankRow label={t.donate.accountNumberLabel} value="20311600016" copiedField={copiedField} fieldId="account" onCopy={copyToClipboard} />
+                    <BankRow label={t.donate.swiftCodeLabel} value="BCBUBIBI" copiedField={copiedField} fieldId="swift" onCopy={copyToClipboard} />
                   </div>
 
                   <div className="mt-4 pt-4 border-t border-white/10">
@@ -424,13 +424,13 @@ export default function DonatePage() {
                 transition={{ delay: 0.1 }}
                 className="bg-white rounded-2xl border border-gray-100 shadow-lg p-6"
               >
-                <p className="text-sm font-semibold text-[#1E3A5F] mb-4">{t.donate.trustAndImpact}</p>
+                <p className="text-sm font-semibold text-[#1E3A5F] mb-4">{t.donate.trustAndImpactSectionTitle}</p>
                 <div className="space-y-3">
                   <TrustItem icon={Shield} text={t.donate.securePayments} />
                   <TrustItem icon={Award} text={t.donate.recognizedNgoSince} />                  
                   <TrustItem icon={Heart} text={t.donate.hundredPercentPrograms} />
                   <TrustItem icon={Lock} text={t.donate.noHiddenFees} />  
-                  <TrustItem icon={Users} text={t.donate.humanitarianService} />
+                  <TrustItem icon={Users} text={t.donate.humanitarianServiceYears} />
                 </div>
               </motion.div>
 
@@ -446,7 +446,7 @@ export default function DonatePage() {
                   {t.donate.transparencyNote}
                 </p>
                 <div className="mt-3 pt-3 border-t border-[#D4AF37]/20">
-                  <p className="text-xs text-gray-500">Ord. Min. N°550/936 du 05/06/2020</p>
+                  <p className="text-xs text-gray-500">{t.donate.quoteDisclaimer}</p>
                 </div>
               </motion.div>
             </div>

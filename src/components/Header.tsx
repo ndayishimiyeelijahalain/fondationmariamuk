@@ -86,9 +86,10 @@ export default function Header() {
               <button
                 onClick={() => setIsLangOpen(!isLangOpen)}
                 className="flex items-center gap-2 px-3 py-2 text-white/80 hover:text-white transition-colors"
+                aria-label={t.common.lang[language]}
               >
                 <Globe className="w-4 h-4" />
-                <span className="text-sm font-medium">{currentLang?.code.toUpperCase()}</span>
+                <span className="text-sm font-medium">{t.common.lang[language]}</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${isLangOpen ? 'rotate-180' : ''}`} />
               </button>
 
@@ -112,7 +113,7 @@ export default function Header() {
                         }`}
                       >
                         <span className="text-lg">{lang.flag}</span>
-                        <span className="font-medium">{lang.name}</span>
+                        <span className="font-medium">{t.common.lang[lang.code]}</span>
                       </button>
                     ))}
                   </motion.div>

@@ -42,7 +42,7 @@ export default function SponsorPage() {
       <section className="relative py-20 bg-gradient-to-br from-[#1E3A5F] to-[#0F2744] overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <img
-            src=""
+            src="/fondation-mariam/education-girls-uniforms-01.jpg"
             alt=""
             className="w-full h-full object-cover"
           />
@@ -56,7 +56,7 @@ export default function SponsorPage() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6">
               <Heart className="w-4 h-4 text-[#D4AF37]" fill="#D4AF37" />
-              <span className="text-white/90 text-sm font-medium">Child Sponsorship Program</span>
+              <span className="text-white/90 text-sm font-medium">{t.sponsor.programTitle}</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-white mb-6">
               {t.sponsor.title}
@@ -113,9 +113,9 @@ export default function SponsorPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-serif font-bold text-[#1E3A5F] mb-4">
-              Children Waiting for Sponsors
+              {t.sponsor.waitingChildrenTitle}
             </h2>
-            <p className="text-gray-600">Every child deserves a chance</p>
+            <p className="text-gray-600">{t.sponsor.waitingChildrenSubtitle}</p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -136,13 +136,13 @@ export default function SponsorPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   <div className="absolute bottom-4 left-4">
                     <p className="text-white font-semibold text-lg">{child.name}</p>
-                    <p className="text-white/80 text-sm">Age {child.age}</p>
+                    <p className="text-white/80 text-sm">{t.common.age} {child.age}</p>
                   </div>
                 </div>
                 <div className="p-4">
                   <p className="text-gray-600 text-sm mb-4">{child.bio}</p>
                   <button className="w-full py-2 bg-gradient-to-r from-[#D4AF37] to-[#F5D76E] text-[#1E3A5F] rounded-lg font-medium hover:shadow-lg transition-all">
-                    Sponsor {child.name}
+                    {t.sponsor.sponsorChildButton.replace('{childName}', child.name)}
                   </button>
                 </div>
               </motion.div>
@@ -182,7 +182,7 @@ export default function SponsorPage() {
             viewport={{ once: true }}
             className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8"
           >
-            <h3 className="text-xl font-semibold text-[#1E3A5F] mb-6">Select Monthly Amount</h3>
+            <h3 className="text-xl font-semibold text-[#1E3A5F] mb-6">{t.sponsor.selectAmountTitle}</h3>
 
             <div className="grid grid-cols-2 gap-3 mb-6">
               {sponsorshipAmounts.map((amount) => (
@@ -195,20 +195,20 @@ export default function SponsorPage() {
                       : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
                   }`}
                 >
-                  ${amount}/month
+                  ${amount}{t.donate.perMonth}
                 </button>
               ))}
             </div>
 
             <div className="bg-gray-50 rounded-xl p-4 mb-6">
               <p className="text-sm text-gray-600">
-                Your ${selectedAmount}/month provides:
+                {t.sponsor.monthlyProvides.replace('${amount}', String(selectedAmount))}
               </p>
               <ul className="mt-2 text-sm text-gray-700 space-y-1">
-                <li>• School fees and supplies</li>
-                <li>• Daily nutritious meals</li>
-                <li>• Healthcare check-ups</li>
-                <li>• Personal development support</li>
+                <li>• {t.sponsor.benefitsSchool}</li>
+                <li>• {t.sponsor.benefitsMeals}</li>
+                <li>• {t.sponsor.benefitsHealthcare}</li>
+                <li>• {t.sponsor.benefitsDevelopment}</li>
               </ul>
             </div>
 

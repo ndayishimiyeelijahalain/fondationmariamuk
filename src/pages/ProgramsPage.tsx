@@ -183,7 +183,7 @@ export default function ProgramsPage() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6">
               <Heart className="w-4 h-4 text-[#D4AF37]" fill="#D4AF37" />
-              <span className="text-white/90 text-sm font-medium">13 Active Programs</span>
+              <span className="text-white/90 text-sm font-medium">{t.common.activePrograms.replace('{count}', '13')}</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-white mb-6">
               {t.programs.title}
@@ -260,25 +260,23 @@ export default function ProgramsPage() {
             >
               <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#D4AF37]/20 text-[#D4AF37] rounded-full text-sm font-medium mb-6">
                 <TrophyIcon className="w-4 h-4" />
-                Featured Program
+                {t.common.featuredProgram}
               </span>
               <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-6">
-                Taekwondo Excellence Program
+                {t.programs.taekwondoExcellenceTitle}
               </h2>
               <p className="text-white/80 leading-relaxed mb-6">
-                Our Taekwondo program teaches discipline, respect, and leadership to vulnerable youth.
-                With multiple championship trophies, we've proven that every child can achieve greatness
-                with the right support and guidance.
+                {t.programs.taekwondoExcellenceDesc}
               </p>
 
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
                   <p className="text-3xl font-bold text-[#D4AF37]">4+</p>
-                  <p className="text-white/70 text-sm">Championship Trophies</p>
+                  <p className="text-white/70 text-sm">{t.common.championshipTrophies.replace('{count}', '')}</p>
                 </div>
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
                   <p className="text-3xl font-bold text-[#10B981]">200+</p>
-                  <p className="text-white/70 text-sm">Youth Trained</p>
+                  <p className="text-white/70 text-sm">{t.common.youthTrained.replace('{count}', '')}</p>
                 </div>
               </div>
 
@@ -286,7 +284,7 @@ export default function ProgramsPage() {
                 to="/donate#sports"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#D4AF37] to-[#F5D76E] text-[#1E3A5F] rounded-full font-semibold hover:shadow-xl transition-all group"
               >
-                Support This Program
+                {t.programs.supportThisProgram}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
@@ -316,10 +314,10 @@ export default function ProgramsPage() {
       <section className="py-20 bg-gradient-to-r from-[#D4AF37]/10 via-white to-[#D4AF37]/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-serif font-bold text-[#1E3A5F] mb-4">
-            Support Our Programs
+            {t.programs.supportProgramsTitle}
           </h2>
           <p className="text-gray-600 mb-8 max-w-xl mx-auto">
-            Your contribution helps us continue these vital programs and reach more people in need
+            {t.programs.supportProgramsSubtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

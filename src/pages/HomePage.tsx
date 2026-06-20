@@ -90,7 +90,7 @@ export default function HomePage() {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full mb-8">
               <span className="text-white/90 text-sm font-medium">
-                Since 1978 • {t.about.recognition ?? 'Recognition'}
+                {t.common.sinceDate.replace('{year}', '1978')} • {t.about.recognition}
               </span>
             </div>
 

@@ -55,10 +55,10 @@ export default function GalleryPage() {
         <div className="relative max-w-4xl mx-auto px-4 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <h1 className="text-4xl sm:text-5xl font-serif font-bold text-white mb-6">
-              Gallery
+              {t.gallery.title}
             </h1>
             <p className="text-lg text-white/80">
-              Visual stories of hope, transformation, and community
+              {t.gallery.subtitle}
             </p>
           </motion.div>
         </div>
@@ -80,7 +80,7 @@ export default function GalleryPage() {
                     : 'bg-white text-gray-600 hover:bg-gray-100 border'
                 }`}
               >
-                {cat.label}
+                {t.gallery[`category${cat.id.charAt(0).toUpperCase() + cat.id.slice(1)}` as keyof typeof t.gallery]}
               </button>
             ))}
           </div>
