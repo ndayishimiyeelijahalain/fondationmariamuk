@@ -104,6 +104,11 @@ export const translations = {
       footballDesc: 'Formation au football, esprit d’équipe, leadership et développement des jeunes.',
       supportThisProgram: 'Soutenir ce programme',
       learnMore: 'En Savoir Plus',
+      taekwondoExcellenceTitle: 'Programme d\'Excellence en Taekwondo',
+      taekwondoExcellenceDesc: 'Notre programme de Taekwondo enseigne la discipline, le respect et le leadership aux jeunes vulnérables. Avec plusieurs trophées de championnat, nous avons prouvé que chaque enfant peut atteindre la grandeur avec le bon soutien et les bons conseils.',
+      supportProgramsTitle: 'Soutenir Nos Programmes',
+      supportProgramsSubtitle: 'Votre contribution nous aide à poursuivre ces programmes vitaux et à atteindre plus de personnes dans le besoin.',
+      youthTrainedCount: '{count} Jeunes Formés',
     },
     donate: {
       securityNoteHero: 'Sécurité et Transparence Garanties',
@@ -377,13 +382,6 @@ export const translations = {
     news: {
       searchPlaceholder: 'Rechercher des articles...',
     },
-    programs: {
-      taekwondoExcellenceTitle: 'Programme d\'Excellence en Taekwondo',
-      taekwondoExcellenceDesc: 'Notre programme de Taekwondo enseigne la discipline, le respect et le leadership aux jeunes vulnérables. Avec plusieurs trophées de championnat, nous avons prouvé que chaque enfant peut atteindre la grandeur avec le bon soutien et les bons conseils.',
-      supportProgramsTitle: 'Soutenir Nos Programmes',
-      supportProgramsSubtitle: 'Votre contribution nous aide à poursuivre ces programmes vitaux et à atteindre plus de personnes dans le besoin.',
-      youthTrainedCount: '{count} Jeunes Formés',
-    },
     cta: {
       title: 'Votre générosité crée un changement durable',
       subtitle: 'Chaque contribution transforme des vies et apporte l\'espoir aux plus vulnérables.',
@@ -500,6 +498,11 @@ export const translations = {
       footballDesc: 'Football training, teamwork, leadership and youth development.',
       supportThisProgram: 'Support this program',
       learnMore: 'Learn More',
+      taekwondoExcellenceTitle: 'Taekwondo Excellence Program',
+      taekwondoExcellenceDesc: 'Our Taekwondo program teaches discipline, respect, and leadership to vulnerable youth. With multiple championship trophies, we\'ve proven that every child can achieve greatness with the right support and guidance.',
+      supportProgramsTitle: 'Support Our Programs',
+      supportProgramsSubtitle: 'Your contribution helps us continue these vital programs and reach more people in need.',
+      youthTrainedCount: '{count} Youth Trained',
     },
     donate: {
       securityNoteHero: 'Security and Transparency Guaranteed',
@@ -767,13 +770,6 @@ export const translations = {
     news: {
       searchPlaceholder: 'Search articles...',
     },
-    programs: {
-      taekwondoExcellenceTitle: 'Taekwondo Excellence Program',
-      taekwondoExcellenceDesc: 'Our Taekwondo program teaches discipline, respect, and leadership to vulnerable youth. With multiple championship trophies, we\'ve proven that every child can achieve greatness with the right support and guidance.',
-      supportProgramsTitle: 'Support Our Programs',
-      supportProgramsSubtitle: 'Your contribution helps us continue these vital programs and reach more people in need.',
-      youthTrainedCount: '{count} Youth Trained',
-    },
     cta: {
       title: 'Your generosity creates lasting change',
       subtitle: 'Every contribution transforms lives and brings hope to the most vulnerable.',
@@ -890,6 +886,11 @@ export const translations = {
       footballDesc: 'Kwigisha urwaruka umupira n’ukwubaka indero.',
       supportThisProgram: 'Shigikira iyi porogarame',
       learnMore: 'Menya vyinshi',
+      taekwondoExcellenceTitle: 'Porogarama y\'Ubunyabugingo muri Taekwondo',
+      taekwondoExcellenceDesc: 'Porogarama yacu ya Taekwondo yigisha ikinyabupfura, icubahiro, n\'uburongozi urwaruka ruri mu mazinga. Turerekanye ko umwana wese ashobora gushika ku bunini hamwe n\'inkunga n\'uburongozi bikwiye, dufise ibikombe vyinshi vya championat.',
+      supportProgramsTitle: 'Shigikira Porogarama Zacu',
+      supportProgramsSubtitle: 'Inkunga yawe iratwunganira mu gukomeza izi porogarama z’ingenzi no gushika ku bantu benshi bakeneye ubufasha.',
+      youthTrainedCount: '{count} Urwaruka Rwafashijwe',
     },
     donate: {
       securityNoteHero: 'Umutekano n’Ubugenekerezo Birizewe',
@@ -1139,13 +1140,6 @@ export const translations = {
     news: {
       searchPlaceholder: 'Rondera inyandiko...',
     },
-    programs: {
-      taekwondoExcellenceTitle: 'Porogarama y\'Ubunyabugingo muri Taekwondo',
-      taekwondoExcellenceDesc: 'Porogarama yacu ya Taekwondo yigisha ikinyabupfura, icubahiro, n\'uburongozi urwaruka ruri mu mazinga. Turerekanye ko umwana wese ashobora gushika ku bunini hamwe n\'inkunga n\'uburongozi bikwiye, dufise ibikombe vyinshi vya championat.',
-      supportProgramsTitle: 'Shigikira Porogarama Zacu',
-      supportProgramsSubtitle: 'Inkunga yawe iratwunganira mu gukomeza izi porogarama z’ingenzi no gushika ku bantu benshi bakeneye ubufasha.',
-      youthTrainedCount: '{count} Urwaruka Rwafashijwe',
-    },
     cta: {
       title: 'Ubuntu bwawe burazana impinduka zirama',
       subtitle: 'Intererano yose ihindura ubuzima kandi izana icizere ku babikeneye.',
@@ -1263,6 +1257,11 @@ export const translations = {
       footballImpact: 'Vijana Waliopata Mafunzo',
       supportThisProgram: 'Saidia mpango huu',
       learnMore: 'Jifunze Zaidi',
+      taekwondoExcellenceTitle: 'Programu ya Ubora wa Taekwondo',
+      taekwondoExcellenceDesc: 'Programu yetu ya Taekwondo inafundisha nidhamu, heshima, na uongozi kwa vijana walio hatarini. Kwa kuwa na vikombe vingi vya ubingwa, tumethibitisha kuwa kila mtoto anaweza kufikia ukuu kwa msaada na mwongozo sahihi.',
+      supportProgramsTitle: 'Saidia Programu Zetu',
+      supportProgramsSubtitle: 'Mchango wako unatutasaidia kuendelea na programu hizi muhimu na kuwafikia watu wengi zaidi wenye uhitaji.',
+      youthTrainedCount: '{count} Vijana Waliofunzwa',
     },
     donate: {
       securityNoteHero: 'Usalama na Uwazi Umehakikishwa',
@@ -1517,13 +1516,6 @@ export const translations = {
     },
     news: {
       searchPlaceholder: 'Tafuta makala...',
-    },
-    programs: {
-      taekwondoExcellenceTitle: 'Programu ya Ubora wa Taekwondo',
-      taekwondoExcellenceDesc: 'Programu yetu ya Taekwondo inafundisha nidhamu, heshima, na uongozi kwa vijana walio hatarini. Kwa kuwa na vikombe vingi vya ubingwa, tumethibitisha kuwa kila mtoto anaweza kufikia ukuu kwa msaada na mwongozo sahihi.',
-      supportProgramsTitle: 'Saidia Programu Zetu',
-      supportProgramsSubtitle: 'Mchango wako unatutasaidia kuendelea na programu hizi muhimu na kuwafikia watu wengi zaidi wenye uhitaji.',
-      youthTrainedCount: '{count} Vijana Waliofunzwa',
     },
     cta: {
       title: 'Ukarimu wako huleta mabadiliko ya kudumu',
