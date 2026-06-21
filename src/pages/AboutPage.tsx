@@ -134,13 +134,11 @@ export default function AboutPage() {
                 <div className={`flex-1 ${idx % 2 === 0 ? 'text-right' : 'text-left'}`}>
                   <div className="bg-white p-6 rounded-xl shadow inline-block">
                     <span className="text-[#D4AF37] font-bold">
-                      {safeT(`about.history.year${year}`, year)}
-                    </span>
+                    {safeT(`about.historyDetails.year${year}`, year)}                    </span>
                     <h3 className="font-semibold text-[#1E3A5F]">
-                      {safeT(`about.history.title${year}`, '')}
-                    </h3>
+                    {safeT(`about.historyDetails.title${year}`, '')}                    </h3>
                     <p className="text-sm text-gray-600">
-                      {safeT(`about.history.desc${year}`, '')}
+                    {safeT(`about.historyDetails.desc${year}`, '')}
                     </p>
                   </div>
                 </div>
