@@ -7,7 +7,6 @@ import {
   Users,
   Shield,
   Calendar,
-  CheckCircle,
 } from 'lucide-react';
 import { useI18n } from '../i18n';
 import { useSafeT } from '../utils/i18n';
@@ -15,6 +14,9 @@ import { useSafeT } from '../utils/i18n';
 export default function AboutPage() {
   const { t } = useI18n();
   const safeT = useSafeT();
+
+  // 🔍 Vérification (à retirer après)
+  console.log('About translations:', t.about);
 
   const values = [
     { key: 'compassion', icon: Heart, color: 'from-rose-500 to-rose-600' },
@@ -24,6 +26,19 @@ export default function AboutPage() {
   ];
 
   const timelineYears = ['1978', '1990', '2005', '2015', '2020', '2024', '2026'];
+
+  // Fonction sécurisée pour récupérer les traductions de l'histoire
+  const getHistoryTranslation = (key: string, fallback: string) => {
+    // Essayer d'abord avec about.historyDetails
+    let value = t.about?.historyDetails?.[key as keyof typeof t.about.historyDetails];
+    if (value) return value;
+    
+    // Fallback: essayer historyDetails au niveau racine
+    value = (t as any).historyDetails?.[key];
+    if (value) return value;
+    
+    return fallback;
+  };
 
   return (
     <div className="min-h-screen bg-white pt-20">
@@ -43,7 +58,7 @@ export default function AboutPage() {
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full mb-6">
               <Calendar className="w-4 h-4 text-[#D4AF37]" />
               <span className="text-white/90 text-sm font-medium">
-                Depuis 1978 • Plus de 48 ans d'impact
+                {safeT('about.subtitle', 'Depuis 1978 • Plus de 48 ans d\'impact')}
               </span>
             </div>
             <h1 className="text-5xl font-serif font-bold text-white mb-6">
@@ -114,7 +129,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* TIMELINE - HISTORY - NOW USING TRANSLATIONS */}
+      {/* TIMELINE - HISTORY */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl font-serif font-bold text-center text-[#1E3A5F] mb-16">
@@ -124,30 +139,39 @@ export default function AboutPage() {
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-[#D4AF37] via-[#10B981] to-[#D4AF37]" />
 
-            {timelineYears.map((year, idx) => (
-              <motion.div
-                key={year}
-                className={`flex items-center gap-8 mb-12 ${
-                  idx % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
-                }`}
-              >
-                <div className={`flex-1 ${idx % 2 === 0 ? 'text-right' : 'text-left'}`}>
-                  <div className="bg-white p-6 rounded-xl shadow inline-block">
-                    <span className="text-[#D4AF37] font-bold">
-                    {safeT(`about.historyDetails.year${year}`, year)}                    </span>
-                    <h3 className="font-semibold text-[#1E3A5F]">
-                    {safeT(`about.historyDetails.title${year}`, '')}                    </h3>
-                    <p className="text-sm text-gray-600">
-                    {safeT(`about.historyDetails.desc${year}`, '')}
-                    </p>
+            {timelineYears.map((year, idx) => {
+              // Utiliser getHistoryTranslation pour chaque élément
+              const yearText = getHistoryTranslation(`year${year}`, year);
+              const titleText = getHistoryTranslation(`title${year}`, '');
+              const descText = getHistoryTranslation(`desc${year}`, '');
+
+              return (
+                <motion.div
+                  key={year}
+                  className={`flex items-center gap-8 mb-12 ${
+                    idx % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+                  }`}
+                >
+                  <div className={`flex-1 ${idx % 2 === 0 ? 'text-right' : 'text-left'}`}>
+                    <div className="bg-white p-6 rounded-xl shadow inline-block">
+                      <span className="text-[#D4AF37] font-bold">
+                        {yearText}
+                      </span>
+                      <h3 className="font-semibold text-[#1E3A5F]">
+                        {titleText}
+                      </h3>
+                      <p className="text-sm text-gray-600">
+                        {descText}
+                      </p>
+                    </div>
                   </div>
-                </div>
 
-                <div className="w-4 h-4 bg-[#D4AF37] rounded-full ring-4 ring-[#D4AF37]/20" />
+                  <div className="w-4 h-4 bg-[#D4AF37] rounded-full ring-4 ring-[#D4AF37]/20" />
 
-                <div className="flex-1" />
-              </motion.div>
-            ))}
+                  <div className="flex-1" />
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
