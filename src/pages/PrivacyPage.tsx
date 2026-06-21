@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Shield, Lock, Eye, UserCheck, Mail, ArrowLeft } from 'lucide-react';
+import { useI18n } from '../i18n';
+import { useSafeT } from '../utils/i18n';
 
 const sections = [
   {
@@ -105,6 +107,9 @@ const sections = [
 ];
 
 export default function PrivacyPage() {
+  const { t } = useI18n();
+  const safeT = useSafeT();
+
   return (
     <div className="min-h-screen bg-gray-50 pt-20">
       {/* Hero */}
@@ -114,13 +119,14 @@ export default function PrivacyPage() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6">
               <Shield className="w-4 h-4 text-[#D4AF37]" />
-              <span className="text-white/90 text-sm font-medium">{t.privacy.lastUpdated}</span>
+              <span className="text-white/90 text-sm font-medium">Last updated: January 2026</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-serif font-bold text-white mb-4">
-              {t.privacy.title}
+              {safeT('footer.privacy', 'Privacy Policy')}
             </h1>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              {t.privacy.subtitle}
+              Fondation Mariam is committed to protecting your privacy and handling your
+              personal information with the utmost care and transparency.
             </p>
           </motion.div>
         </div>
@@ -133,7 +139,7 @@ export default function PrivacyPage() {
             className="inline-flex items-center gap-2 text-[#1E3A5F] font-medium hover:text-[#D4AF37] transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
-            {t.common.back} {t.nav.home}
+            Back to Home
           </Link>
 
           {/* Introduction */}
@@ -143,7 +149,11 @@ export default function PrivacyPage() {
             className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 mb-8"
           >
             <p className="text-gray-700 leading-relaxed">
-              {t.privacy.intro}
+              This Privacy Policy explains how <strong>Fondation Mariam</strong> ("we," "us," or "our"),
+              headquartered at Kinama, Quartier Ruyigi, 24e Avenue N°57, Bujumbura, Burundi
+              (Ord. Min. N°550/936 du 05/06/2020), collects, uses, and protects information
+              submitted to us through our website and related services. By using our website or
+              interacting with our organization, you agree to the terms described in this policy.
             </p>
           </motion.div>
 
@@ -163,13 +173,13 @@ export default function PrivacyPage() {
                   <div className="w-12 h-12 bg-gradient-to-br from-[#1E3A5F] to-[#0F2744] rounded-xl flex items-center justify-center flex-shrink-0">
                     <section.icon className="w-6 h-6 text-[#D4AF37]" />
                   </div>
-                  <h2 className="text-xl font-serif font-bold text-[#1E3A5F]">{t.privacy[`section${section.id.charAt(0).toUpperCase() + section.id.slice(1)}Title` as keyof typeof t.privacy]}</h2>
+                  <h2 className="text-xl font-serif font-bold text-[#1E3A5F]">{section.title}</h2>
                 </div>
                 <div className="p-6 space-y-6">
                   {section.items.map((item, i) => (
                     <div key={i}>
-                      <h3 className="font-semibold text-[#1E3A5F] mb-2">{t.privacy[`${section.id}${item.subtitle.split(' ')[0]}Subtitle` as keyof typeof t.privacy]}</h3>
-                      <p className="text-gray-600 leading-relaxed">{t.privacy[`${section.id}${item.subtitle.split(' ')[0]}Text` as keyof typeof t.privacy]}</p>
+                      <h3 className="font-semibold text-[#1E3A5F] mb-2">{item.subtitle}</h3>
+                      <p className="text-gray-600 leading-relaxed">{item.text}</p>
                     </div>
                   ))}
                 </div>
@@ -184,12 +194,15 @@ export default function PrivacyPage() {
             viewport={{ once: true }}
             className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 mt-6"
           >
-            <h2 className="text-xl font-serif font-bold text-[#1E3A5F] mb-4">{t.privacy.thirdPartyServicesTitle}</h2>
+            <h2 className="text-xl font-serif font-bold text-[#1E3A5F] mb-4">Third-Party Services</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              {t.privacy.thirdPartyServicesText1}
+              We do not sell, trade, or rent your personal information to third parties for marketing purposes.
+              We may share information with trusted service providers who assist us in operating our website
+              and delivering our services, subject to confidentiality agreements.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              {t.privacy.thirdPartyServicesText2}
+              Our website may contain links to third-party sites. We are not responsible for the privacy
+              practices of those sites and encourage you to review their privacy policies independently.
             </p>
           </motion.div>
 
@@ -200,12 +213,16 @@ export default function PrivacyPage() {
             viewport={{ once: true }}
             className="bg-gradient-to-br from-[#D4AF37]/10 to-[#10B981]/10 rounded-2xl border border-[#D4AF37]/20 p-8 mt-6"
           >
-            <h2 className="text-xl font-serif font-bold text-[#1E3A5F] mb-4">{t.privacy.internationalDonorsTitle}</h2>
+            <h2 className="text-xl font-serif font-bold text-[#1E3A5F] mb-4">Note for International Donors</h2>
             <p className="text-gray-700 leading-relaxed mb-3">
-              {t.privacy.internationalDonorsText1}
+              Fondation Mariam receives support from donors worldwide. If you are located outside
+              Burundi, please be aware that your information will be transferred to and processed in Burundi,
+              which may have different data protection laws than your country.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              {t.privacy.internationalDonorsText2}
+              By donating or submitting information through our website, you consent to this transfer.
+              We take all reasonable steps to ensure your data is treated securely and in accordance
+              with this Privacy Policy.
             </p>
           </motion.div>
 
@@ -219,28 +236,30 @@ export default function PrivacyPage() {
             <div className="flex items-start gap-4">
               <Mail className="w-8 h-8 text-[#D4AF37] flex-shrink-0 mt-1" />
               <div>
-                <h2 className="text-xl font-serif font-bold mb-3">{t.privacy.contactTitle}</h2>
+                <h2 className="text-xl font-serif font-bold mb-3">Contact Us About Privacy</h2>
                 <p className="text-white/80 mb-4">
-                  {t.privacy.contactText}
+                  If you have questions about this Privacy Policy or wish to exercise your rights,
+                  please contact us:
                 </p>
                 <div className="space-y-1 text-white/80">
-                  <p><strong className="text-white">{t.common.contactOfficeName}</strong></p>
-                  <p>{t.common.contactAddress1}</p>
-                  <p>{t.common.contactAddress2}</p>
+                  <p><strong className="text-white">Fondation Mariam</strong></p>
+                  <p>Kinama, Quartier Ruyigi, 24e Avenue N°57</p>
+                  <p>BP 398, Bujumbura, Burundi</p>
                   <p>
-                    {t.common.contactEmail}:{' '}
+                    Email:{' '}
                     <a href="mailto:mariamfondation@gmail.com" className="text-[#D4AF37] hover:underline">
                       mariamfondation@gmail.com
                     </a>
                   </p>
-                  <p>{t.common.contactPhone}: +257 79 97 64 45</p>
+                  <p>Tel: +257 79 97 64 45</p>
                 </div>
               </div>
             </div>
           </motion.div>
 
           <p className="text-center text-gray-500 text-sm mt-8 pb-8">
-            {t.common.footerUpdated.replace('January 1, 2026', 'January 1, 2026')}
+            This policy was last updated on January 1, 2026. We reserve the right to update this
+            policy at any time. Changes will be posted on this page with a revised date.
           </p>
         </div>
       </section>

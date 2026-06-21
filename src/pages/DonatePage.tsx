@@ -19,11 +19,12 @@ import {
   Accessibility,
   MapPin,
   HardHat,
-  Shirt,
+  Gift,
   Star,
   Layers
 } from 'lucide-react';
 import { useI18n } from '../i18n';
+import { useSafeT } from '../utils/i18n';
 
 const donationTiers = [
   {
@@ -31,120 +32,97 @@ const donationTiers = [
     icon: BookOpen,
     color: 'from-blue-500 to-blue-600',
     tagColor: 'bg-blue-50 text-blue-700 border-blue-200',
-    tag: 'Every Gift Counts',
-    title: 'School Supplies',
-    impact: 'Helps provide essential school supplies — notebooks, pens, and learning materials — for one child for an entire month.',
-    detail: 'Your $10 puts a pencil and hope in a child\'s hands.'
+    tag: 'everyGiftCounts',
+    titleKey: 'schoolSupplies',
+    impactKey: 'schoolSuppliesDesc',
+    detailKey: 'schoolSuppliesDetail'
   },
   {
     amount: 25,
     icon: Utensils,
     color: 'from-amber-500 to-orange-500',
     tagColor: 'bg-amber-50 text-amber-700 border-amber-200',
-    tag: 'Feed a Child',
-    title: 'Food Assistance',
-    impact: 'Supports food assistance for a vulnerable child for one week, ensuring they receive nutritious daily meals.',
-    detail: 'Hunger-free children learn better and dream bigger.'
+    tag: 'feedChild',
+    titleKey: 'foodAssistance',
+    impactKey: 'foodAssistanceDesc',
+    detailKey: 'hungerFree'
   },
   {
     amount: 50,
     icon: BookOpen,
     color: 'from-emerald-500 to-emerald-600',
     tagColor: 'bg-emerald-50 text-emerald-700 border-emerald-200',
-    tag: 'Most Popular',
-    title: 'Education Support',
-    impact: 'Provides full educational support for one child — school fees, textbooks, uniforms, and learning materials for one month.',
-    detail: 'Education is the most powerful weapon to change the world.'
+    tag: 'mostPopular',
+    titleKey: 'educationSupport',
+    impactKey: 'educationSupportDesc',
+    detailKey: 'educationIsWeapon'
   },
   {
     amount: 100,
     icon: HeartPulse,
     color: 'from-rose-500 to-rose-600',
     tagColor: 'bg-rose-50 text-rose-700 border-rose-200',
-    tag: 'Health Matters',
-    title: 'Healthcare & Medical',
-    impact: 'Contributes to complete healthcare support — medical consultations, essential medicines, and community health programs for one month.',
-    detail: 'A healthy child is a hopeful child with a brighter future.'
+    tag: 'healthMatters',
+    titleKey: 'healthcareSupport',
+    impactKey: 'healthcareDesc',
+    detailKey: 'healthyChild'
   },
   {
     amount: 250,
     icon: Star,
     color: 'from-violet-500 to-violet-600',
     tagColor: 'bg-violet-50 text-violet-700 border-violet-200',
-    tag: 'Champion Sponsor',
-    title: 'Child Sponsorship',
-    impact: 'Sponsors a full month of holistic care for one child — education, nutrition, healthcare, and psychosocial support combined.',
-    detail: 'You become a guardian of hope for a child in need.'
+    tag: 'championSponsor',
+    titleKey: 'childSponsorship',
+    impactKey: 'childSponsorshipDesc',
+    detailKey: 'becomeGuardian'
   },
   {
     amount: 500,
     icon: Users,
     color: 'from-[#1E3A5F] to-[#0F2744]',
     tagColor: 'bg-navy-50 text-[#1E3A5F] border-blue-200',
-    tag: 'Community Hero',
-    title: 'Multiple Children',
-    impact: 'Supports multiple children through food, education, and care programs — transforming several lives and lifting entire families.',
-    detail: 'One generous act ripples through an entire community.'
+    tag: 'communityHero',
+    titleKey: 'multipleChildren',
+    impactKey: 'multipleChildrenDesc',
+    detailKey: 'rippleEffect'
   },
   {
     amount: 1000,
     icon: Layers,
     color: 'from-[#D4AF37] to-[#B8942E]',
     tagColor: 'bg-yellow-50 text-yellow-800 border-yellow-300',
-    tag: 'Legacy Donor',
-    title: 'Community Initiative',
-    impact: 'Funds major community and humanitarian initiatives — infrastructure, vocational training, women\'s empowerment, or emergency response programs.',
-    detail: 'Your legacy transforms not just individuals, but generations.'
+    tag: 'legacyDonor',
+    titleKey: 'communityInitiative',
+    impactKey: 'communityInitiativeDesc',
+    detailKey: 'legacyTransforms'
   }
 ];
 
 const fundCategories = [
-  { key: 'childSponsorship', icon: Heart, color: 'from-rose-500 to-rose-600', desc: 'Child Sponsorship' },
-  { key: 'educationFund', icon: BookOpen, color: 'from-blue-500 to-blue-600', desc: 'Education Fund' },
-  { key: 'foodFund', icon: Utensils, color: 'from-amber-500 to-amber-600', desc: 'Food Fund' },
-  { key: 'medicalFund', icon: HeartPulse, color: 'from-emerald-500 to-emerald-600', desc: 'Medical Fund' },
-  { key: 'emergencyFund', icon: AlertCircle, color: 'from-red-500 to-red-600', desc: 'Emergency Fund' },
-  { key: 'womenFund', icon: Sparkles, color: 'from-pink-500 to-pink-600', desc: 'Women Empowerment' },
-  { key: 'disabilityFund', icon: Accessibility, color: 'from-purple-500 to-purple-600', desc: 'Disability Support' },
-  { key: 'communityFund', icon: MapPin, color: 'from-cyan-500 to-cyan-600', desc: 'Community Development' },
-  { key: 'infrastructureFund', icon: HardHat, color: 'from-slate-500 to-slate-600', desc: 'Infrastructure' },
+  { key: 'childSponsorship', icon: Heart, color: 'from-rose-500 to-rose-600' },
+  { key: 'educationFund', icon: BookOpen, color: 'from-blue-500 to-blue-600' },
+  { key: 'foodFund', icon: Utensils, color: 'from-amber-500 to-amber-600' },
+  { key: 'medicalFund', icon: HeartPulse, color: 'from-emerald-500 to-emerald-600' },
+  { key: 'emergencyFund', icon: AlertCircle, color: 'from-red-500 to-red-600' },
+  { key: 'womenFund', icon: Sparkles, color: 'from-pink-500 to-pink-600' },
+  { key: 'disabilityFund', icon: Accessibility, color: 'from-purple-500 to-purple-600' },
+  { key: 'communityFund', icon: MapPin, color: 'from-cyan-500 to-cyan-600' },
+  { key: 'infrastructureFund', icon: HardHat, color: 'from-slate-500 to-slate-600' },
 ];
 
 const otherWays = [
-  {
-    icon: Utensils,
-    titleKey: 'foodDonations',
-    descKey: 'foodDonationsDesc',
-  },
-  {
-    icon: Shirt,
-    titleKey: 'clothingDonations',
-    descKey: 'clothingDonationsDesc',
-  },
-  {
-    icon: HeartPulse,
-    titleKey: 'medicalSupplies',
-    descKey: 'medicalSuppliesDesc',
-  },
-  {
-    icon: BookOpen,
-    titleKey: 'schoolMaterials',
-    descKey: 'schoolMaterialsDesc',
-  },
-  {
-    icon: Users,
-    titleKey: 'volunteerSupport',
-    descKey: 'volunteerSupportDesc',
-  },
-  {
-    icon: Building2,
-    titleKey: 'corporateSponsorship',
-    descKey: 'corporateSponsorshipDesc',
-  },
+  { key: 'foodDonations', icon: Gift, image: '/fondation-mariam/impact-community-meal-01.jpg' },
+  { key: 'clothingDonations', icon: Gift, image: '/fondation-mariam/gallery-girl-portrait-01.jpg' },
+  { key: 'medicalSupplies', icon: HeartPulse, image: '/fondation-mariam/healthcare-medical-support-01.jpg' },
+  { key: 'schoolMaterials', icon: BookOpen, image: '/fondation-mariam/education-supplies-01.jpg' },
+  { key: 'volunteerSupport', icon: Users, image: '/fondation-mariam/volunteers-meeting-02.jpg' },
+  { key: 'corporateSponsorship', icon: Building2, image: '/fondation-mariam/leadership-ceremony-01.jpg' },
 ];
 
 export default function DonatePage() {
   const { t } = useI18n();
+  const safeT = useSafeT();
   const [donationType, setDonationType] = useState<'one-time' | 'monthly'>('one-time');
   const [selectedAmount, setSelectedAmount] = useState<number>(50);
   const [customAmount, setCustomAmount] = useState('');
@@ -165,11 +143,7 @@ export default function DonatePage() {
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-[#1E3A5F] to-[#0F2744] overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-          <img
-            src="/gallery/craft-02.jpg"
-            alt=""
-            className="w-full h-full object-cover"
-          />
+          <img src="/fondation-mariam/gallery-girls-outdoor-01.jpg" alt="Children" className="w-full h-full object-cover" />
         </div>
         <div className="absolute top-20 right-20 w-64 h-64 bg-[#D4AF37]/10 rounded-full blur-3xl" />
         <div className="absolute bottom-20 left-10 w-96 h-96 bg-[#10B981]/10 rounded-full blur-3xl" />
@@ -178,26 +152,26 @@ export default function DonatePage() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6">
               <Heart className="w-4 h-4 text-[#D4AF37]" fill="#D4AF37" />
-              <span className="text-white/90 text-sm font-medium">{t.donate.securityNoteHero}</span>
+              <span className="text-white/90 text-sm font-medium">{safeT('donate.securityNote', 'Security and Transparency Guaranteed')}</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-white mb-6">
-              {t.donate.title}
+              {safeT('donate.title', 'Your Generosity Creates Lasting Change')}
             </h1>
             <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-8">
-              {t.donate.subtitle}
+              {safeT('donate.subtitle', 'Every contribution transforms lives and brings hope to the most vulnerable.')}
             </p>
             <div className="flex flex-wrap justify-center gap-6 text-sm">
               <div className="flex items-center gap-2 text-white/70">
                 <Shield className="w-4 h-4 text-[#10B981]" />
-                {t.donate.securePaymentsBadge}
+                {safeT('donate.securePayments', 'Secure Payments')}
               </div>
               <div className="flex items-center gap-2 text-white/70">
                 <Award className="w-4 h-4 text-[#D4AF37]" />
-                {t.donate.recognizedNgoBadge}
+                {safeT('donate.recognizedNgoSince', 'Recognized NGO Since 1978')}
               </div>
               <div className="flex items-center gap-2 text-white/70">
                 <Heart className="w-4 h-4 text-rose-400" />
-                {t.donate.hundredPercentBadge}
+                {safeT('donate.hundredPercentPrograms', '100% Goes to Programs')}
               </div>
             </div>
           </motion.div>
@@ -215,7 +189,7 @@ export default function DonatePage() {
               }`}
             >
               <CreditCard className="w-4 h-4" />
-              {t.donate.oneTime}
+              {safeT('donate.oneTime', 'One-Time Donation')}
             </button>
             <button
               onClick={() => setDonationType('monthly')}
@@ -224,7 +198,7 @@ export default function DonatePage() {
               }`}
             >
               <Smartphone className="w-4 h-4" />
-              {t.donate.monthly}
+              {safeT('donate.monthly', 'Monthly Giving')}
             </button>
           </div>
         </div>
@@ -245,8 +219,8 @@ export default function DonatePage() {
                 className="bg-white rounded-2xl border border-gray-100 shadow-lg overflow-hidden"
               >
                 <div className="p-6 border-b border-gray-100">
-                  <h2 className="text-lg font-semibold text-[#1E3A5F]">{t.donate.selectAmount}</h2>
-                  <p className="text-sm text-gray-500 mt-1">{t.donate.seeExactlyHow}</p>
+                  <h2 className="text-lg font-semibold text-[#1E3A5F]">{safeT('donate.selectAmount', 'Select Amount')}</h2>
+                  <p className="text-sm text-gray-500 mt-1">{safeT('donate.seeExactlyHow', 'See exactly how your donation makes an impact')}</p>
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-0 divide-y sm:divide-y-0 sm:divide-x divide-gray-100">
@@ -266,9 +240,9 @@ export default function DonatePage() {
                           }`}
                         >
                           ${tier.amount}
-                          {tier.tag === 'Most Popular' && (
+                          {tier.tag === 'mostPopular' && (
                             <span className="absolute -top-2 -right-1 text-xs bg-[#10B981] text-white px-2 py-0.5 rounded-full font-medium">
-                              {t.donate.mostPopular}
+                              {safeT('donate.mostPopular', 'Most Popular')}
                             </span>
                           )}
                         </motion.button>
@@ -279,7 +253,7 @@ export default function DonatePage() {
                       <input
                         type="number"
                         min="1"
-                        placeholder={t.donate.customAmount}
+                        placeholder={safeT('donate.customAmount', 'Custom Amount')}
                         value={customAmount}
                         onChange={(e) => setCustomAmount(e.target.value)}
                         className="w-full pl-10 pr-4 py-3.5 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:border-[#D4AF37] focus:ring-1 focus:ring-[#D4AF37] transition-colors font-medium"
@@ -299,19 +273,19 @@ export default function DonatePage() {
                           transition={{ duration: 0.2 }}
                         >
                           <span className={`inline-block text-xs font-medium px-2.5 py-1 rounded-full border mb-3 ${activeTier.tagColor}`}>
-                            {activeTier.tag}
+                            {safeT(`donate.${activeTier.tag}`, activeTier.tag)}
                           </span>
                           <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${activeTier.color} flex items-center justify-center mb-4 shadow-lg`}>
                             <activeTier.icon className="w-6 h-6 text-white" />
                           </div>
                           <h3 className="text-lg font-bold text-[#1E3A5F] mb-2">
-                            ${activeTier.amount} — {activeTier.title}
+                            ${activeTier.amount} — {safeT(`donate.${activeTier.titleKey}`, activeTier.titleKey)}
                           </h3>
                           <p className="text-gray-600 text-sm leading-relaxed mb-3">
-                            {activeTier.impact}
+                            {safeT(`donate.${activeTier.impactKey}`, '')}
                           </p>
                           <p className="text-[#D4AF37] text-xs font-medium italic">
-                            "{activeTier.detail}"
+                            "{safeT(`donate.${activeTier.detailKey}`, '')}"
                           </p>
                         </motion.div>
                       ) : (
@@ -325,12 +299,13 @@ export default function DonatePage() {
                             <Heart className="w-6 h-6 text-white" fill="white" />
                           </div>
                           <h3 className="text-lg font-bold text-[#1E3A5F] mb-2">
-                          {customAmount
-  ? `$${customAmount} ${t.donate.donation}`
-  : t.donate.enterAmount}
+                            {customAmount
+                              ? `$${customAmount} ${safeT('donate.donation', 'Donation')}`
+                              : safeT('donate.enterAmount', 'Enter an amount')}
                           </h3>
                           <p className="text-gray-500 text-sm">
-                          {t.donate.everyDollarGoes}                          </p>
+                            {safeT('donate.everyDollarGoes', 'Every dollar goes directly to supporting children and women in Burundi.')}
+                          </p>
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -341,11 +316,13 @@ export default function DonatePage() {
                 <div className="p-6 border-t border-gray-100 bg-gray-50">
                   <button className="w-full py-4 bg-gradient-to-r from-[#1E3A5F] to-[#0F2744] text-white rounded-xl font-bold text-lg hover:shadow-xl hover:from-[#0F2744] hover:to-[#1E3A5F] transition-all flex items-center justify-center gap-3">
                     <Heart className="w-5 h-5" fill="white" />
-                    {t.donate.donateNow}
-                    {donationType === 'monthly' ? ` ${t.donate.perMonth}` : ''}                  </button>
+                    {safeT('donate.donateNow', 'Donate Now')}
+                    {donationType === 'monthly' ? ` ${safeT('donate.perMonth', '/ month')}` : ''}
+                  </button>
                   <p className="text-center text-xs text-gray-500 mt-3 flex items-center justify-center gap-1.5">
                     <Lock className="w-3 h-3" />
-                    {t.donate.secureAndEncrypted}                  </p>
+                    {safeT('donate.secureAndEncrypted', 'Secure and encrypted. 100% goes to programs.')}
+                  </p>
                 </div>
               </motion.div>
 
@@ -356,8 +333,8 @@ export default function DonatePage() {
                 transition={{ delay: 0.1 }}
                 className="bg-white rounded-2xl border border-gray-100 shadow-lg p-6"
               >
-                <h2 className="text-lg font-semibold text-[#1E3A5F] mb-2">{t.donate.categories}</h2>
-                  <p className="text-sm text-gray-500 mb-6">{t.donate.chooseAreaDirect}</p>
+                <h2 className="text-lg font-semibold text-[#1E3A5F] mb-2">{safeT('donate.categories', 'Donation Categories')}</h2>
+                <p className="text-sm text-gray-500 mb-6">{safeT('donate.chooseAreaDirect', 'Choose a specific area to direct your donation')}</p>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                   {fundCategories.map((cat) => (
                     <button
@@ -372,7 +349,7 @@ export default function DonatePage() {
                       <div className={`w-9 h-9 rounded-lg bg-gradient-to-br ${cat.color} flex items-center justify-center mb-2.5 group-hover:scale-110 transition-transform`}>
                         <cat.icon className="w-4 h-4 text-white" />
                       </div>
-                      <p className="font-medium text-[#1E3A5F] text-xs leading-tight">{t.donate[cat.key as keyof typeof t.donate]}</p>
+                      <p className="font-medium text-[#1E3A5F] text-xs leading-tight">{safeT(`donate.${cat.key}`, cat.key)}</p>
                       {selectedFund === cat.key && (
                         <span className="inline-block mt-1 w-4 h-0.5 bg-[#D4AF37] rounded-full" />
                       )}
@@ -398,21 +375,46 @@ export default function DonatePage() {
                       <Building2 className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-semibold">{t.donate.bankTransfer}</h3>
-                      <p className="text-white/60 text-xs">{t.donate.internationalTransfersAccepted}</p>
+                      <h3 className="font-semibold">{safeT('donate.bankTransfer', 'Bank Transfer')}</h3>
+                      <p className="text-white/60 text-xs">{safeT('donate.internationalTransfersAccepted', 'International transfers accepted')}</p>
                     </div>
                   </div>
 
                   <div className="space-y-3 text-sm">
-                    <BankRow label={t.donate.bankNameLabel} value="BCB — Banque Commerciale du Burundi" copiedField={copiedField} fieldId="bank" onCopy={copyToClipboard} />
-                    <BankRow label={t.donate.currencyLabel} value="USD" copiedField={copiedField} fieldId="currency" onCopy={copyToClipboard} />
-                    <BankRow label={t.donate.accountNumberLabel} value="20311600016" copiedField={copiedField} fieldId="account" onCopy={copyToClipboard} />
-                    <BankRow label={t.donate.swiftCodeLabel} value="BCBUBIBI" copiedField={copiedField} fieldId="swift" onCopy={copyToClipboard} />
+                    <BankRow 
+                      label={safeT('donate.bankName', 'Bank')} 
+                      value="BCB — Banque Commerciale du Burundi" 
+                      copiedField={copiedField} 
+                      fieldId="bank" 
+                      onCopy={copyToClipboard} 
+                    />
+                    <BankRow 
+                      label={safeT('donate.currency', 'Currency')} 
+                      value="USD" 
+                      copiedField={copiedField} 
+                      fieldId="currency" 
+                      onCopy={copyToClipboard} 
+                    />
+                    <BankRow 
+                      label={safeT('donate.accountNumber', 'Account Number')} 
+                      value="20311600016" 
+                      copiedField={copiedField} 
+                      fieldId="account" 
+                      onCopy={copyToClipboard} 
+                    />
+                    <BankRow 
+                      label={safeT('donate.swiftCode', 'SWIFT/BIC Code')} 
+                      value="BCBUBIBI" 
+                      copiedField={copiedField} 
+                      fieldId="swift" 
+                      onCopy={copyToClipboard} 
+                    />
                   </div>
 
                   <div className="mt-4 pt-4 border-t border-white/10">
                     <p className="text-white/60 text-xs">
-                    {t.donate.pleaseIncludeName}                    </p>
+                      {safeT('donate.pleaseIncludeName', 'Please include your name and "Fondation Mariam Donation" as the payment reference.')}
+                    </p>
                   </div>
                 </div>
               </motion.div>
@@ -424,13 +426,13 @@ export default function DonatePage() {
                 transition={{ delay: 0.1 }}
                 className="bg-white rounded-2xl border border-gray-100 shadow-lg p-6"
               >
-                <p className="text-sm font-semibold text-[#1E3A5F] mb-4">{t.donate.trustAndImpactSectionTitle}</p>
+                <p className="text-sm font-semibold text-[#1E3A5F] mb-4">{safeT('donate.trustAndImpact', 'Trust & Impact')}</p>
                 <div className="space-y-3">
-                  <TrustItem icon={Shield} text={t.donate.securePayments} />
-                  <TrustItem icon={Award} text={t.donate.recognizedNgoSince} />                  
-                  <TrustItem icon={Heart} text={t.donate.hundredPercentPrograms} />
-                  <TrustItem icon={Lock} text={t.donate.noHiddenFees} />  
-                  <TrustItem icon={Users} text={t.donate.humanitarianServiceYears} />
+                  <TrustItem icon={Shield} text={safeT('donate.securePayments', 'Secure Payments')} />
+                  <TrustItem icon={Award} text={safeT('donate.recognizedNgoSince', 'Recognized NGO Since 1978')} />
+                  <TrustItem icon={Heart} text={safeT('donate.hundredPercentPrograms', '100% Goes to Programs')} />
+                  <TrustItem icon={Lock} text={safeT('donate.noHiddenFees', 'No hidden fees or deductions')} />
+                  <TrustItem icon={Users} text={safeT('donate.humanitarianService', '46+ years of humanitarian service')} />
                 </div>
               </motion.div>
 
@@ -443,10 +445,10 @@ export default function DonatePage() {
               >
                 <div className="absolute top-2 right-3 text-6xl text-[#D4AF37]/10 font-serif leading-none">"</div>
                 <p className="text-[#1E3A5F] font-medium text-sm leading-relaxed relative z-10">
-                  {t.donate.transparencyNote}
+                  {safeT('donate.transparencyNote', '100% of your donation goes directly to programs.')}
                 </p>
                 <div className="mt-3 pt-3 border-t border-[#D4AF37]/20">
-                  <p className="text-xs text-gray-500">{t.donate.quoteDisclaimer}</p>
+                  <p className="text-xs text-gray-500">Ord. Min. N°550/936 du 05/06/2020</p>
                 </div>
               </motion.div>
             </div>
@@ -464,32 +466,33 @@ export default function DonatePage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl font-serif font-bold text-[#1E3A5F] mb-3">
-              {t.donate.otherWays}
+              {safeT('donate.otherWays', 'Other Ways to Help')}
             </h2>
             <p className="text-gray-500 max-w-2xl mx-auto">
-            {t.donate.otherWaysSubtitle}            </p>
+              {safeT('donate.otherWaysSubtitle', 'There are many ways to support our mission beyond financial donations.')}
+            </p>
           </motion.div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {otherWays.map((way, idx) => (
               <motion.div
-                key={way.titleKey}
+                key={way.key}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
-                className="group bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all"
+                className="group bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all overflow-hidden relative"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-[#10B981] to-[#34D399] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg shadow-emerald-200">
-                  <way.icon className="w-6 h-6 text-white" />
+                <div className="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity">
+                  <img src={way.image} alt="" className="w-full h-full object-cover" />
                 </div>
-                <h3 className="font-semibold text-[#1E3A5F] mb-1">
-  {t.donate[way.titleKey as keyof typeof t.donate]}
-</h3>
-
-<p className="text-sm text-gray-500">
-  {t.donate[way.descKey as keyof typeof t.donate]}
-</p>
+                <div className="relative z-10">
+                  <div className="w-12 h-12 bg-gradient-to-br from-[#10B981] to-[#34D399] rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg shadow-emerald-200">
+                    <way.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="font-semibold text-[#1E3A5F] mb-1">{safeT(`donate.${way.key}`, way.key)}</h3>
+                  <p className="text-sm text-gray-500">{safeT(`donate.${way.key}Desc`, '')}</p>
+                </div>
               </motion.div>
             ))}
           </div>

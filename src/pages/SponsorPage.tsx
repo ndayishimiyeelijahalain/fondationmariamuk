@@ -7,33 +7,77 @@ import {
   CheckCircle,
 } from 'lucide-react';
 import { useI18n } from '../i18n';
+import { useSafeT } from '../utils/i18n';
 
 export default function SponsorPage() {
   const { t } = useI18n();
+  const safeT = useSafeT();
   const [selectedAmount, setSelectedAmount] = useState(35);
 
   const sponsorshipAmounts = [25, 35, 50, 100];
 
   const steps = [
-    { key: 'chooseChild', icon: Users, desc: t.sponsor.chooseChildDesc },
-    { key: 'monthlySupport', icon: Heart, desc: t.sponsor.monthlySupportDesc },
-    { key: 'buildRelationship', icon: ChevronRight, desc: t.sponsor.buildRelationshipDesc },
+    { 
+      key: 'chooseChild', 
+      icon: Users, 
+      title: safeT('sponsor.chooseChild', 'Choose a Child'),
+      desc: safeT('sponsor.chooseChildDesc', 'Browse profiles of children waiting for sponsorship.'),
+      image: '/gallery/children-01.jpg'
+    },
+    { 
+      key: 'monthlySupport', 
+      icon: Heart, 
+      title: safeT('sponsor.monthlySupport', 'Monthly Support'),
+      desc: safeT('sponsor.monthlySupportDesc', 'Contribute monthly for education, health and well-being.'),
+      image: '/fondation-mariam/education-classroom-01.jpg'
+    },
+    { 
+      key: 'buildRelationship', 
+      icon: ChevronRight, 
+      title: safeT('sponsor.buildRelationship', 'Build a Relationship'),
+      desc: safeT('sponsor.buildRelationshipDesc', 'Receive updates and build a meaningful relationship.'),
+      image: '/fondation-mariam/gallery-courtyard-group-01.jpg'
+    },
   ];
 
   const benefits = [
-    t.sponsor.educationSupport,
-    t.sponsor.healthcareSupport,
-    t.sponsor.nutritionSupport,
-    t.sponsor.mentoringSupport,
-    t.sponsor.lifeSkillsSupport,
-    t.sponsor.communityBenefit,
+    safeT('sponsor.educationSupport', 'Access to education'),
+    safeT('sponsor.healthcareSupport', 'Healthcare'),
+    safeT('sponsor.nutritionSupport', 'Proper nutrition'),
+    safeT('sponsor.mentoringSupport', 'Mentoring and guidance'),
+    safeT('sponsor.lifeSkillsSupport', 'Life skills'),
+    safeT('sponsor.communityBenefit', 'Community benefit'),
   ];
 
   const children = [
-    { id: 1, name: 'Amina', age: 8, bio: 'Loves learning and dreams of becoming a teacher', image: 'gallery/children-01.jpg' },
-    { id: 2, name: 'Jean', age: 10, bio: 'Enjoys football and wants to help his community', image: 'https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=200' },
-    { id: 3, name: 'Grace', age: 7, bio: 'Bright student who loves to read', image: 'https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=200' },
-    { id: 4, name: 'Patrick', age: 12, bio: 'Talented artist, needs school support', image: 'https://images.pexels.com/photos/2204537/pexels-photo-2204537.jpeg?auto=compress&cs=tinysrgb&w=200' },
+    { 
+      id: 1, 
+      name: 'Amina', 
+      age: 8, 
+      bio: safeT('sponsor.childBio1', 'Loves learning and dreams of becoming a teacher'), 
+      image: '/gallery/children-01.jpg' 
+    },
+    { 
+      id: 2, 
+      name: 'Jean', 
+      age: 10, 
+      bio: safeT('sponsor.childBio2', 'Enjoys football and wants to help his community'), 
+      image: '/gallery/children-02.jpg' 
+    },
+    { 
+      id: 3, 
+      name: 'Grace', 
+      age: 7, 
+      bio: safeT('sponsor.childBio3', 'Bright student who loves to read'), 
+      image: '/gallery/children-03.jpg' 
+    },
+    { 
+      id: 4, 
+      name: 'Patrick', 
+      age: 12, 
+      bio: safeT('sponsor.childBio4', 'Talented artist, needs school support'), 
+      image: '/gallery/children-04.jpg' 
+    },
   ];
 
   return (
@@ -41,11 +85,7 @@ export default function SponsorPage() {
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-[#1E3A5F] to-[#0F2744] overflow-hidden">
         <div className="absolute inset-0 opacity-20">
-          <img
-            src="/fondation-mariam/education-girls-uniforms-01.jpg"
-            alt=""
-            className="w-full h-full object-cover"
-          />
+          <img src="/gallery/children-05.jpg" alt="Children" className="w-full h-full object-cover" />
         </div>
         <div className="absolute top-20 right-20 w-64 h-64 bg-[#D4AF37]/10 rounded-full blur-3xl" />
 
@@ -56,13 +96,15 @@ export default function SponsorPage() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6">
               <Heart className="w-4 h-4 text-[#D4AF37]" fill="#D4AF37" />
-              <span className="text-white/90 text-sm font-medium">{t.sponsor.programTitle}</span>
+              <span className="text-white/90 text-sm font-medium">
+                {safeT('sponsor.badge', 'Child Sponsorship Program')}
+              </span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-white mb-6">
-              {t.sponsor.title}
+              {safeT('sponsor.title', 'Sponsor a Child')}
             </h1>
             <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto">
-              {t.sponsor.subtitle}
+              {safeT('sponsor.subtitle', 'Transform a life through monthly sponsorship')}
             </p>
           </motion.div>
         </div>
@@ -78,7 +120,7 @@ export default function SponsorPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl font-serif font-bold text-[#1E3A5F] mb-4">
-              {t.sponsor.howItWorks}
+              {safeT('sponsor.howItWorks', 'How it Works')}
             </h2>
           </motion.div>
 
@@ -90,18 +132,23 @@ export default function SponsorPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="relative bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center"
+                className="relative bg-white rounded-2xl p-6 shadow-lg border border-gray-100 text-center overflow-hidden"
               >
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 bg-gradient-to-br from-[#D4AF37] to-[#F5D76E] rounded-full flex items-center justify-center text-[#1E3A5F] font-bold text-sm">
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity">
+                  <img src={step.image} alt="" className="w-full h-full object-cover" />
+                </div>
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 bg-gradient-to-br from-[#D4AF37] to-[#F5D76E] rounded-full flex items-center justify-center text-[#1E3A5F] font-bold text-sm z-10">
                   {idx + 1}
                 </div>
-                <div className="w-16 h-16 mx-auto bg-gradient-to-br from-[#10B981] to-[#34D399] rounded-2xl flex items-center justify-center mb-4 mt-4">
-                  <step.icon className="w-8 h-8 text-white" />
+                <div className="relative z-10">
+                  <div className="w-16 h-16 mx-auto bg-gradient-to-br from-[#10B981] to-[#34D399] rounded-2xl flex items-center justify-center mb-4 mt-4">
+                    <step.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-[#1E3A5F] mb-2">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm">{step.desc}</p>
                 </div>
-                <h3 className="text-lg font-semibold text-[#1E3A5F] mb-2">
-                  {t.sponsor[step.key as keyof typeof t.sponsor]}
-                </h3>
-                <p className="text-gray-600 text-sm">{step.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -113,9 +160,9 @@ export default function SponsorPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-serif font-bold text-[#1E3A5F] mb-4">
-              {t.sponsor.waitingChildrenTitle}
+              {safeT('sponsor.waitingChildren', 'Children Waiting for Sponsors')}
             </h2>
-            <p className="text-gray-600">{t.sponsor.waitingChildrenSubtitle}</p>
+            <p className="text-gray-600">{safeT('sponsor.everyChildDeserves', 'Every child deserves a chance')}</p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -127,7 +174,7 @@ export default function SponsorPage() {
                 viewport={{ once: true }}
                 className="group bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden hover:-translate-y-1 transition-all"
               >
-                <div className="relative h-48">
+                <div className="relative h-48 overflow-hidden">
                   <img
                     src={child.image}
                     alt={child.name}
@@ -136,13 +183,13 @@ export default function SponsorPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                   <div className="absolute bottom-4 left-4">
                     <p className="text-white font-semibold text-lg">{child.name}</p>
-                    <p className="text-white/80 text-sm">{t.common.age} {child.age}</p>
+                    <p className="text-white/80 text-sm">{safeT('sponsor.age', 'Age')} {child.age}</p>
                   </div>
                 </div>
                 <div className="p-4">
-                  <p className="text-gray-600 text-sm mb-4">{child.bio}</p>
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">{child.bio}</p>
                   <button className="w-full py-2 bg-gradient-to-r from-[#D4AF37] to-[#F5D76E] text-[#1E3A5F] rounded-lg font-medium hover:shadow-lg transition-all">
-                    {t.sponsor.sponsorChildButton.replace('{childName}', child.name)}
+                    {safeT('sponsor.sponsorChild', 'Sponsor')} {child.name}
                   </button>
                 </div>
               </motion.div>
@@ -160,7 +207,9 @@ export default function SponsorPage() {
             viewport={{ once: true }}
             className="text-center"
           >
-            <h2 className="text-3xl font-serif font-bold mb-12">{t.sponsor.impact}</h2>
+            <h2 className="text-3xl font-serif font-bold mb-12">
+              {safeT('sponsor.impact', 'Impact of Sponsorship')}
+            </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, idx) => (
                 <div key={idx} className="flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-xl p-4">
@@ -182,7 +231,9 @@ export default function SponsorPage() {
             viewport={{ once: true }}
             className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8"
           >
-            <h3 className="text-xl font-semibold text-[#1E3A5F] mb-6">{t.sponsor.selectAmountTitle}</h3>
+            <h3 className="text-xl font-semibold text-[#1E3A5F] mb-6">
+              {safeT('sponsor.selectAmount', 'Select Monthly Amount')}
+            </h3>
 
             <div className="grid grid-cols-2 gap-3 mb-6">
               {sponsorshipAmounts.map((amount) => (
@@ -195,26 +246,26 @@ export default function SponsorPage() {
                       : 'bg-gray-50 text-gray-700 hover:bg-gray-100'
                   }`}
                 >
-                  ${amount}{t.donate.perMonth}
+                  ${amount}/{safeT('sponsor.month', 'month')}
                 </button>
               ))}
             </div>
 
             <div className="bg-gray-50 rounded-xl p-4 mb-6">
               <p className="text-sm text-gray-600">
-                {t.sponsor.monthlyProvides.replace('${amount}', String(selectedAmount))}
+                {safeT('sponsor.provides', 'Your')} ${selectedAmount}/{safeT('sponsor.month', 'month')} {safeT('sponsor.provides', 'provides')}:
               </p>
               <ul className="mt-2 text-sm text-gray-700 space-y-1">
-                <li>• {t.sponsor.benefitsSchool}</li>
-                <li>• {t.sponsor.benefitsMeals}</li>
-                <li>• {t.sponsor.benefitsHealthcare}</li>
-                <li>• {t.sponsor.benefitsDevelopment}</li>
+                <li>• {safeT('sponsor.schoolFees', 'School fees and supplies')}</li>
+                <li>• {safeT('sponsor.meals', 'Daily nutritious meals')}</li>
+                <li>• {safeT('sponsor.healthcare', 'Healthcare check-ups')}</li>
+                <li>• {safeT('sponsor.development', 'Personal development support')}</li>
               </ul>
             </div>
 
             <button className="w-full py-4 bg-gradient-to-r from-[#1E3A5F] to-[#0F2744] text-white rounded-xl font-semibold hover:shadow-xl transition-all flex items-center justify-center gap-2">
               <Heart className="w-5 h-5" fill="white" />
-              {t.sponsor.applyNow}
+              {safeT('sponsor.applyNow', 'Apply Now')}
             </button>
           </motion.div>
         </div>

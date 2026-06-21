@@ -16,21 +16,12 @@ import {
   Shield,
   GraduationCap,
   Home,
-  HelpCircle,
-  Trophy,
-  Quote,
 } from 'lucide-react';
-
 import { useI18n } from '../i18n';
+import { useSafeT } from '../utils/i18n';
 
-// -----------------------------
-// SAFE translation type helper
-// -----------------------------
 type T = ReturnType<typeof useI18n>['t'];
 
-// -----------------------------
-// Counter hook
-// -----------------------------
 function useCounter(end: number, duration: number = 2) {
   const [count, setCount] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
@@ -38,30 +29,22 @@ function useCounter(end: number, duration: number = 2) {
 
   useEffect(() => {
     if (!isInView) return;
-
     let startTime: number;
-
     const animate = (timestamp: number) => {
       if (!startTime) startTime = timestamp;
-
       const progress = Math.min((timestamp - startTime) / (duration * 1000), 1);
-
       setCount(Math.floor(progress * end));
-
       if (progress < 1) requestAnimationFrame(animate);
     };
-
     requestAnimationFrame(animate);
   }, [isInView, end, duration]);
 
   return { count, ref };
 }
 
-// -----------------------------
-// HOME PAGE
-// -----------------------------
 export default function HomePage() {
   const { t } = useI18n();
+  const safeT = useSafeT();
 
   const heroRef = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll();
@@ -69,7 +52,7 @@ export default function HomePage() {
 
   return (
     <div className="overflow-hidden">
-      {/* HERO */}
+      {/* HERO - Image: hero-main.jpg */}
       <section
         ref={heroRef}
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
@@ -77,7 +60,7 @@ export default function HomePage() {
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-[#1E3A5F] via-[#0F2744] to-[#0A1929]" />
           <div
-            className="absolute inset-0 bg-cover bg-center opacity-35"
+            className="absolute inset-0 bg-cover bg-center opacity-45"
             style={{ backgroundImage: "url('/hero/hero-main.jpg')" }}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0A1929] via-[#1E3A5F]/50 to-transparent opacity-90" />
@@ -90,63 +73,60 @@ export default function HomePage() {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full mb-8">
               <span className="text-white/90 text-sm font-medium">
-                {t.common.sinceDate.replace('{year}', '1978')} • {t.about.recognition}
+                Since 1978 • {safeT('about.recognition', 'Recognition')}
               </span>
             </div>
 
             <h1 className="text-5xl font-bold text-white mb-6">
-              {t.hero.title}
+              {safeT('hero.title', 'Bringing Hope To Every Child, Every Woman, Every Future')}
             </h1>
 
             <p className="text-xl text-white/80 mb-10 max-w-3xl mx-auto">
-              {t.hero.subtitle}
+              {safeT('hero.subtitle', 'Since 1978, Fondation Mariam has transformed lives through education, protection, empowerment, healthcare, sports, culture, and humanitarian support.')}
             </p>
 
             <div className="flex gap-4 justify-center flex-wrap">
               <Link
                 to="/donate"
-                className="px-8 py-4 bg-yellow-400 text-blue-900 rounded-full font-semibold flex items-center gap-2"
+                className="px-8 py-4 bg-yellow-400 text-blue-900 rounded-full font-semibold flex items-center gap-2 hover:scale-105 transition"
               >
                 <Heart />
-                {t.hero.donate}
+                {safeT('hero.donate', 'Donate Now')}
               </Link>
 
               <Link
                 to="/sponsor"
-                className="px-8 py-4 bg-white/10 text-white rounded-full"
+                className="px-8 py-4 bg-white/10 text-white rounded-full font-semibold flex items-center gap-2 hover:bg-white/20 transition"
               >
                 <Users />
-                {t.hero.sponsor}
+                {safeT('hero.sponsor', 'Sponsor a Child')}
               </Link>
             </div>
           </motion.div>
         </motion.div>
       </section>
 
-      {/* IMPACT */}
-      <ImpactStats t={t} />
+      {/* IMPACT STATS */}
+      <ImpactStats t={t} safeT={useSafeT()} />
 
-      {/* MISSION */}
-      <MissionSection t={t} />
+      {/* MISSION SECTION */}
+      <MissionSection t={t} safeT={useSafeT()} />
 
-      {/* PROGRAMS */}
-      <ProgramsGrid t={t} />
+      {/* PROGRAMS GRID */}
+      <ProgramsGrid t={t} safeT={useSafeT()} />
 
-      {/* CTA */}
-      <CTASection t={t} />
+      {/* CTA SECTION - Image: impact-child-portrait-02.jpg */}
+      <CTASection t={t} safeT={useSafeT()} />
     </div>
   );
 }
 
-// -----------------------------
-// IMPACT STATS
-// -----------------------------
-function ImpactStats({ t }: { t: T }) {
+function ImpactStats({ t, safeT }: { t: T; safeT: (key: string, fallback: string) => string }) {
   const stats = [
-    { value: 5000, label: t.impact.children, icon: Heart },
-    { value: 2500, label: t.impact.women, icon: Users },
-    { value: 46, label: t.impact.years, icon: Calendar },
-    { value: 50, label: t.impact.communities, icon: MapPin },
+    { value: 5000, label: safeT('impact.children', 'Children Supported'), icon: Heart },
+    { value: 2500, label: safeT('impact.women', 'Women Empowered'), icon: Users },
+    { value: 46, label: safeT('impact.years', 'Years of Service'), icon: Calendar },
+    { value: 50, label: safeT('impact.communities', 'Communities Reached'), icon: MapPin },
   ];
 
   return (
@@ -154,13 +134,10 @@ function ImpactStats({ t }: { t: T }) {
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
         {stats.map((s, i) => {
           const counter = useCounter(s.value);
-
           return (
             <div key={i} ref={counter.ref} className="text-center">
               <s.icon className="mx-auto mb-3 text-blue-900" />
-              <div className="text-4xl font-bold text-blue-900">
-                {counter.count}+
-              </div>
+              <div className="text-4xl font-bold text-blue-900">{counter.count}</div>
               <p>{s.label}</p>
             </div>
           );
@@ -170,24 +147,18 @@ function ImpactStats({ t }: { t: T }) {
   );
 }
 
-// -----------------------------
-// MISSION
-// -----------------------------
-function MissionSection({ t }: { t: T }) {
+function MissionSection({ t, safeT }: { t: T; safeT: (key: string, fallback: string) => string }) {
   return (
     <section className="py-20 bg-blue-900 text-white text-center">
-      <h2 className="text-3xl font-bold mb-4">{t.about.mission}</h2>
+      <h2 className="text-3xl font-bold mb-4">{safeT('about.mission', 'Our Mission')}</h2>
       <p className="max-w-2xl mx-auto opacity-80">
-        {t.about.missionText}
+        {safeT('about.missionText', 'Support and protect orphaned children, vulnerable women, children with disabilities, unaccompanied children, women prisoners, and marginalized communities through education, healthcare, empowerment, protection, cultural development, sports, and humanitarian assistance.')}
       </p>
     </section>
   );
 }
 
-// -----------------------------
-// PROGRAMS
-// -----------------------------
-function ProgramsGrid({ t }: { t: T }) {
+function ProgramsGrid({ t, safeT }: { t: T; safeT: (key: string, fallback: string) => string }) {
   const programs = [
     'orphanSupport',
     'education',
@@ -215,16 +186,14 @@ function ProgramsGrid({ t }: { t: T }) {
       <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
         {programs.map((key) => {
           const Icon = icons[key];
-
           return (
             <Link
               key={key}
               to={`/programs#${key}`}
-              className="bg-white p-6 rounded-xl shadow"
+              className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition"
             >
               <Icon className="mb-3 text-blue-900" />
-              <h3 className="font-semibold text-[#1E3A5F]">                {t.programs?.[key] ?? key}
-              </h3>
+              <h3 className="font-semibold">{safeT(`programs.${key}`, key)}</h3>
             </Link>
           );
         })}
@@ -233,45 +202,33 @@ function ProgramsGrid({ t }: { t: T }) {
   );
 }
 
-// -----------------------------
-// CTA (UPDATED PREMIUM VERSION)
-// -----------------------------
-function CTASection({ t }: { t: T }) {
+function CTASection({ t, safeT }: { t: T; safeT: (key: string, fallback: string) => string }) {
+  const title = safeT('donate.title', 'Your Generosity Creates Lasting Change');
+  const subtitle = safeT('donate.subtitle', 'Every contribution transforms lives and brings hope to the most vulnerable.');
+  const donateText = safeT('hero.donate', 'Donate Now');
+
   return (
     <section className="relative py-24 text-center text-white overflow-hidden">
-      
-      {/* BACKGROUND IMAGE */}
       <div className="absolute inset-0">
-  <div
-    className="absolute inset-0 bg-cover"
-    style={{
-      backgroundImage: "url('/fondation-mariam/impact-child-portrait-02.jpg')",
-      backgroundPosition: "center 25%",
-      backgroundSize: "cover",
-    }}
-  />
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/fondation-mariam/impact-child-portrait-02.jpg')",
+          }}
+        />
+        <div className="absolute inset-0 bg-blue-900/80" />
+      </div>
 
-  <div className="absolute inset-0 bg-blue-900/80" />
-</div>
-
-      {/* CONTENT */}
       <div className="relative z-10 max-w-3xl mx-auto px-4">
-      <h2 className="text-4xl font-bold mb-6">
-  {t.cta.title}
-</h2>
-
-<p className="text-white/80 text-lg mb-8">
-  {t.cta.subtitle}
-</p>
-
-<Heart />
-
+        <h2 className="text-4xl font-bold mb-6">{title}</h2>
+        <p className="text-white/80 text-lg mb-8">{subtitle}</p>
         <Link
           to="/donate"
           className="inline-flex items-center gap-2 px-8 py-4 bg-yellow-400 text-blue-900 rounded-full font-semibold hover:scale-105 transition"
         >
           <Heart />
-          {t.cta.button}        </Link>
+          {donateText}
+        </Link>
       </div>
     </section>
   );

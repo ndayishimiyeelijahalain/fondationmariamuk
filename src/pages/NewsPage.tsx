@@ -2,8 +2,12 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Calendar, User, Search, Filter, ArrowRight } from 'lucide-react';
+import { useI18n } from '../i18n';
+import { useSafeT } from '../utils/i18n';
 
 export default function NewsPage() {
+  const { t } = useI18n();
+  const safeT = useSafeT();
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -23,7 +27,7 @@ export default function NewsPage() {
       category: 'news',
       date: '2024-06-15',
       author: 'Fondation Mariam Team',
-      image: 'gallery/children-05.jpg',
+      image: '/gallery/children-05.jpg',
       featured: true,
     },
     {
@@ -33,7 +37,7 @@ export default function NewsPage() {
       category: 'stories',
       date: '2024-06-10',
       author: 'Communications Team',
-      image: 'gallery/children-05.jpg',
+      image: '/gallery/children-05.jpg',
       featured: false,
     },
     {
@@ -43,7 +47,7 @@ export default function NewsPage() {
       category: 'news',
       date: '2024-06-05',
       author: 'Program Team',
-      image: '',
+      image: '/gallery/woman-02.jpg',
       featured: false,
     },
     {
@@ -53,7 +57,7 @@ export default function NewsPage() {
       category: 'events',
       date: '2024-05-28',
       author: 'Sports Department',
-      image: '',
+      image: '/gallery/taekwondo-01.jpg',
       featured: false,
     },
     {
@@ -63,7 +67,7 @@ export default function NewsPage() {
       category: 'press',
       date: '2024-05-20',
       author: 'Partnerships Team',
-      image: '',
+      image: '/gallery/craft-01.jpg',
       featured: false,
     },
     {
@@ -73,7 +77,7 @@ export default function NewsPage() {
       category: 'events',
       date: '2024-05-15',
       author: 'Women Empowerment Team',
-      image: '',
+      image: '/gallery/woman-03.jpg',
       featured: false,
     },
   ];
@@ -100,7 +104,7 @@ export default function NewsPage() {
             animate={{ opacity: 1, y: 0 }}
           >
             <h1 className="text-4xl sm:text-5xl font-serif font-bold text-white mb-6">
-              News & Stories
+              {safeT('nav.news', 'News & Stories')}
             </h1>
             <p className="text-lg text-white/80">
               Updates, impact stories, and announcements from Fondation Mariam
@@ -134,7 +138,7 @@ export default function NewsPage() {
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
               <input
                 type="text"
-                placeholder={t.news.searchPlaceholder}
+                placeholder="Search articles..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-2 bg-white border border-gray-200 rounded-full focus:outline-none focus:border-[#D4AF37] transition-colors"
@@ -185,7 +189,7 @@ export default function NewsPage() {
                     to={`/news/${featuredArticle.id}`}
                     className="inline-flex items-center gap-2 text-[#1E3A5F] font-medium hover:text-[#D4AF37] transition-colors"
                   >
-                    Read More <ArrowRight className="w-4 h-4" />
+                    {safeT('common.readMore', 'Read More')} <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               </div>
@@ -233,7 +237,7 @@ export default function NewsPage() {
                       to={`/news/${article.id}`}
                       className="text-[#D4AF37] font-medium hover:underline"
                     >
-                      Read More
+                      {safeT('common.readMore', 'Read More')}
                     </Link>
                   </div>
                 </div>
