@@ -1,0 +1,22 @@
+# robots.txt for Fondation Mariam Website
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /node_modules/
+
+# Specific crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl delay in milliseconds
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://fondation-mariam.org/sitemap.xml
