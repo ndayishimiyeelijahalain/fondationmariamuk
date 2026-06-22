@@ -267,7 +267,7 @@ export default function ContactPage() {
                 className="bg-gradient-to-br from-[#1E3A5F] to-[#0F2744] text-white rounded-2xl p-8"
               >
                 <h3 className="text-xl font-semibold mb-6">
-                  {safeT('social.followUs', 'Suivez-nous sur les réseaux sociaux')}
+                  {safeT('social.followUsTitle', 'Suivez-nous sur les réseaux sociaux')}
                 </h3>
                 <div className="grid grid-cols-3 gap-3">
                   {socialLinks.map((social) => {
@@ -297,7 +297,9 @@ export default function ContactPage() {
                 viewport={{ once: true }}
                 className="bg-gray-50 rounded-2xl p-8 border border-gray-100"
               >
-                <h3 className="text-xl font-semibold text-[#1E3A5F] mb-6">{safeT('contact.headOffice', 'Siège Social')}</h3>
+                <h3 className="text-xl font-semibold text-[#1E3A5F] mb-6">
+                  {safeT('contact.headOffice', 'Siège Social')}
+                </h3>
                 <div className="space-y-4">
                   <div className="flex items-start gap-4">
                     <MapPin className="w-6 h-6 text-[#D4AF37] flex-shrink-0 mt-0.5" />
@@ -373,11 +375,17 @@ export default function ContactPage() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <Clock className="w-6 h-6 text-[#D4AF37]" />
-                  <h3 className="text-xl font-semibold text-[#1E3A5F]">{safeT('contact.officeHours', 'Heures d\'Ouverture')}</h3>
+                  <h3 className="text-xl font-semibold text-[#1E3A5F]">
+                    {safeT('contact.officeHours', 'Heures d\'Ouverture')}
+                  </h3>
                 </div>
                 <div className="space-y-2 text-gray-600">
-                  <p><strong>{safeT('contact.weekdays', 'Lundi - Vendredi')}:</strong> 8:00 AM - 5:00 PM</p>
-                  <p><strong>{safeT('contact.saturday', 'Samedi')}:</strong> 9:00 AM - 12:00 PM</p>
+                  <p>
+                    <strong>{safeT('contact.weekdays', 'Lundi - Vendredi')}:</strong> 8:00 AM - 5:00 PM
+                  </p>
+                  <p>
+                    <strong>{safeT('contact.saturday', 'Samedi')}:</strong> 9:00 AM - 12:00 PM
+                  </p>
                 </div>
               </motion.div>
             </div>
