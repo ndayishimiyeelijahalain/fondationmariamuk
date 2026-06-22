@@ -126,6 +126,7 @@ export default function ProgramsPage() {
 
   return (
     <div className="min-h-screen bg-white pt-20">
+      {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-[#1E3A5F] to-[#0F2744] overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <img src="/fondation-mariam/gallery-courtyard-group-01.jpg" alt="" className="w-full h-full object-cover" />
@@ -202,32 +203,30 @@ export default function ProgramsPage() {
         </div>
       </section>
 
-      {/* Taekwondo Highlight */}
+      {/* Taekwondo Highlight - NOW FULLY TRANSLATED */}
       <section className="py-20 bg-gradient-to-br from-[#1E3A5F] to-[#0F2744] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <span className="inline-flex items-center gap-2 px-4 py-1.5 bg-[#D4AF37]/20 text-[#D4AF37] rounded-full text-sm font-medium mb-6">
                 <TrophyIcon className="w-4 h-4" />
-                Featured Program
+                {safeT('programs.featuredProgram', 'Featured Program')}
               </span>
               <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-6">
-                Taekwondo Excellence Program
+                {safeT('programs.taekwondoTitle', 'Taekwondo Excellence Program')}
               </h2>
               <p className="text-white/80 leading-relaxed mb-6">
-                Our Taekwondo program teaches discipline, respect, and leadership to vulnerable youth.
-                With multiple championship trophies, we've proven that every child can achieve greatness
-                with the right support and guidance.
+                {safeT('programs.taekwondoDesc', 'Our Taekwondo program teaches discipline, respect, and leadership to vulnerable youth. With multiple championship trophies, we have proven that every child can achieve greatness with the right support and guidance.')}
               </p>
 
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
                   <p className="text-3xl font-bold text-[#D4AF37]">4+</p>
-                  <p className="text-white/70 text-sm">Championship Trophies</p>
+                  <p className="text-white/70 text-sm">{safeT('programs.taekwondoTrophies', 'Championship Trophies')}</p>
                 </div>
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
                   <p className="text-3xl font-bold text-[#10B981]">200+</p>
-                  <p className="text-white/70 text-sm">Youth Trained</p>
+                  <p className="text-white/70 text-sm">{safeT('programs.taekwondoYouth', 'Youth Trained')}</p>
                 </div>
               </div>
 
@@ -242,19 +241,20 @@ export default function ProgramsPage() {
 
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="grid grid-cols-2 gap-4">
               <img src="/fondation-mariam/sports-taekwondo-training-01.jpg" alt="Taekwondo training" className="rounded-xl shadow-xl h-64 w-full object-cover" />
-              <img src="/fondation-mariam/sports-taekwondo-girls-01.jpg" alt="Championship celebration" className="rounded-xl shadow-xl h-64 w-full object-cover mt-8" />
+              <img src="/fondation-mariam/sports-taekwondo-girls-01.jpg" alt="Taekwondo girls" className="rounded-xl shadow-xl h-64 w-full object-cover mt-8" />
             </motion.div>
           </div>
         </div>
       </section>
 
+      {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-[#D4AF37]/10 via-white to-[#D4AF37]/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-serif font-bold text-[#1E3A5F] mb-4">
             {safeT('programs.supportThisProgram', 'Support Our Programs')}
           </h2>
           <p className="text-gray-600 mb-8 max-w-xl mx-auto">
-            Your contribution helps us continue these vital programs and reach more people in need
+            {safeT('programs.ctaText', 'Your contribution helps us continue these vital programs and reach more people in need')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/donate" className="px-8 py-4 bg-gradient-to-r from-[#D4AF37] to-[#F5D76E] text-[#1E3A5F] rounded-full font-semibold shadow-lg hover:shadow-xl transition-all">

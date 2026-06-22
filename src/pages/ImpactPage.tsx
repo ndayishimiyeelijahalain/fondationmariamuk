@@ -70,7 +70,7 @@ export default function ImpactPage() {
 
   return (
     <div className="min-h-screen bg-white pt-20">
-      {/* HERO - Image: impact-child-portrait-01.jpg */}
+      {/* Hero */}
       <section className="relative py-20 bg-gradient-to-br from-[#1E3A5F] to-[#0F2744] overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <img
@@ -142,8 +142,9 @@ export default function ImpactPage() {
             </div>
           </motion.div>
 
-          {/* Boys vs Girls breakdown */}
+          {/* Boys vs Girls breakdown - CORRIGÉ: 42 GARÇONS, 34 FILLES */}
           <div className="grid sm:grid-cols-2 gap-8 max-w-2xl mx-auto mb-16">
+            {/* Boys - 42 */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -153,7 +154,8 @@ export default function ImpactPage() {
               <div className="w-16 h-16 mx-auto bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg">
                 <Users className="w-8 h-8 text-white" />
               </div>
-              <GenderCounter end={42} label="Garçons" color="text-blue-600" />              <div className="mt-4">
+              <GenderCounter end={42} label={safeT('impact.boys', 'Garçons')} color="text-blue-600" />
+              <div className="mt-4">
                 <div className="w-full bg-gray-100 rounded-full h-2.5">
                   <motion.div
                     initial={{ width: 0 }}
@@ -163,10 +165,11 @@ export default function ImpactPage() {
                     className="bg-gradient-to-r from-blue-500 to-blue-600 h-2.5 rounded-full"
                   />
                 </div>
-                <p className="text-xs text-gray-400 mt-1.5">55% {safeT('impact.children', 'of beneficiaries')}</p>
+                <p className="text-xs text-gray-400 mt-1.5">55% {safeT('impact.ofBeneficiaries', 'des bénéficiaires')}</p>
               </div>
             </motion.div>
 
+            {/* Girls - 34 */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -176,7 +179,8 @@ export default function ImpactPage() {
               <div className="w-16 h-16 mx-auto bg-gradient-to-br from-pink-500 to-rose-500 rounded-2xl flex items-center justify-center mb-4 shadow-lg">
                 <Sparkles className="w-8 h-8 text-white" />
               </div>
-              <GenderCounter end={34} label="Filles" color="text-pink-600" />              <div className="mt-4">
+              <GenderCounter end={34} label={safeT('impact.girls', 'Filles')} color="text-pink-600" />
+              <div className="mt-4">
                 <div className="w-full bg-gray-100 rounded-full h-2.5">
                   <motion.div
                     initial={{ width: 0 }}
@@ -186,11 +190,12 @@ export default function ImpactPage() {
                     className="bg-gradient-to-r from-pink-500 to-rose-500 h-2.5 rounded-full"
                   />
                 </div>
-                <p className="text-xs text-gray-400 mt-1.5">45% {safeT('impact.children', 'of beneficiaries')}</p>
+                <p className="text-xs text-gray-400 mt-1.5">45% {safeT('impact.ofBeneficiaries', 'des bénéficiaires')}</p>
               </div>
             </motion.div>
           </div>
 
+          {/* Visual breakdown bar */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -198,7 +203,7 @@ export default function ImpactPage() {
             className="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg border border-gray-100 p-6"
           >
             <h3 className="text-center font-semibold text-[#1E3A5F] mb-4">
-              {safeT('impact.subtitle', 'Gender Distribution')}
+              {safeT('impact.genderDistribution', 'Répartition par Genre')}
             </h3>
             <div className="flex rounded-xl overflow-hidden h-10 shadow-inner">
               <motion.div
@@ -208,7 +213,7 @@ export default function ImpactPage() {
                 transition={{ duration: 1.5, delay: 0.2 }}
                 className="bg-gradient-to-r from-blue-500 to-blue-400 flex items-center justify-center text-white font-bold text-sm"
               >
-                42 {safeT('impact.children', 'Boys')}
+                42 {safeT('impact.boys', 'Garçons')}
               </motion.div>
               <motion.div
                 initial={{ width: 0 }}
@@ -217,13 +222,13 @@ export default function ImpactPage() {
                 transition={{ duration: 1.5, delay: 0.4 }}
                 className="bg-gradient-to-r from-pink-400 to-rose-500 flex items-center justify-center text-white font-bold text-sm"
               >
-                34 {safeT('impact.women', 'Girls')}
+                34 {safeT('impact.girls', 'Filles')}
               </motion.div>
             </div>
             <div className="flex justify-between text-xs text-gray-500 mt-2">
-              <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-full bg-blue-500 inline-block" /> {safeT('impact.children', 'Boys')} (55.3%)</span>
-              <span className="font-bold text-[#1E3A5F]">76 {safeT('impact.children', 'Total')}</span>
-              <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-full bg-pink-500 inline-block" /> {safeT('impact.women', 'Girls')} (44.7%)</span>
+              <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-full bg-blue-500 inline-block" /> {safeT('impact.boys', 'Garçons')} (55.3%)</span>
+              <span className="font-bold text-[#1E3A5F]">76 {safeT('impact.total', 'Total')}</span>
+              <span className="flex items-center gap-1.5"><span className="w-3 h-3 rounded-full bg-pink-500 inline-block" /> {safeT('impact.girls', 'Filles')} (44.7%)</span>
             </div>
           </motion.div>
         </div>
@@ -239,13 +244,13 @@ export default function ImpactPage() {
             className="text-center mb-14"
           >
             <span className="inline-block px-4 py-1.5 bg-[#10B981]/10 text-[#10B981] rounded-full text-sm font-semibold mb-4">
-              {safeT('impact.subtitle', 'Since 1978')}
+              {safeT('impact.since1978', 'Depuis 1978')}
             </span>
             <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#1E3A5F] mb-4">
-              {safeT('impact.title', 'Cumulative Historical Impact')}
+              {safeT('impact.cumulative', 'Impact Historique Cumulé')}
             </h2>
             <p className="text-gray-500 max-w-xl mx-auto">
-              {safeT('impact.subtitle', 'Over 46 years of continuous humanitarian service across Burundi')}
+              {safeT('impact.cumulativeDesc', 'Plus de 46 ans de service humanitaire continu à travers le Burundi')}
             </p>
           </motion.div>
 
@@ -255,7 +260,7 @@ export default function ImpactPage() {
               label={safeT('impact.years', 'Years of Service')}
               icon={Calendar}
               color="from-amber-500 to-orange-500"
-              description={safeT('impact.subtitle', 'Continuous humanitarian service')}
+              description={safeT('impact.continuousService', 'Service humanitaire continu')}
             />
             <AnimatedCounter
               end={50}
@@ -263,7 +268,7 @@ export default function ImpactPage() {
               label={safeT('impact.communities', 'Communities Reached')}
               icon={MapPin}
               color="from-emerald-500 to-emerald-600"
-              description={safeT('impact.subtitle', 'Neighborhoods and communities reached')}
+              description={safeT('impact.communitiesDesc', 'Quartiers et communautés touchées')}
             />
             <AnimatedCounter
               end={1200}
@@ -271,64 +276,20 @@ export default function ImpactPage() {
               label={safeT('impact.women', 'Women Empowered')}
               icon={Sparkles}
               color="from-pink-500 to-rose-500"
-              description={safeT('impact.subtitle', 'Through vocational & empowerment programs')}
+              description={safeT('impact.womenDesc', 'À travers les programmes de formation et d\'autonomisation')}
             />
             <AnimatedCounter
               end={4}
-              label={safeT('programs.sports', 'Taekwondo Trophies')}
+              label={safeT('programs.taekwondoTrophies', 'Taekwondo Trophies')}
               icon={Trophy}
               color="from-[#D4AF37] to-[#B8942E]"
-              description={safeT('impact.subtitle', 'Regional championship victories')}
+              description={safeT('impact.trophiesDesc', 'Victoires aux championnats régionaux')}
             />
           </div>
         </div>
       </section>
 
-      {/* PROGRAM-BY-PROGRAM IMPACT */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-14"
-          >
-            <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#1E3A5F] mb-4">
-              {safeT('impact.title', 'Impact by Program Area')}
-            </h2>
-            <p className="text-gray-500 max-w-xl mx-auto">
-              {safeT('impact.subtitle', 'Each program creates measurable, lasting change in people\'s lives')}
-            </p>
-          </motion.div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {[
-              { key: 'education', label: safeT('programs.education', 'Students Enrolled'), value: '76', icon: BookOpen, color: 'from-blue-500 to-blue-600', sub: safeT('impact.subtitle', 'Current academic year') },
-              { key: 'healthcare', label: safeT('programs.healthcare', 'Medical Treatments'), value: '200+', icon: HeartPulse, color: 'from-emerald-500 to-emerald-600', sub: safeT('impact.subtitle', 'Annual beneficiaries') },
-              { key: 'food', label: safeT('programs.food', 'Families Fed Monthly'), value: '50+', icon: Utensils, color: 'from-amber-500 to-amber-600', sub: safeT('impact.subtitle', 'Food assistance') },
-              { key: 'vocational', label: safeT('programs.vocational', 'Women in Training'), value: '30+', icon: GraduationCap, color: 'from-violet-500 to-violet-600', sub: safeT('impact.subtitle', 'Vocational programs') },
-            ].map((stat, idx) => (
-              <motion.div
-                key={stat.key}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.07 }}
-                className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 text-center hover:-translate-y-1 transition-all"
-              >
-                <div className={`w-12 h-12 mx-auto bg-gradient-to-br ${stat.color} rounded-xl flex items-center justify-center mb-4 shadow-md`}>
-                  <stat.icon className="w-6 h-6 text-white" />
-                </div>
-                <p className="text-3xl font-black text-[#1E3A5F] mb-1">{stat.value}</p>
-                <p className="font-semibold text-gray-700 text-sm">{stat.label}</p>
-                <p className="text-gray-400 text-xs mt-1">{stat.sub}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SUCCESS STORIES - Images spécifiques */}
+      {/* Success Stories */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -338,9 +299,9 @@ export default function ImpactPage() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#1E3A5F] mb-4">
-              {safeT('impact.title', 'Stories of Transformation')}
+              {safeT('impact.stories', 'Histoires de Transformation')}
             </h2>
-            <p className="text-gray-500">{safeT('impact.subtitle', 'Real lives changed by your generosity')}</p>
+            <p className="text-gray-500">{safeT('impact.storiesDesc', 'Des vies réelles changées par votre générosité')}</p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -348,20 +309,20 @@ export default function ImpactPage() {
               {
                 image: '/fondation-mariam/education-girls-uniforms-01.jpg',
                 name: 'Marie-Claire, 19',
-                program: safeT('programs.education', 'Education Program'),
-                quote: safeT('impact.subtitle', 'Fondation Mariam gave me the education I needed. Today I am preparing for university and I want to become a doctor to help my community.')
+                program: safeT('programs.education', 'Programme Éducatif'),
+                quote: safeT('impact.story1', 'Fondation Mariam m\'a donné l\'éducation dont j\'avais besoin. Aujourd\'hui je me prépare pour l\'université et je veux devenir médecin pour aider ma communauté.')
               },
               {
                 image: '/fondation-mariam/sports-taekwondo-girls-01.jpg',
                 name: 'Jean-Baptiste, 14',
-                program: safeT('programs.sports', 'Taekwondo Program'),
-                quote: safeT('impact.subtitle', 'Through Taekwondo I learned discipline and confidence. We won the regional championship and I am proud to represent our foundation.')
+                program: safeT('programs.sports', 'Programme Taekwondo'),
+                quote: safeT('impact.story2', 'Grâce au Taekwondo, j\'ai appris la discipline et la confiance. Nous avons gagné le championnat régional et je suis fier de représenter notre fondation.')
               },
               {
                 image: '/fondation-mariam/women-empowerment-community-01.jpg',
                 name: 'Émilienne',
-                program: safeT('programs.women', 'Women\'s Empowerment'),
-                quote: safeT('impact.subtitle', 'The tailoring training changed my life. Now I run my own business and can feed and educate my children with dignity.')
+                program: safeT('programs.women', 'Autonomisation des Femmes'),
+                quote: safeT('impact.story3', 'La formation en couture a changé ma vie. Maintenant je gère ma propre entreprise et je peux nourrir et éduquer mes enfants avec dignité.')
               }
             ].map((story, idx) => (
               <motion.div
@@ -400,10 +361,10 @@ export default function ImpactPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
             <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#1E3A5F] mb-4">
-              {safeT('impact.title', 'Help Us Reach More Children')}
+              {safeT('impact.ctaTitle', 'Aidez-nous à Toucher Plus d\'Enfants')}
             </h2>
             <p className="text-[#1E3A5F]/80 mb-8 max-w-xl mx-auto">
-              {safeT('impact.subtitle', '76 children are counting on your support. Every donation creates lasting change.')}
+              {safeT('impact.ctaDesc', '76 enfants comptent sur votre soutien. Chaque don crée un changement durable.')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/donate" className="group px-8 py-4 bg-[#1E3A5F] text-white rounded-full font-bold hover:bg-[#0F2744] transition-all flex items-center justify-center gap-2 shadow-xl">
