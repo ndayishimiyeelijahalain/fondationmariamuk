@@ -153,8 +153,7 @@ export default function ImpactPage() {
               <div className="w-16 h-16 mx-auto bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg">
                 <Users className="w-8 h-8 text-white" />
               </div>
-              <GenderCounter end={42} label={safeT('impact.children', 'Boys')} color="text-blue-600" />
-              <div className="mt-4">
+              <GenderCounter end={42} label="Garçons" color="text-blue-600" />              <div className="mt-4">
                 <div className="w-full bg-gray-100 rounded-full h-2.5">
                   <motion.div
                     initial={{ width: 0 }}
@@ -177,8 +176,7 @@ export default function ImpactPage() {
               <div className="w-16 h-16 mx-auto bg-gradient-to-br from-pink-500 to-rose-500 rounded-2xl flex items-center justify-center mb-4 shadow-lg">
                 <Sparkles className="w-8 h-8 text-white" />
               </div>
-              <GenderCounter end={34} label={safeT('impact.women', 'Girls')} color="text-pink-600" />
-              <div className="mt-4">
+              <GenderCounter end={34} label="Filles" color="text-pink-600" />              <div className="mt-4">
                 <div className="w-full bg-gray-100 rounded-full h-2.5">
                   <motion.div
                     initial={{ width: 0 }}

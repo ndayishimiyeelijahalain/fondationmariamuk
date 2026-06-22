@@ -418,6 +418,72 @@ export default function DonatePage() {
                   </div>
                 </div>
               </motion.div>
+              // Dans la section Bank Transfer Info, ajouter un second bloc pour BIF :
+<div className="mt-6 pt-6 border-t border-white/10">
+  <div className="flex items-center gap-3 mb-4">
+    <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#10B981] to-[#34D399] flex items-center justify-center shadow-lg">
+      <Building2 className="w-5 h-5 text-white" />
+    </div>
+    <div>
+      <h4 className="font-semibold text-white/90 text-sm">{safeT('donate.bankTransferBIF', 'Bank Transfer (BIF)')}</h4>
+      <p className="text-white/60 text-xs">{safeT('donate.internationalTransfersAccepted', 'International transfers accepted')}</p>
+    </div>
+  </div>
+
+  <div className="space-y-3 text-sm">
+    <BankRow 
+      label={safeT('donate.bankNameBIF', 'Bank')} 
+      value={safeT('donate.bankNameBIFValue', 'Banque de Crédit de Bujumbura (BCB)')}
+      copiedField={copiedField} 
+      fieldId="bankBIF" 
+      onCopy={copyToClipboard} 
+    />
+    <BankRow 
+      label={safeT('donate.currency', 'Currency')} 
+      value={safeT('donate.currencyBIF', 'BIF')}
+      copiedField={copiedField} 
+      fieldId="currencyBIF" 
+      onCopy={copyToClipboard} 
+    />
+    <BankRow 
+      label={safeT('donate.accountNumber', 'Account Number')} 
+      value={safeT('donate.accountNumberBIFValue', 'XXXXXXXXXX')}
+      copiedField={copiedField} 
+      fieldId="accountBIF" 
+      onCopy={copyToClipboard} 
+    />
+    <BankRow 
+      label={safeT('donate.swiftCode', 'SWIFT/BIC Code')} 
+      value={safeT('donate.swiftCodeBIFValue', 'BCBUBIBI')}
+      copiedField={copiedField} 
+      fieldId="swiftBIF" 
+      onCopy={copyToClipboard} 
+    />
+  </div>
+</div>
+
+// Ajouter aussi la section Lumicash :
+<div className="mt-6 pt-6 border-t border-white/10">
+  <div className="flex items-center gap-3 mb-4">
+    <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#F59E0B] to-[#D97706] flex items-center justify-center shadow-lg">
+      <Smartphone className="w-5 h-5 text-white" />
+    </div>
+    <div>
+      <h4 className="font-semibold text-white/90 text-sm">{safeT('donate.lumicash', 'Lumicash')}</h4>
+      <p className="text-white/60 text-xs">{safeT('donate.lumicashDesc', 'Mobile payment via Lumicash')}</p>
+    </div>
+  </div>
+
+  <div className="space-y-3 text-sm">
+    <BankRow 
+      label={safeT('donate.lumicashNumber', 'Lumicash Number')} 
+      value={safeT('donate.lumicashNumberValue', '79 97 64 45')}
+      copiedField={copiedField} 
+      fieldId="lumicash" 
+      onCopy={copyToClipboard} 
+    />
+  </div>
+</div>
 
               {/* Trust Indicators */}
               <motion.div

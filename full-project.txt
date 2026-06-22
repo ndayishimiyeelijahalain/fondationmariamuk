@@ -1938,7 +1938,7 @@ export default function DonatePage() {
               </div>
               <div className="flex items-center gap-2 text-white/70">
                 <Award className="w-4 h-4 text-[#D4AF37]" />
-                Recognized NGO Since 1978
+                Recognized NGO Since 2020
               </div>
               <div className="flex items-center gap-2 text-white/70">
                 <Heart className="w-4 h-4 text-rose-400" />
