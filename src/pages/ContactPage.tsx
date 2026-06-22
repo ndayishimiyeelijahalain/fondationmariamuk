@@ -147,12 +147,6 @@ export default function ContactPage() {
               <h2 className="text-2xl font-serif font-bold text-[#1E3A5F] mb-2">
                 {safeT('contact.sendMessage', 'Envoyer un Message')}
               </h2>
-              <p className="text-gray-500 text-sm mb-6">
-                {safeT('contact.emailInfo', 'Tous les messages seront envoyés à')} {''}
-                <a href="mailto:mariamfondation@gmail.com" className="text-[#D4AF37] hover:underline">
-                  mariamfondation@gmail.com
-                </a>
-              </p>
 
               {isSuccess ? (
                 <div className="text-center py-12">
