@@ -358,133 +358,133 @@ export const translations = {
       benefit4: 'Soutien et encadrement de notre équipe',
       benefit5: 'Expérience unique au Burundi',
       benefit6: 'Certificat d\'appréciation',
-      privacy: {
-        lastUpdated: 'Dernière mise à jour : Janvier 2026',
-        subtitle: 'Fondation Mariam s\'engage à protéger votre vie privée et à traiter vos informations personnelles avec le plus grand soin et transparence.',
-        intro: 'Cette Politique de Confidentialité explique comment Fondation Mariam (« nous », « notre »), dont le siège social est situé à Kinama, Quartier Ruyigi, 24e Avenue N°57, Bujumbura, Burundi (Ord. Min. N°550/936 du 05/06/2020), collecte, utilise et protège les informations qui nous sont soumises via notre site web et nos services associés. En utilisant notre site web ou en interagissant avec notre organisation, vous acceptez les termes décrits dans cette politique.',
-        collection: {
-          title: 'Informations que Nous Collectons',
-          personalInfo: 'Informations Personnelles',
-          personalInfoText: 'Lorsque vous interagissez avec Fondation Mariam, nous pouvons collecter des informations personnelles incluant : nom complet, adresse email, adresse postale, numéro de téléphone et informations de paiement lors du traitement des dons.',
-          contactForms: 'Formulaires de Contact',
-          contactFormsText: 'Lorsque vous soumettez un formulaire de contact, une demande de bénévolat ou une demande de partenariat, nous collectons les informations que vous fournissez pour répondre à votre demande et conserver un enregistrement de nos communications.',
-          newsletter: 'Abonnements à la Newsletter',
-          newsletterText: 'Lorsque vous vous abonnez à notre newsletter, nous collectons votre adresse email et, optionnellement, votre nom. Vous pouvez vous désabonner à tout moment en cliquant sur le lien dans nos emails.',
-          donations: 'Informations sur les Dons',
-          donationsText: 'Pour les dons traités via notre plateforme, nous collectons les détails nécessaires pour traiter votre contribution et vous fournir des reçus fiscaux et des lettres d\'accusé de réception comme requis.'
-        },
-        cookies: {
-          title: 'Cookies et Analytiques',
-          essential: 'Cookies Essentiels',
-          essentialText: 'Nous utilisons des cookies essentiels pour assurer le bon fonctionnement de notre site web, y compris les préférences linguistiques et la gestion des sessions. Ils ne peuvent être désactivés sans affecter les fonctionnalités du site.',
-          analytics: 'Analytiques',
-          analyticsText: 'Nous pouvons utiliser des outils d\'analyse pour comprendre comment les visiteurs interagissent avec notre site web. Ces données sont agrégées et anonymisées, ce qui nous aide à améliorer l\'expérience utilisateur. Nous ne vendons pas ces données à des tiers.',
-          choices: 'Vos Choix concernant les Cookies',
-          choicesText: 'Vous pouvez désactiver les cookies non essentiels via les paramètres de votre navigateur. Veuillez noter que certaines fonctionnalités de notre site web peuvent ne pas fonctionner correctement si les cookies sont désactivés.'
-        },
-        use: {
-          title: 'Comment Nous Utilisons Vos Informations',
-          service: 'Prestation de Services',
-          serviceText: 'Nous utilisons vos informations pour traiter les dons, envoyer des reçus et documents fiscaux, répondre aux demandes, gérer les parrainages et vous envoyer notre newsletter ou des mises à jour de programme auxquelles vous avez souscrit.',
-          communication: 'Communication',
-          communicationText: 'Avec votre consentement, nous pouvons vous contacter avec des informations sur nos programmes, rapports d\'impact, campagnes de collecte de fonds et annonces importantes liées à Fondation Mariam.',
-          legal: 'Obligations Légales',
-          legalText: 'Nous pouvons utiliser ou divulguer vos informations lorsque la loi l\'exige, notamment à des fins de conformité fiscale et réglementaire en tant qu\'organisation à but non lucratif reconnue au Burundi.'
-        },
-        security: {
-          title: 'Sécurité des Données',
-          protection: 'Mesures de Protection',
-          protectionText: 'Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles contre tout accès non autorisé, perte accidentelle, altération ou divulgation. Toutes les transmissions de données sont cryptées à l\'aide de la technologie SSL/TLS.',
-          retention: 'Conservation des Données',
-          retentionText: 'Nous conservons vos informations personnelles uniquement aussi longtemps que nécessaire aux fins décrites dans cette politique, ou comme requis par les lois applicables. Les enregistrements des donateurs sont généralement conservés pendant sept ans à des fins légales et fiscales.',
-          transfers: 'Transferts Internationaux',
-          transfersText: 'En tant qu\'organisation humanitaire internationale, vos données peuvent être consultées ou transférées à travers les frontières. Nous veillons à ce que des garanties appropriées soient en place partout où vos données sont traitées, conformément aux principes internationaux de protection des données.'
-        },
-        rights: {
-          title: 'Vos Droits',
-          access: 'Accès et Correction',
-          accessText: 'Vous avez le droit de demander l\'accès aux informations personnelles que nous détenons à votre sujet, et de demander que toute information inexacte soit corrigée. Veuillez nous contacter par écrit pour exercer ce droit.',
-          deletion: 'Suppression',
-          deletionText: 'Vous pouvez demander la suppression de vos données personnelles. Nous nous conformerons à moins que nous ne soyons légalement tenus de conserver les informations (par exemple, pour des dossiers financiers ou la conformité légale).',
-          optout: 'Désabonnement',
-          optoutText: 'Vous pouvez vous désabonner des communications marketing et de la newsletter à tout moment. Utilisez le lien de désabonnement dans nos emails ou contactez-nous directement. Veuillez noter que nous pouvons toujours envoyer des messages transactionnels liés à vos dons ou demandes.'
-        },
-        thirdParty: {
-          title: 'Services Tiers',
-          text1: 'Nous ne vendons, n\'échangeons ni ne louons vos informations personnelles à des tiers à des fins de marketing. Nous pouvons partager des informations avec des prestataires de services de confiance qui nous aident à gérer notre site web et à fournir nos services, sous réserve d\'accords de confidentialité.',
-          text2: 'Notre site web peut contenir des liens vers des sites tiers. Nous ne sommes pas responsables des pratiques de confidentialité de ces sites et vous encourageons à consulter leurs politiques de confidentialité indépendamment.'
-        },
-        international: {
-          title: 'Note pour les Donateurs Internationaux',
-          text1: 'Fondation Mariam reçoit des soutiens du monde entier. Si vous êtes situé en dehors du Burundi, veuillez noter que vos informations seront transférées et traitées au Burundi, qui peut avoir des lois de protection des données différentes de votre pays.',
-          text2: 'En faisant un don ou en soumettant des informations via notre site web, vous consentez à ce transfert. Nous prenons toutes les mesures raisonnables pour garantir que vos données sont traitées en toute sécurité et conformément à cette Politique de Confidentialité.'
-        },
-        contact: {
-          title: 'Nous Contacter au Sujet de la Confidentialité',
-          text: 'Si vous avez des questions concernant cette Politique de Confidentialité ou si vous souhaitez exercer vos droits, veuillez nous contacter :'
-        },
-        footer: 'Cette politique a été mise à jour pour la dernière fois le 1er janvier 2026. Nous nous réservons le droit de mettre à jour cette politique à tout moment. Les modifications seront affichées sur cette page avec une date révisée.'
+    },
+    privacy: {
+      lastUpdated: 'Dernière mise à jour : Janvier 2026',
+      subtitle: 'Fondation Mariam s\'engage à protéger votre vie privée et à traiter vos informations personnelles avec le plus grand soin et transparence.',
+      intro: 'Cette Politique de Confidentialité explique comment Fondation Mariam (« nous », « notre »), dont le siège social est situé à Kinama, Quartier Ruyigi, 24e Avenue N°57, Bujumbura, Burundi (Ord. Min. N°550/936 du 05/06/2020), collecte, utilise et protège les informations qui nous sont soumises via notre site web et nos services associés. En utilisant notre site web ou en interagissant avec notre organisation, vous acceptez les termes décrits dans cette politique.',
+      collection: {
+        title: 'Informations que Nous Collectons',
+        personalInfo: 'Informations Personnelles',
+        personalInfoText: 'Lorsque vous interagissez avec Fondation Mariam, nous pouvons collecter des informations personnelles incluant : nom complet, adresse email, adresse postale, numéro de téléphone et informations de paiement lors du traitement des dons.',
+        contactForms: 'Formulaires de Contact',
+        contactFormsText: 'Lorsque vous soumettez un formulaire de contact, une demande de bénévolat ou une demande de partenariat, nous collectons les informations que vous fournissez pour répondre à votre demande et conserver un enregistrement de nos communications.',
+        newsletter: 'Abonnements à la Newsletter',
+        newsletterText: 'Lorsque vous vous abonnez à notre newsletter, nous collectons votre adresse email et, optionnellement, votre nom. Vous pouvez vous désabonner à tout moment en cliquant sur le lien dans nos emails.',
+        donations: 'Informations sur les Dons',
+        donationsText: 'Pour les dons traités via notre plateforme, nous collectons les détails nécessaires pour traiter votre contribution et vous fournir des reçus fiscaux et des lettres d\'accusé de réception comme requis.'
       },
-      terms: {
-        lastUpdated: 'Dernière mise à jour : Janvier 2026',
-        subtitle: 'Veuillez lire attentivement ces conditions avant d\'utiliser le site web de Fondation Mariam.',
-        intro: 'Ces Conditions d\'Utilisation régissent votre accès et votre utilisation du site web de Fondation Mariam, une organisation humanitaire à but non lucratif enregistrée au Burundi (Ord. Min. N°550/936 du 05/06/2020), dont le siège social est situé à Kinama, Quartier Ruyigi, 24e Avenue N°57, Bujumbura. Ces conditions s\'appliquent à tous les visiteurs, donateurs, bénévoles, partenaires et autres utilisateurs du Site.',
-        acceptance: {
-          title: 'Acceptation des Conditions',
-          text: 'En accédant et en utilisant le site web de Fondation Mariam (le "Site"), vous acceptez et consentez à être lié par ces Conditions d\'Utilisation. Si vous n\'acceptez pas l\'un de ces termes, vous ne devez pas utiliser le Site. Nous nous réservons le droit de modifier ces conditions à tout moment. Votre utilisation continue du Site suite à la publication des modifications constitue votre acceptation de ces changements.'
-        },
-        use: {
-          title: 'Utilisation Autorisée de Ce Site Web',
-          item1: 'Ce site web est fourni à des fins d\'information, d\'éducation et de collecte de fonds liées à la mission humanitaire de Fondation Mariam.',
-          item2: 'Vous pouvez accéder et visualiser le contenu de ce Site pour un usage personnel et non commercial.',
-          item3: 'Vous ne devez pas utiliser le Site pour distribuer des spams, des contenus malveillants, ou mener toute activité qui pourrait nuire au Site, à notre organisation ou à d\'autres utilisateurs.',
-          item4: 'Vous ne devez pas tenter d\'obtenir un accès non autorisé à une partie du Site ou à ses systèmes sous-jacents.',
-          item5: 'L\'utilisation commerciale de tout contenu de ce Site sans autorisation écrite expresse est strictement interdite.'
-        },
-        donations: {
-          title: 'Avis sur les Dons',
-          text: 'Tous les dons faits à Fondation Mariam sont volontaires et non remboursables, sauf en cas d\'erreurs de traitement documentées. Fondation Mariam est une organisation à but non lucratif reconnue (Ord. Min. N°550/936 du 05/06/2020) au Burundi. Les dons sont utilisés pour financer nos programmes humanitaires, y compris l\'éducation, les soins de santé, l\'aide alimentaire, l\'autonomisation des femmes, le soutien aux personnes handicapées et le développement communautaire.',
-          item1: 'Les dons sont traités par le biais de canaux bancaires sécurisés. Banque : Banque de Crédit de Bujumbura (BCB), Compte : 20311600016, SWIFT : BCBUBIBI.',
-          item2: 'Des reçus fiscaux ou une documentation d\'accusé de réception seront fournis sur demande pour les dons éligibles.',
-          item3: 'Fondation Mariam s\'engage à utiliser les dons de manière transparente et efficace conformément à notre mission déclarée.',
-          item4: 'Les affectations spécifiques des fonds (éducation, santé, etc.) sont honorées dans la mesure de nos possibilités, mais peuvent être redirigées en cas de besoin urgent.',
-          item5: 'Fondation Mariam ne garantit pas de résultats spécifiques de tout don.'
-        },
-        ip: {
-          title: 'Propriété Intellectuelle',
-          text: 'Tout le contenu de ce Site, y compris mais sans s\'y limiter, les textes, photographies, graphiques, logos, et le nom et le logo de Fondation Mariam, est la propriété de Fondation Mariam et est protégé par les lois applicables en matière de propriété intellectuelle.',
-          item1: 'Vous pouvez partager des liens vers notre contenu à des fins non commerciales, avec une attribution appropriée.',
-          item2: 'Vous ne pouvez pas reproduire, distribuer ou créer des œuvres dérivées de notre contenu sans autorisation écrite préalable.',
-          item3: 'Le nom Fondation Mariam, le logo et le slogan "La Lumière de la Nation" sont des marques déposées de la fondation.',
-          item4: 'Les images d\'archives affichées sur ce Site sont sous licence d\'utilisation et ne peuvent pas être extraites ou réutilisées indépendamment.'
-        },
-        liability: {
-          title: 'Limitation de Responsabilité',
-          text: 'Les informations sur ce Site sont fournies "telles quelles" sans garantie d\'aucune sorte. Fondation Mariam ne fait aucune déclaration ni garantie quant à l\'exactitude, l\'exhaustivité ou l\'adéquation des informations à des fins particulières.',
-          item1: 'Fondation Mariam ne pourra être tenue responsable des dommages directs, indirects, accessoires ou consécutifs découlant de l\'utilisation de ce Site.',
-          item2: 'Nous ne garantissons pas un accès ininterrompu ou sans erreur au Site.',
-          item3: 'Fondation Mariam n\'est pas responsable du contenu des sites externes liés depuis ce Site.',
-          item4: 'Bien que nous prenions toutes les précautions raisonnables, nous ne pouvons garantir la sécurité absolue des informations transmises sur internet.'
-        },
-        responsibilities: {
-          title: 'Responsabilités de l\'Utilisateur',
-          item1: 'Vous êtes responsable de vous assurer que toute information que vous nous fournissez est exacte et à jour.',
-          item2: 'Vous ne devez pas usurper l\'identité de Fondation Mariam ou de l\'un de ses représentants.',
-          item3: 'Vous ne devez pas utiliser ce Site pour collecter des informations sur d\'autres utilisateurs.',
-          item4: 'Vous acceptez de ne pas mener de collecte de fonds au nom de Fondation Mariam sans notre autorisation écrite explicite.',
-          item5: 'Les candidats bénévoles et les partenaires sont responsables de l\'exactitude des informations qu\'ils soumettent.',
-          item6: 'Vous acceptez d\'utiliser ce Site conformément à toutes les lois locales, nationales et internationales applicables.'
-        },
-        governingLaw: {
-          title: 'Droit Applicable',
-          text: 'Les présentes Conditions d\'Utilisation sont régies et interprétées conformément aux lois de la République du Burundi. Tout litige découlant de ces conditions ou de votre utilisation de ce Site sera soumis à la juridiction exclusive des tribunaux du Burundi. Les utilisateurs internationaux reconnaissent que leur utilisation de ce Site est volontaire et soumise à ces conditions régissant.'
-        },
-        contact: {
-          title: 'Questions sur Ces Conditions ?',
-          text: 'Si vous avez des questions concernant ces Conditions d\'Utilisation, veuillez nous contacter :'
-        },
-        footer: 'Ces Conditions d\'Utilisation ont été mises à jour pour la dernière fois le 1er janvier 2026. Fondation Mariam se réserve le droit de mettre à jour ces conditions à tout moment en publiant une version révisée sur cette page.'
+      cookies: {
+        title: 'Cookies et Analytiques',
+        essential: 'Cookies Essentiels',
+        essentialText: 'Nous utilisons des cookies essentiels pour assurer le bon fonctionnement de notre site web, y compris les préférences linguistiques et la gestion des sessions. Ils ne peuvent être désactivés sans affecter les fonctionnalités du site.',
+        analytics: 'Analytiques',
+        analyticsText: 'Nous pouvons utiliser des outils d\'analyse pour comprendre comment les visiteurs interagissent avec notre site web. Ces données sont agrégées et anonymisées, ce qui nous aide à améliorer l\'expérience utilisateur. Nous ne vendons pas ces données à des tiers.',
+        choices: 'Vos Choix concernant les Cookies',
+        choicesText: 'Vous pouvez désactiver les cookies non essentiels via les paramètres de votre navigateur. Veuillez noter que certaines fonctionnalités de notre site web peuvent ne pas fonctionner correctement si les cookies sont désactivés.'
       },
+      use: {
+        title: 'Comment Nous Utilisons Vos Informations',
+        service: 'Prestation de Services',
+        serviceText: 'Nous utilisons vos informations pour traiter les dons, envoyer des reçus et documents fiscaux, répondre aux demandes, gérer les parrainages et vous envoyer notre newsletter ou des mises à jour de programme auxquelles vous avez souscrit.',
+        communication: 'Communication',
+        communicationText: 'Avec votre consentement, nous pouvons vous contacter avec des informations sur nos programmes, rapports d\'impact, campagnes de collecte de fonds et annonces importantes liées à Fondation Mariam.',
+        legal: 'Obligations Légales',
+        legalText: 'Nous pouvons utiliser ou divulguer vos informations lorsque la loi l\'exige, notamment à des fins de conformité fiscale et réglementaire en tant qu\'organisation à but non lucratif reconnue au Burundi.'
+      },
+      security: {
+        title: 'Sécurité des Données',
+        protection: 'Mesures de Protection',
+        protectionText: 'Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles contre tout accès non autorisé, perte accidentelle, altération ou divulgation. Toutes les transmissions de données sont cryptées à l\'aide de la technologie SSL/TLS.',
+        retention: 'Conservation des Données',
+        retentionText: 'Nous conservons vos informations personnelles uniquement aussi longtemps que nécessaire aux fins décrites dans cette politique, ou comme requis par les lois applicables. Les enregistrements des donateurs sont généralement conservés pendant sept ans à des fins légales et fiscales.',
+        transfers: 'Transferts Internationaux',
+        transfersText: 'En tant qu\'organisation humanitaire internationale, vos données peuvent être consultées ou transférées à travers les frontières. Nous veillons à ce que des garanties appropriées soient en place partout où vos données sont traitées, conformément aux principes internationaux de protection des données.'
+      },
+      rights: {
+        title: 'Vos Droits',
+        access: 'Accès et Correction',
+        accessText: 'Vous avez le droit de demander l\'accès aux informations personnelles que nous détenons à votre sujet, et de demander que toute information inexacte soit corrigée. Veuillez nous contacter par écrit pour exercer ce droit.',
+        deletion: 'Suppression',
+        deletionText: 'Vous pouvez demander la suppression de vos données personnelles. Nous nous conformerons à moins que nous ne soyons légalement tenus de conserver les informations (par exemple, pour des dossiers financiers ou la conformité légale).',
+        optout: 'Désabonnement',
+        optoutText: 'Vous pouvez vous désabonner des communications marketing et de la newsletter à tout moment. Utilisez le lien de désabonnement dans nos emails ou contactez-nous directement. Veuillez noter que nous pouvons toujours envoyer des messages transactionnels liés à vos dons ou demandes.'
+      },
+      thirdParty: {
+        title: 'Services Tiers',
+        text1: 'Nous ne vendons, n\'échangeons ni ne louons vos informations personnelles à des tiers à des fins de marketing. Nous pouvons partager des informations avec des prestataires de services de confiance qui nous aident à gérer notre site web et à fournir nos services, sous réserve d\'accords de confidentialité.',
+        text2: 'Notre site web peut contenir des liens vers des sites tiers. Nous ne sommes pas responsables des pratiques de confidentialité de ces sites et vous encourageons à consulter leurs politiques de confidentialité indépendamment.'
+      },
+      international: {
+        title: 'Note pour les Donateurs Internationaux',
+        text1: 'Fondation Mariam reçoit des soutiens du monde entier. Si vous êtes situé en dehors du Burundi, veuillez noter que vos informations seront transférées et traitées au Burundi, qui peut avoir des lois de protection des données différentes de votre pays.',
+        text2: 'En faisant un don ou en soumettant des informations via notre site web, vous consentez à ce transfert. Nous prenons toutes les mesures raisonnables pour garantir que vos données sont traitées en toute sécurité et conformément à cette Politique de Confidentialité.'
+      },
+      contactPrivacy: {
+        title: 'Nous Contacter au Sujet de la Confidentialité',
+        text: 'Si vous avez des questions concernant cette Politique de Confidentialité ou si vous souhaitez exercer vos droits, veuillez nous contacter :'
+      },
+      footer: 'Cette politique a été mise à jour pour la dernière fois le 1er janvier 2026. Nous nous réservons le droit de mettre à jour cette politique à tout moment. Les modifications seront affichées sur cette page avec une date révisée.'
+    },
+    terms: {
+      lastUpdated: 'Dernière mise à jour : Janvier 2026',
+      subtitle: 'Veuillez lire attentivement ces conditions avant d\'utiliser le site web de Fondation Mariam.',
+      intro: 'Ces Conditions d\'Utilisation régissent votre accès et votre utilisation du site web de Fondation Mariam, une organisation humanitaire à but non lucratif enregistrée au Burundi (Ord. Min. N°550/936 du 05/06/2020), dont le siège social est situé à Kinama, Quartier Ruyigi, 24e Avenue N°57, Bujumbura. Ces conditions s\'appliquent à tous les visiteurs, donateurs, bénévoles, partenaires et autres utilisateurs du Site.',
+      acceptance: {
+        title: 'Acceptation des Conditions',
+        text: 'En accédant et en utilisant le site web de Fondation Mariam (le "Site"), vous acceptez et consentez à être lié par ces Conditions d\'Utilisation. Si vous n\'acceptez pas l\'un de ces termes, vous ne devez pas utiliser le Site. Nous nous réservons le droit de modifier ces conditions à tout moment. Votre utilisation continue du Site suite à la publication des modifications constitue votre acceptation de ces changements.'
+      },
+      use: {
+        title: 'Utilisation Autorisée de Ce Site Web',
+        item1: 'Ce site web est fourni à des fins d\'information, d\'éducation et de collecte de fonds liées à la mission humanitaire de Fondation Mariam.',
+        item2: 'Vous pouvez accéder et visualiser le contenu de ce Site pour un usage personnel et non commercial.',
+        item3: 'Vous ne devez pas utiliser le Site pour distribuer des spams, des contenus malveillants, ou mener toute activité qui pourrait nuire au Site, à notre organisation ou à d\'autres utilisateurs.',
+        item4: 'Vous ne devez pas tenter d\'obtenir un accès non autorisé à une partie du Site ou à ses systèmes sous-jacents.',
+        item5: 'L\'utilisation commerciale de tout contenu de ce Site sans autorisation écrite expresse est strictement interdite.'
+      },
+      donations: {
+        title: 'Avis sur les Dons',
+        text: 'Tous les dons faits à Fondation Mariam sont volontaires et non remboursables, sauf en cas d\'erreurs de traitement documentées. Fondation Mariam est une organisation à but non lucratif reconnue (Ord. Min. N°550/936 du 05/06/2020) au Burundi. Les dons sont utilisés pour financer nos programmes humanitaires, y compris l\'éducation, les soins de santé, l\'aide alimentaire, l\'autonomisation des femmes, le soutien aux personnes handicapées et le développement communautaire.',
+        item1: 'Les dons sont traités par le biais de canaux bancaires sécurisés. Banque : Banque de Crédit de Bujumbura (BCB), Compte : 20311600016, SWIFT : BCBUBIBI.',
+        item2: 'Des reçus fiscaux ou une documentation d\'accusé de réception seront fournis sur demande pour les dons éligibles.',
+        item3: 'Fondation Mariam s\'engage à utiliser les dons de manière transparente et efficace conformément à notre mission déclarée.',
+        item4: 'Les affectations spécifiques des fonds (éducation, santé, etc.) sont honorées dans la mesure de nos possibilités, mais peuvent être redirigées en cas de besoin urgent.',
+        item5: 'Fondation Mariam ne garantit pas de résultats spécifiques de tout don.'
+      },
+      ip: {
+        title: 'Propriété Intellectuelle',
+        text: 'Tout le contenu de ce Site, y compris mais sans s\'y limiter, les textes, photographies, graphiques, logos, et le nom et le logo de Fondation Mariam, est la propriété de Fondation Mariam et est protégé par les lois applicables en matière de propriété intellectuelle.',
+        item1: 'Vous pouvez partager des liens vers notre contenu à des fins non commerciales, avec une attribution appropriée.',
+        item2: 'Vous ne pouvez pas reproduire, distribuer ou créer des œuvres dérivées de notre contenu sans autorisation écrite préalable.',
+        item3: 'Le nom Fondation Mariam, le logo et le slogan "La Lumière de la Nation" sont des marques déposées de la fondation.',
+        item4: 'Les images d\'archives affichées sur ce Site sont sous licence d\'utilisation et ne peuvent pas être extraites ou réutilisées indépendamment.'
+      },
+      liability: {
+        title: 'Limitation de Responsabilité',
+        text: 'Les informations sur ce Site sont fournies "telles quelles" sans garantie d\'aucune sorte. Fondation Mariam ne fait aucune déclaration ni garantie quant à l\'exactitude, l\'exhaustivité ou l\'adéquation des informations à des fins particulières.',
+        item1: 'Fondation Mariam ne pourra être tenue responsable des dommages directs, indirects, accessoires ou consécutifs découlant de l\'utilisation de ce Site.',
+        item2: 'Nous ne garantissons pas un accès ininterrompu ou sans erreur au Site.',
+        item3: 'Fondation Mariam n\'est pas responsable du contenu des sites externes liés depuis ce Site.',
+        item4: 'Bien que nous prenions toutes les précautions raisonnables, nous ne pouvons garantir la sécurité absolue des informations transmises sur internet.'
+      },
+      responsibilities: {
+        title: 'Responsabilités de l\'Utilisateur',
+        item1: 'Vous êtes responsable de vous assurer que toute information que vous nous fournissez est exacte et à jour.',
+        item2: 'Vous ne devez pas usurper l\'identité de Fondation Mariam ou de l\'un de ses représentants.',
+        item3: 'Vous ne devez pas utiliser ce Site pour collecter des informations sur d\'autres utilisateurs.',
+        item4: 'Vous acceptez de ne pas mener de collecte de fonds au nom de Fondation Mariam sans notre autorisation écrite explicite.',
+        item5: 'Les candidats bénévoles et les partenaires sont responsables de l\'exactitude des informations qu\'ils soumettent.',
+        item6: 'Vous acceptez d\'utiliser ce Site conformément à toutes les lois locales, nationales et internationales applicables.'
+      },
+      governingLaw: {
+        title: 'Droit Applicable',
+        text: 'Les présentes Conditions d\'Utilisation sont régies et interprétées conformément aux lois de la République du Burundi. Tout litige découlant de ces conditions ou de votre utilisation de ce Site sera soumis à la juridiction exclusive des tribunaux du Burundi. Les utilisateurs internationaux reconnaissent que leur utilisation de ce Site est volontaire et soumise à ces conditions régissant.'
+      },
+      contactTerms: {
+        title: 'Questions sur Ces Conditions ?',
+        text: 'Si vous avez des questions concernant ces Conditions d\'Utilisation, veuillez nous contacter :'
+      },
+      footer: 'Ces Conditions d\'Utilisation ont été mises à jour pour la dernière fois le 1er janvier 2026. Fondation Mariam se réserve le droit de mettre à jour ces conditions à tout moment en publiant une version révisée sur cette page.'
     },
   },
   en: {
@@ -837,133 +837,133 @@ export const translations = {
       benefit4: 'Receive support and guidance from our team',
       benefit5: 'Beautiful experience in Burundi',
       benefit6: 'Certificate of appreciation',
-      privacy: {
-        lastUpdated: 'Last updated: January 2026',
-        subtitle: 'Fondation Mariam is committed to protecting your privacy and handling your personal information with the utmost care and transparency.',
-        intro: 'This Privacy Policy explains how Fondation Mariam ("we," "us," or "our"), headquartered at Kinama, Quartier Ruyigi, 24e Avenue N°57, Bujumbura, Burundi (Ord. Min. N°550/936 du 05/06/2020), collects, uses, and protects information submitted to us through our website and related services. By using our website or interacting with our organization, you agree to the terms described in this policy.',
-        collection: {
-          title: 'Information We Collect',
-          personalInfo: 'Personal Information',
-          personalInfoText: 'When you interact with Fondation Mariam, we may collect personal information including: full name, email address, postal address, telephone number, and payment information when processing donations.',
-          contactForms: 'Contact Forms',
-          contactFormsText: 'When you submit a contact form, volunteer application, or partnership inquiry, we collect the information you provide to respond to your request and maintain a record of our communications.',
-          newsletter: 'Newsletter Subscriptions',
-          newsletterText: 'When you subscribe to our newsletter, we collect your email address and, optionally, your name. You may unsubscribe at any time by clicking the link in any of our emails.',
-          donations: 'Donation Information',
-          donationsText: 'For donations processed through our platform, we collect the details necessary to process your contribution and provide you with tax receipts and acknowledgment letters as required.'
-        },
-        cookies: {
-          title: 'Cookies & Analytics',
-          essential: 'Essential Cookies',
-          essentialText: 'We use essential cookies to ensure the basic functionality of our website, including language preferences and session management. These cannot be disabled without affecting site functionality.',
-          analytics: 'Analytics',
-          analyticsText: 'We may use analytics tools to understand how visitors interact with our website. This data is aggregated and anonymized, helping us improve the user experience. We do not sell this data to third parties.',
-          choices: 'Your Cookie Choices',
-          choicesText: 'You may disable non-essential cookies through your browser settings. Please note that some features of our website may not function correctly if cookies are disabled.'
-        },
-        use: {
-          title: 'How We Use Your Information',
-          service: 'Service Delivery',
-          serviceText: 'We use your information to process donations, send receipts and tax documentation, respond to inquiries, manage sponsorships, and deliver our newsletter or program updates you have opted into.',
-          communication: 'Communication',
-          communicationText: 'With your consent, we may contact you with information about our programs, impact reports, fundraising campaigns, and important announcements related to Fondation Mariam.',
-          legal: 'Legal Obligations',
-          legalText: 'We may use or disclose your information where required by law, including for tax and regulatory compliance purposes as a recognized non-profit organization in Burundi.'
-        },
-        security: {
-          title: 'Data Security',
-          protection: 'Protection Measures',
-          protectionText: 'We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, accidental loss, alteration, or disclosure. All data transmissions are encrypted using SSL/TLS technology.',
-          retention: 'Data Retention',
-          retentionText: 'We retain your personal information only for as long as necessary for the purposes described in this policy, or as required by applicable laws. Donor records are typically retained for seven years for legal and tax purposes.',
-          transfers: 'International Transfers',
-          transfersText: 'As an international humanitarian organization, your data may be accessed or transferred across borders. We ensure appropriate safeguards are in place wherever your data is processed, in compliance with international data protection principles.'
-        },
-        rights: {
-          title: 'Your Rights',
-          access: 'Access & Correction',
-          accessText: 'You have the right to request access to the personal information we hold about you, and to request that any inaccurate information be corrected. Please contact us in writing to exercise this right.',
-          deletion: 'Deletion',
-          deletionText: 'You may request deletion of your personal data. We will comply unless we are legally required to retain the information (for example, for financial records or legal compliance).',
-          optout: 'Opt-Out',
-          optoutText: 'You may opt out of marketing and newsletter communications at any time. Use the unsubscribe link in our emails or contact us directly. Note that we may still send transactional messages related to your donations or requests.'
-        },
-        thirdParty: {
-          title: 'Third-Party Services',
-          text1: 'We do not sell, trade, or rent your personal information to third parties for marketing purposes. We may share information with trusted service providers who assist us in operating our website and delivering our services, subject to confidentiality agreements.',
-          text2: 'Our website may contain links to third-party sites. We are not responsible for the privacy practices of those sites and encourage you to review their privacy policies independently.'
-        },
-        international: {
-          title: 'Note for International Donors',
-          text1: 'Fondation Mariam receives support from donors worldwide. If you are located outside Burundi, please be aware that your information will be transferred to and processed in Burundi, which may have different data protection laws than your country.',
-          text2: 'By donating or submitting information through our website, you consent to this transfer. We take all reasonable steps to ensure your data is treated securely and in accordance with this Privacy Policy.'
-        },
-        contact: {
-          title: 'Contact Us About Privacy',
-          text: 'If you have questions about this Privacy Policy or wish to exercise your rights, please contact us:'
-        },
-        footer: 'This policy was last updated on January 1, 2026. We reserve the right to update this policy at any time. Changes will be posted on this page with a revised date.'
+    },
+    privacy: {
+      lastUpdated: 'Last updated: January 2026',
+      subtitle: 'Fondation Mariam is committed to protecting your privacy and handling your personal information with the utmost care and transparency.',
+      intro: 'This Privacy Policy explains how Fondation Mariam ("we," "us," or "our"), headquartered at Kinama, Quartier Ruyigi, 24e Avenue N°57, Bujumbura, Burundi (Ord. Min. N°550/936 du 05/06/2020), collects, uses, and protects information submitted to us through our website and related services. By using our website or interacting with our organization, you agree to the terms described in this policy.',
+      collection: {
+        title: 'Information We Collect',
+        personalInfo: 'Personal Information',
+        personalInfoText: 'When you interact with Fondation Mariam, we may collect personal information including: full name, email address, postal address, telephone number, and payment information when processing donations.',
+        contactForms: 'Contact Forms',
+        contactFormsText: 'When you submit a contact form, volunteer application, or partnership inquiry, we collect the information you provide to respond to your request and maintain a record of our communications.',
+        newsletter: 'Newsletter Subscriptions',
+        newsletterText: 'When you subscribe to our newsletter, we collect your email address and, optionally, your name. You may unsubscribe at any time by clicking the link in any of our emails.',
+        donations: 'Donation Information',
+        donationsText: 'For donations processed through our platform, we collect the details necessary to process your contribution and provide you with tax receipts and acknowledgment letters as required.'
       },
-      terms: {
-        lastUpdated: 'Last updated: January 2026',
-        subtitle: 'Please read these terms carefully before using the Fondation Mariam website.',
-        intro: 'These Terms of Use govern your access to and use of the website of Fondation Mariam, a humanitarian non-profit organization registered in Burundi (Ord. Min. N°550/936 du 05/06/2020), headquartered at Kinama, Quartier Ruyigi, 24e Avenue N°57, Bujumbura. These terms apply to all visitors, donors, volunteers, partners, and any other users of the Site.',
-        acceptance: {
-          title: 'Acceptance of Terms',
-          text: 'By accessing and using the Fondation Mariam website (the "Site"), you accept and agree to be bound by these Terms of Use. If you do not agree with any of these terms, you must not use the Site. We reserve the right to modify these terms at any time. Your continued use of the Site following the posting of changes constitutes your acceptance of those changes.'
-        },
-        use: {
-          title: 'Permitted Use of This Website',
-          item1: 'This website is provided for informational, educational, and fundraising purposes related to the humanitarian mission of Fondation Mariam.',
-          item2: 'You may access and view content on this Site for personal, non-commercial use.',
-          item3: 'You must not use the Site to distribute spam, malicious content, or conduct any activity that could harm the Site, our organization, or other users.',
-          item4: 'You must not attempt to gain unauthorized access to any part of the Site or its underlying systems.',
-          item5: 'Commercial use of any content from this Site without express written permission is strictly prohibited.'
-        },
-        donations: {
-          title: 'Donations Disclaimer',
-          text: 'All donations made to Fondation Mariam are voluntary and non-refundable except in cases of documented processing errors. Fondation Mariam is a recognized non-profit organization (Ord. Min. N°550/936 du 05/06/2020) in Burundi. Donations are used to fund our humanitarian programs including education, healthcare, food assistance, women empowerment, disability support, and community development.',
-          item1: 'Donations are processed through secure banking channels. Bank: Banque de Crédit de Bujumbura (BCB), Account: 20311600016, SWIFT: BCBUBIBI.',
-          item2: 'Tax receipts or acknowledgment documentation will be provided upon request for qualifying donations.',
-          item3: 'Fondation Mariam commits to using donations transparently and efficiently in accordance with our stated mission.',
-          item4: 'Specific fund designations (education, healthcare, etc.) are honored to the best of our ability but may be redirected where urgent need exists.',
-          item5: 'Fondation Mariam does not guarantee specific outcomes from any donation.'
-        },
-        ip: {
-          title: 'Intellectual Property',
-          text: 'All content on this Site, including but not limited to text, photographs, graphics, logos, and the Fondation Mariam name and logo, is the property of Fondation Mariam and is protected by applicable intellectual property laws.',
-          item1: 'You may share links to our content for non-commercial purposes, with appropriate attribution.',
-          item2: 'You may not reproduce, distribute, or create derivative works of our content without prior written permission.',
-          item3: 'The Fondation Mariam name, logo, and "La Lumière de la Nation" slogan are trademarks of the foundation.',
-          item4: 'Stock images displayed on this Site are licensed for use and may not be extracted or reused independently.'
-        },
-        liability: {
-          title: 'Limitation of Liability',
-          text: 'The information on this Site is provided "as is" without warranty of any kind. Fondation Mariam makes no representations or warranties about the accuracy, completeness, or suitability of the information for any particular purpose.',
-          item1: 'Fondation Mariam shall not be liable for any direct, indirect, incidental, or consequential damages arising from the use of this Site.',
-          item2: 'We do not guarantee uninterrupted or error-free access to the Site.',
-          item3: 'Fondation Mariam is not responsible for the content of external websites linked from this Site.',
-          item4: 'While we take all reasonable precautions, we cannot guarantee the absolute security of information transmitted over the internet.'
-        },
-        responsibilities: {
-          title: 'User Responsibilities',
-          item1: 'You are responsible for ensuring that any information you provide to us is accurate and up-to-date.',
-          item2: 'You must not impersonate Fondation Mariam or any of its representatives.',
-          item3: 'You must not use this Site to collect information about other users.',
-          item4: 'You agree not to conduct any form of fundraising in the name of Fondation Mariam without our explicit written authorization.',
-          item5: 'Volunteer applicants and partners are responsible for the accuracy of information they submit.',
-          item6: 'You agree to use this Site in compliance with all applicable local, national, and international laws.'
-        },
-        governingLaw: {
-          title: 'Governing Law',
-          text: 'These Terms of Use shall be governed by and construed in accordance with the laws of the Republic of Burundi. Any disputes arising from these terms or your use of this Site shall be subject to the exclusive jurisdiction of the courts of Burundi. International users acknowledge that their use of this Site is voluntary and subject to these governing terms.'
-        },
-        contact: {
-          title: 'Questions About These Terms?',
-          text: 'If you have questions about these Terms of Use, please contact us:'
-        },
-        footer: 'These Terms of Use were last updated on January 1, 2026. Fondation Mariam reserves the right to update these terms at any time by posting a revised version on this page.'
+      cookies: {
+        title: 'Cookies & Analytics',
+        essential: 'Essential Cookies',
+        essentialText: 'We use essential cookies to ensure the basic functionality of our website, including language preferences and session management. These cannot be disabled without affecting site functionality.',
+        analytics: 'Analytics',
+        analyticsText: 'We may use analytics tools to understand how visitors interact with our website. This data is aggregated and anonymized, helping us improve the user experience. We do not sell this data to third parties.',
+        choices: 'Your Cookie Choices',
+        choicesText: 'You may disable non-essential cookies through your browser settings. Please note that some features of our website may not function correctly if cookies are disabled.'
       },
+      use: {
+        title: 'How We Use Your Information',
+        service: 'Service Delivery',
+        serviceText: 'We use your information to process donations, send receipts and tax documentation, respond to inquiries, manage sponsorships, and deliver our newsletter or program updates you have opted into.',
+        communication: 'Communication',
+        communicationText: 'With your consent, we may contact you with information about our programs, impact reports, fundraising campaigns, and important announcements related to Fondation Mariam.',
+        legal: 'Legal Obligations',
+        legalText: 'We may use or disclose your information where required by law, including for tax and regulatory compliance purposes as a recognized non-profit organization in Burundi.'
+      },
+      security: {
+        title: 'Data Security',
+        protection: 'Protection Measures',
+        protectionText: 'We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, accidental loss, alteration, or disclosure. All data transmissions are encrypted using SSL/TLS technology.',
+        retention: 'Data Retention',
+        retentionText: 'We retain your personal information only for as long as necessary for the purposes described in this policy, or as required by applicable laws. Donor records are typically retained for seven years for legal and tax purposes.',
+        transfers: 'International Transfers',
+        transfersText: 'As an international humanitarian organization, your data may be accessed or transferred across borders. We ensure appropriate safeguards are in place wherever your data is processed, in compliance with international data protection principles.'
+      },
+      rights: {
+        title: 'Your Rights',
+        access: 'Access & Correction',
+        accessText: 'You have the right to request access to the personal information we hold about you, and to request that any inaccurate information be corrected. Please contact us in writing to exercise this right.',
+        deletion: 'Deletion',
+        deletionText: 'You may request deletion of your personal data. We will comply unless we are legally required to retain the information (for example, for financial records or legal compliance).',
+        optout: 'Opt-Out',
+        optoutText: 'You may opt out of marketing and newsletter communications at any time. Use the unsubscribe link in our emails or contact us directly. Note that we may still send transactional messages related to your donations or requests.'
+      },
+      thirdParty: {
+        title: 'Third-Party Services',
+        text1: 'We do not sell, trade, or rent your personal information to third parties for marketing purposes. We may share information with trusted service providers who assist us in operating our website and delivering our services, subject to confidentiality agreements.',
+        text2: 'Our website may contain links to third-party sites. We are not responsible for the privacy practices of those sites and encourage you to review their privacy policies independently.'
+      },
+      international: {
+        title: 'Note for International Donors',
+        text1: 'Fondation Mariam receives support from donors worldwide. If you are located outside Burundi, please be aware that your information will be transferred to and processed in Burundi, which may have different data protection laws than your country.',
+        text2: 'By donating or submitting information through our website, you consent to this transfer. We take all reasonable steps to ensure your data is treated securely and in accordance with this Privacy Policy.'
+      },
+      contactPrivacy: {
+        title: 'Contact Us About Privacy',
+        text: 'If you have questions about this Privacy Policy or wish to exercise your rights, please contact us:'
+      },
+      footer: 'This policy was last updated on January 1, 2026. We reserve the right to update this policy at any time. Changes will be posted on this page with a revised date.'
+    },
+    terms: {
+      lastUpdated: 'Last updated: January 2026',
+      subtitle: 'Please read these terms carefully before using the Fondation Mariam website.',
+      intro: 'These Terms of Use govern your access to and use of the website of Fondation Mariam, a humanitarian non-profit organization registered in Burundi (Ord. Min. N°550/936 du 05/06/2020), headquartered at Kinama, Quartier Ruyigi, 24e Avenue N°57, Bujumbura. These terms apply to all visitors, donors, volunteers, partners, and any other users of the Site.',
+      acceptance: {
+        title: 'Acceptance of Terms',
+        text: 'By accessing and using the Fondation Mariam website (the "Site"), you accept and agree to be bound by these Terms of Use. If you do not agree with any of these terms, you must not use the Site. We reserve the right to modify these terms at any time. Your continued use of the Site following the posting of changes constitutes your acceptance of those changes.'
+      },
+      use: {
+        title: 'Permitted Use of This Website',
+        item1: 'This website is provided for informational, educational, and fundraising purposes related to the humanitarian mission of Fondation Mariam.',
+        item2: 'You may access and view content on this Site for personal, non-commercial use.',
+        item3: 'You must not use the Site to distribute spam, malicious content, or conduct any activity that could harm the Site, our organization, or other users.',
+        item4: 'You must not attempt to gain unauthorized access to any part of the Site or its underlying systems.',
+        item5: 'Commercial use of any content from this Site without express written permission is strictly prohibited.'
+      },
+      donations: {
+        title: 'Donations Disclaimer',
+        text: 'All donations made to Fondation Mariam are voluntary and non-refundable except in cases of documented processing errors. Fondation Mariam is a recognized non-profit organization (Ord. Min. N°550/936 du 05/06/2020) in Burundi. Donations are used to fund our humanitarian programs including education, healthcare, food assistance, women empowerment, disability support, and community development.',
+        item1: 'Donations are processed through secure banking channels. Bank: Banque de Crédit de Bujumbura (BCB), Account: 20311600016, SWIFT: BCBUBIBI.',
+        item2: 'Tax receipts or acknowledgment documentation will be provided upon request for qualifying donations.',
+        item3: 'Fondation Mariam commits to using donations transparently and efficiently in accordance with our stated mission.',
+        item4: 'Specific fund designations (education, healthcare, etc.) are honored to the best of our ability but may be redirected where urgent need exists.',
+        item5: 'Fondation Mariam does not guarantee specific outcomes from any donation.'
+      },
+      ip: {
+        title: 'Intellectual Property',
+        text: 'All content on this Site, including but not limited to text, photographs, graphics, logos, and the Fondation Mariam name and logo, is the property of Fondation Mariam and is protected by applicable intellectual property laws.',
+        item1: 'You may share links to our content for non-commercial purposes, with appropriate attribution.',
+        item2: 'You may not reproduce, distribute, or create derivative works of our content without prior written permission.',
+        item3: 'The Fondation Mariam name, logo, and "La Lumière de la Nation" slogan are trademarks of the foundation.',
+        item4: 'Stock images displayed on this Site are licensed for use and may not be extracted or reused independently.'
+      },
+      liability: {
+        title: 'Limitation of Liability',
+        text: 'The information on this Site is provided "as is" without warranty of any kind. Fondation Mariam makes no representations or warranties about the accuracy, completeness, or suitability of the information for any particular purpose.',
+        item1: 'Fondation Mariam shall not be liable for any direct, indirect, incidental, or consequential damages arising from the use of this Site.',
+        item2: 'We do not guarantee uninterrupted or error-free access to the Site.',
+        item3: 'Fondation Mariam is not responsible for the content of external websites linked from this Site.',
+        item4: 'While we take all reasonable precautions, we cannot guarantee the absolute security of information transmitted over the internet.'
+      },
+      responsibilities: {
+        title: 'User Responsibilities',
+        item1: 'You are responsible for ensuring that any information you provide to us is accurate and up-to-date.',
+        item2: 'You must not impersonate Fondation Mariam or any of its representatives.',
+        item3: 'You must not use this Site to collect information about other users.',
+        item4: 'You agree not to conduct any form of fundraising in the name of Fondation Mariam without our explicit written authorization.',
+        item5: 'Volunteer applicants and partners are responsible for the accuracy of information they submit.',
+        item6: 'You agree to use this Site in compliance with all applicable local, national, and international laws.'
+      },
+      governingLaw: {
+        title: 'Governing Law',
+        text: 'These Terms of Use shall be governed by and construed in accordance with the laws of the Republic of Burundi. Any disputes arising from these terms or your use of this Site shall be subject to the exclusive jurisdiction of the courts of Burundi. International users acknowledge that their use of this Site is voluntary and subject to these governing terms.'
+      },
+      contactTerms: {
+        title: 'Questions About These Terms?',
+        text: 'If you have questions about these Terms of Use, please contact us:'
+      },
+      footer: 'These Terms of Use were last updated on January 1, 2026. Fondation Mariam reserves the right to update these terms at any time by posting a revised version on this page.'
     },
   },
   rn: {
@@ -1303,133 +1303,133 @@ export const translations = {
       benefit4: 'Gufashwa n\'abandi',
       benefit5: 'Ubunararibonye bwiza mu Burundi',
       benefit6: 'Icyemezo c\'ishimwe',
-      privacy: {
-        lastUpdated: 'Yavuguruwe ku: Mutarama 2026',
-        subtitle: 'Fondation Mariam iriyemeje kurinda amakuru yawe bwite no kuyakoresha mu buryo bwiza kandi buteguye.',
-        intro: 'Iyi Politike y\'Amakuru bwite isobanura uko Fondation Mariam (« twebwe »), ifise icyicaro gikuru i Kinama, Quartier Ruyigi, 24e Avenue N°57, Bujumbura, Burundi (Ord. Min. N°550/936 du 05/06/2020), ikusanya, ikoresha kandi ikarinda amakuru atumirwa kuri twebwe binyuze kurubuga rwacu n\'ibikorwa bidufitaniye isano. Mugukoresha urubuga rwacu cyangwa mugukorana natwe, uba wemeye amategeko asobanurwa muri iyi politike.',
-        collection: {
-          title: 'Amakuru Tukurikiranira',
-          personalInfo: 'Amakuru bwite',
-          personalInfoText: 'Iyo ukorana na Fondation Mariam, dushobora gukusanya amakuru yawe bwite harimo: izina ryose, adereri ya imeyili, adereri yo kohereza amakete, numero ya telefone, n\'amakuru yo kwishyura iyo dukora ibitambo.',
-          contactForms: 'Ubutumwa bwo Kwandikira',
-          contactFormsText: 'Iyo utwandikiye, usabye kwitanga cyangwa ushaka gufatanya natwe, dukusanya amakuru utanga kugira ngo dusubize ikibazo cawe kandi dukomeze amakuru y\'imikorere yacu.',
-          newsletter: 'Kwiyandikisha ku makuru',
-          newsletterText: 'Iyo wiyandikishije ku makuru yacu, dukusanya adereri ya imeyili yawe kandi, niba ubishaka, izina ryawe. Ushobora kwiyikuraho igihe cose ukanda kumurongo uri mubutumwa bwacu.',
-          donations: 'Amakuru y\'Ibitambo',
-          donationsText: 'Ku bitambo bikorwa binyuze kurubuga rwacu, dukusanya amakuru akenewe kugira ngo dukore igitambo cawe kandi tuguhere impapuro z\'imisoro n\'inyandiko zo kwemeza nk\'uko bikenewe.'
-        },
-        cookies: {
-          title: 'Cookies n\'Isesengura',
-          essential: 'Cookies ngirakamaro',
-          essentialText: 'Dukoresha cookies ngirakamaro kugira ngo urubuga rwacu rukore neza, harimo amahitamo y\'indimi n\'imicungire y\'amakuru. Ntibishobora guhagarikwa bitagize ingaruka ku mikorere y\'urubuga.',
-          analytics: 'Isesengura',
-          analyticsText: 'Dushobora gukoresha ibikoresho byo gusesengura kugira ngo tumene uko abasura urubuga bafatanya na rwo. Aya makuru arakusanywa kandi akaba atamenyesha abantu, akadufasha kunoza uburyo abantu bakoresha urubuga. Ntudukura aya makuru ku bandi.',
-          choices: 'Amahitamo yawe kuri Cookies',
-          choicesText: 'Ushobora guhagarika cookies zidakenewe binyuze mubishushanyo bya browser yawe. Menya ko ibintu bimwe kurubuga rwacu bishobora kutakora neza niba cookies zahagaritswe.'
-        },
-        use: {
-          title: 'Uko Dukoresha Amakuru Yawe',
-          service: 'Itangwa ry\'Ibikorwa',
-          serviceText: 'Dukoresha amakuru yawe kugira ngo dukore ibitambo, tworohereze impapuro z\'imisoro n\'inyandiko, dusubize ibibazo, ducunge ubufasha ku bana, kandi tworohereze amakuru yacu cyangwa ivugurura ry\'ibikorwa wiyandikishijeho.',
-          communication: 'Itumanaho',
-          communicationText: 'N\'uburenganzira bwawe, dushobora kuvugana nawe ku makuru y\'ibikorwa byacu, raporo z\'ingaruka, ibikorwa byo gushaka inkunga, n\'amatangazo akomeye ajyanye na Fondation Mariam.',
-          legal: 'Amategeko',
-          legalText: 'Dushobora gukoresha cyangwa gukuraho amakuru yawe iyo amategeko abisaba, harimo ku mpamvu z\'imisoro n\'amategeko nk\'umuryango udafite inyungu w\'amafranga wemewe mu Burundi.'
-        },
-        security: {
-          title: 'Umutekano w\'Amakuru',
-          protection: 'Ingamba zo Kurinda',
-          protectionText: 'Dushyiraho ingamba zikwiye zo kwita ku makuru yawe bwite kugira ngo arindwe kugirirwa nabi, gutakara, guhindurwa, cyangwa kumenyeshwa n\'abatarwemerewe. Amakuru yose yoherezwa ararindwa ikoranabuhanga rya SSL/TLS.',
-          retention: 'Kubika Amakuru',
-          retentionText: 'Dukomeza amakuru yawe bwite igihe gikwiye nk\'uko byakenerwa ku mpamvu zisobanurwa muri iyi politike, cyangwa nk\'uko amategeko abisaba. Amakuru y\'abaterankunga akomeza kubikwa imyaka irindwi ku mpamvu z\'amategeko n\'imisoro.',
-          transfers: 'Kohereza Amakuru Mu Bindi bihugu',
-          transfersText: 'Nk\'umuryango mpuzamahanga w\'ubutabazi, amakuru yawe ashobora kuragwa cyangwa koherezwa mu bindi bihugu. Duharanira ko amakuru yawe arindwa neza aho yose akoreshwa, hakurikijwe amategeko mpuzamahanga yo kurinda amakuru.'
-        },
-        rights: {
-          title: 'Uburenganzira Bwawe',
-          access: 'Kubona no Gusana',
-          accessText: 'Ufite uburenganzira bwo gusaba kubona amakuru bwite dufitiye, no gusaba ko amakuru atariyo asanwa. Twandikire kugira ngo ukoreshe ubu burenganzira.',
-          deletion: 'Gukuraho',
-          deletionText: 'Ushobora gusaba gukuraho amakuru yawe bwite. Tuzabikora keretse amategeko atubuza (urugero: ku mpamvu z\'imisoro cyangwa amategeko).',
-          optout: 'Kwiyikuraho',
-          optoutText: 'Ushobora kwiyikuraho kumakuru y\'ubucuruzi n\'amakuru anyuza mu iposita igihe cyose. Kanda kumurongo wo kwiyikuraho mubutumwa bwacu cyangwa utwandikire. Menya ko dushobora kukohereza ubutumwa bujyanye n\'ibitambo byawe cyangwa ibibazo byawe.'
-        },
-        thirdParty: {
-          title: 'Serivisi z\'Abandi',
-          text1: 'Ntidukura, dukoresha cyangwa duha abandi amakuru yawe bwite ku mpamvu z\'ubucuruzi. Dushobora gusangira amakuru n\'abafasha bafatanya natwe mu mikorere y\'urubuga rwacu no mu itangwa ry\'ibikorwa byacu, hakurikijwe amasezerano yo kubika amakuru.',
-          text2: 'Urubuga rwacu rushobora kugira amahu y\'izindi rubuga. Ntidushinzwe imikorere y\'amakuru bwite kuri izo rubuga kandi turakuhugira kugusuzuma politike zabo wenyine.'
-        },
-        international: {
-          title: 'Inyandiko ku Batterankunga Bo Mu Bindi Bihugu',
-          text1: 'Fondation Mariam yakira inkunga ziva mu bihugu byose. Niba uri hanze y\'Uburundi, menya ko amakuru yawe azoherezwa no gukorwa mu Burundi, aho amategeko yo kurinda amakuru ashobora gutandukana n\'ayo mu gihugu cawe.',
-          text2: 'Mugutanga igitambo cyangwa kohereza amakuru binyuze kurubuga rwacu, wemera ko amakuru yawe aherezwa. Dufata ingamba zose zikwiye kugira ngo amakuru yawe arindwe neza kandi hakurikijwe iyi Politike y\'Amakuru bwite.'
-        },
-        contact: {
-          title: 'Twandikire ku Birebana n\'Amakuru bwite',
-          text: 'Niba ufite ibibazo kuri iyi Politike y\'Amakuru bwite cyangwa ushaka gukoresha uburenganzira bwawe, twandikire :'
-        },
-        footer: 'Iyi politike yavuguruwe ku wa 1 Mutarama 2026. Tugumana uburenganzira bwo kuyivugurura igihe cyose. Impinduka zizashirwa kuri uru rupapuro hamwe n\'itariki yavuguruwe.'
+    },
+    privacy: {
+      lastUpdated: 'Yavuguruwe ku: Mutarama 2026',
+      subtitle: 'Fondation Mariam iriyemeje kurinda amakuru yawe bwite no kuyakoresha mu buryo bwiza kandi buteguye.',
+      intro: 'Iyi Politike y\'Amakuru bwite isobanura uko Fondation Mariam (« twebwe »), ifise icyicaro gikuru i Kinama, Quartier Ruyigi, 24e Avenue N°57, Bujumbura, Burundi (Ord. Min. N°550/936 du 05/06/2020), ikusanya, ikoresha kandi ikarinda amakuru atumirwa kuri twebwe binyuze kurubuga rwacu n\'ibikorwa bidufitaniye isano. Mugukoresha urubuga rwacu cyangwa mugukorana natwe, uba wemeye amategeko asobanurwa muri iyi politike.',
+      collection: {
+        title: 'Amakuru Tukurikiranira',
+        personalInfo: 'Amakuru bwite',
+        personalInfoText: 'Iyo ukorana na Fondation Mariam, dushobora gukusanya amakuru yawe bwite harimo: izina ryose, adereri ya imeyili, adereri yo kohereza amakete, numero ya telefone, n\'amakuru yo kwishyura iyo dukora ibitambo.',
+        contactForms: 'Ubutumwa bwo Kwandikira',
+        contactFormsText: 'Iyo utwandikiye, usabye kwitanga cyangwa ushaka gufatanya natwe, dukusanya amakuru utanga kugira ngo dusubize ikibazo cawe kandi dukomeze amakuru y\'imikorere yacu.',
+        newsletter: 'Kwiyandikisha ku makuru',
+        newsletterText: 'Iyo wiyandikishije ku makuru yacu, dukusanya adereri ya imeyili yawe kandi, niba ubishaka, izina ryawe. Ushobora kwiyikuraho igihe cose ukanda kumurongo uri mubutumwa bwacu.',
+        donations: 'Amakuru y\'Ibitambo',
+        donationsText: 'Ku bitambo bikorwa binyuze kurubuga rwacu, dukusanya amakuru akenewe kugira ngo dukore igitambo cawe kandi tuguhere impapuro z\'imisoro n\'inyandiko zo kwemeza nk\'uko bikenewe.'
       },
-      terms: {
-        lastUpdated: 'Yavuguruwe ku: Mutarama 2026',
-        subtitle: 'Soma amategeko yose mbere yo gukoresha urubuga rwa Fondation Mariam.',
-        intro: 'Aya Mabwirizwa yo Gukoresha agenga uburyo ukoresha urubuga rwa Fondation Mariam, umuryango udafite inyungu w\'ubutabazi wemewe mu Burundi (Ord. Min. N°550/936 du 05/06/2020), ufite icyicaro gikuru i Kinama, Quartier Ruyigi, 24e Avenue N°57, Bujumbura. Aya mabwirizwa akurikira abasura bose, abaterankunga, abitanga ku bushake, abafatanyabikorwa, n\'abandi bakoresha urubuga.',
-        acceptance: {
-          title: 'Kwemera Amategeko',
-          text: 'Ugukoresha urubuga rwa Fondation Mariam, uba wemeye kandi wiyemeje gukurikiza aya Mabwirizwa yo Gukoresha. Niba utemera rimwe muri aya mabwirizwa, ntugomba gukoresha urubuga. Dufite uburenganzira bwo guhindura aya mabwirizwa igihe cyose. Ugukoresha urubuga nyuma y\'impinduka bigaragara, ni ukwemera impinduka.'
-        },
-        use: {
-          title: 'Gukoresha Urubuga',
-          item1: 'Urubuga rwatangijwe ku mpamvu zo kumenyesha, kwigisha, no gushaka inkunga bijyanye n\'ubutumwa bwa Fondation Mariam.',
-          item2: 'Urashobora kureba ibiri kurubuga ku mpamvu zawe bwite, utari ugucuruza.',
-          item3: 'Ntugomba gukoresha urubuga mu kohereza ubutumwa bubi, ibintu bibi, cyangwa gukora ibintu bishobora kwangiza urubuga, umuryango wacu, cyangwa abandi bakoresha.',
-          item4: 'Ntugomba kugerageza kwinjira mu bice by\'urubuga utemerewe cyangwa mu bikoresho byacyo.',
-          item5: 'Gukoresha ibiri kurubuga mu bucuruzi nta ruhushya rwanditse bibujijwe.'
-        },
-        donations: {
-          title: 'Ibitambo',
-          text: 'Ibitambo byose bitangwa kuri Fondation Mariam ni ubushake kandi ntibisubizwa keretse habaye amakosa yo gutunganya. Fondation Mariam ni umuryango udafite inyungu wemewe (Ord. Min. N°550/936 du 05/06/2020) mu Burundi. Ibitambo bikoreshwa mu bikorwa byacu by\'ubutabazi birimo uburezi, ubuvuzi, ibiribwa, gushigikira abagore, gufasha abafise ubumuga, no guteza imbere umuryango.',
-          item1: 'Ibitambo bitunganywa binyuze mu banki zigenga. Banki : Banque de Crédit de Bujumbura (BCB), Konti : 20311600016, SWIFT : BCBUBIBI.',
-          item2: 'Impapuro z\'imisoro cyangwa inyandiko zo kwemeza zizatangwa iyo bisabwe ku bitambo bihagije.',
-          item3: 'Fondation Mariam iriyemeje gukoresha ibitambo mu buryo bugaragara kandi bwiza nk\'uko biteganywa n\'ubutumwa bwacu.',
-          item4: 'Ibitambo byagenerwe ibikorwa runaka (uburezi, ubuvuzi, n\'ibindi) birakurikizwa uko dushoboye, ariko bishobora guhindurwa iyo hari ikibazo gikomeye.',
-          item5: 'Fondation Mariam ntiyemeza ibizava mu gitambo cyose.'
-        },
-        ip: {
-          title: 'Uburenganzira bw\'Ubugeni',
-          text: 'Ibiri kurubuga rwose, harimo ariko ntibigarukira ku nyandiko, amafoto, ibishushanyo, logos, n\'izina na logo ya Fondation Mariam, ni umutungo wa Fondation Mariam kandi birarenganwa n\'amategeko agenga uburenganzira bw\'ubugeni.',
-          item1: 'Urashobora gusangira amahu y\'ibiri kurubuga ku mpamvu zidacuruza, uvuga aho byakomotse.',
-          item2: 'Ntugomba kwandukura, gukwirakwiza, cyangwa gukora ibindi bishya bishingiye ku biri kurubuga nta ruhushya rwanditse.',
-          item3: 'Izina Fondation Mariam, logo, n\'amagambo "La Lumière de la Nation" ni ibimenyetso by\'umuryango.',
-          item4: 'Amafoto akoreshwa kurubuga afite uruhushya rwo gukoreshwa kandi ntashobora gukurwamo cyangwa gukoreshwa ukundi.'
-        },
-        liability: {
-          title: 'Ibiwogira Icyubahiro',
-          text: 'Amakuru ari kurubuga atangwa nk\'ameze nta cyemezo cy\'ubwoko bwose. Fondation Mariam ntabwo ivuga cyangwa isezeranya ko amakuru ari yo yose, yuzuye, cyangwa akwiye ku mpamvu runaka.',
-          item1: 'Fondation Mariam ntabwo ishobora guhanwa ku bwangiza bwose buturuka ku gukoresha urubuga.',
-          item2: 'Ntidusezeranya ko urubuga ruzakora iteka nta nkengera.',
-          item3: 'Fondation Mariam ntabwo ishinzwe ibiri kurubuga rw\'abandi ruherekejwe n\'urubuga rwacu.',
-          item4: 'Nubwo dufata ingamba zose zikwiye, ntidushobora kusezeranya umutekano w\'amakuru yoherezwa kuri interineti.'
-        },
-        responsibilities: {
-          title: 'Ibyo Ukora',
-          item1: 'Uri inshingano zo kugenzura ko amakuru yose utanga ari yo kandi agezweho.',
-          item2: 'Ntugomba kwiyitirira Fondation Mariam cyangwa abayihagarariye.',
-          item3: 'Ntugomba gukoresha urubuga mu gukusanya amakuru y\'abandi bakoresha.',
-          item4: 'Uraemeranya ko utazakora ibikorwa byo gushaka inkunga mu izina rya Fondation Mariam nta ruhushya rwanditse.',
-          item5: 'Abasaba kwitanga n\'abafatanyabikorwa ni bo bishinzwe amakuru batanga.',
-          item6: 'Uraemeranya ko uzakoresha urubuga hakurikijwe amategeko yose y\'igihugu, y\'akarere, n\'impuzamahanga.'
-        },
-        governingLaw: {
-          title: 'Amategeko Agenga',
-          text: 'Aya Mabwirizwa yo Gukoresha agengwa kandi asobanurwa hakurikijwe amategeko ya Republika y\'Uburundi. Impaka zose zituruka kuri aya mabwirizwa cyangwa ugukoresha urubuga rwacu zizakemurwa n\'inkiko z\'Uburundi. Abakoresha bo mu bindi bihugu bemera ko gukoresha urubuga ari ubushake kandi hakurikijwe aya mabwirizwa.'
-        },
-        contact: {
-          title: 'Ibibazo kuri Aya Mabwirizwa?',
-          text: 'Niba ufite ibibazo kuri aya Mabwirizwa yo Gukoresha, twandikire :'
-        },
-        footer: 'Aya Mabwirizwa yo Gukoresha yavuguruwe ku wa 1 Mutarama 2026. Fondation Mariam ifite uburenganzira bwo kuyavugurura igihe cyose ishyiraho impinduka kuri uru rupapuro.'
+      cookies: {
+        title: 'Cookies n\'Isesengura',
+        essential: 'Cookies ngirakamaro',
+        essentialText: 'Dukoresha cookies ngirakamaro kugira ngo urubuga rwacu rukore neza, harimo amahitamo y\'indimi n\'imicungire y\'amakuru. Ntibishobora guhagarikwa bitagize ingaruka ku mikorere y\'urubuga.',
+        analytics: 'Isesengura',
+        analyticsText: 'Dushobora gukoresha ibikoresho byo gusesengura kugira ngo tumene uko abasura urubuga bafatanya na rwo. Aya makuru arakusanywa kandi akaba atamenyesha abantu, akadufasha kunoza uburyo abantu bakoresha urubuga. Ntudukura aya makuru ku bandi.',
+        choices: 'Amahitamo yawe kuri Cookies',
+        choicesText: 'Ushobora guhagarika cookies zidakenewe binyuze mubishushanyo bya browser yawe. Menya ko ibintu bimwe kurubuga rwacu bishobora kutakora neza niba cookies zahagaritswe.'
       },
+      use: {
+        title: 'Uko Dukoresha Amakuru Yawe',
+        service: 'Itangwa ry\'Ibikorwa',
+        serviceText: 'Dukoresha amakuru yawe kugira ngo dukore ibitambo, tworohereze impapuro z\'imisoro n\'inyandiko, dusubize ibibazo, ducunge ubufasha ku bana, kandi tworohereze amakuru yacu cyangwa ivugurura ry\'ibikorwa wiyandikishijeho.',
+        communication: 'Itumanaho',
+        communicationText: 'N\'uburenganzira bwawe, dushobora kuvugana nawe ku makuru y\'ibikorwa byacu, raporo z\'ingaruka, ibikorwa byo gushaka inkunga, n\'amatangazo akomeye ajyanye na Fondation Mariam.',
+        legal: 'Amategeko',
+        legalText: 'Dushobora gukoresha cyangwa gukuraho amakuru yawe iyo amategeko abisaba, harimo ku mpamvu z\'imisoro n\'amategeko nk\'umuryango udafite inyungu w\'amafranga wemewe mu Burundi.'
+      },
+      security: {
+        title: 'Umutekano w\'Amakuru',
+        protection: 'Ingamba zo Kurinda',
+        protectionText: 'Dushyiraho ingamba zikwiye zo kwita ku makuru yawe bwite kugira ngo arindwe kugirirwa nabi, gutakara, guhindurwa, cyangwa kumenyeshwa n\'abatarwemerewe. Amakuru yose yoherezwa ararindwa ikoranabuhanga rya SSL/TLS.',
+        retention: 'Kubika Amakuru',
+        retentionText: 'Dukomeza amakuru yawe bwite igihe gikwiye nk\'uko byakenerwa ku mpamvu zisobanurwa muri iyi politike, cyangwa nk\'uko amategeko abisaba. Amakuru y\'abaterankunga akomeza kubikwa imyaka irindwi ku mpamvu z\'amategeko n\'imisoro.',
+        transfers: 'Kohereza Amakuru Mu Bindi bihugu',
+        transfersText: 'Nk\'umuryango mpuzamahanga w\'ubutabazi, amakuru yawe ashobora kuragwa cyangwa koherezwa mu bindi bihugu. Duharanira ko amakuru yawe arindwa neza aho yose akoreshwa, hakurikijwe amategeko mpuzamahanga yo kurinda amakuru.'
+      },
+      rights: {
+        title: 'Uburenganzira Bwawe',
+        access: 'Kubona no Gusana',
+        accessText: 'Ufite uburenganzira bwo gusaba kubona amakuru bwite dufitiye, no gusaba ko amakuru atariyo asanwa. Twandikire kugira ngo ukoreshe ubu burenganzira.',
+        deletion: 'Gukuraho',
+        deletionText: 'Ushobora gusaba gukuraho amakuru yawe bwite. Tuzabikora keretse amategeko atubuza (urugero: ku mpamvu z\'imisoro cyangwa amategeko).',
+        optout: 'Kwiyikuraho',
+        optoutText: 'Ushobora kwiyikuraho kumakuru y\'ubucuruzi n\'amakuru anyuza mu iposita igihe cyose. Kanda kumurongo wo kwiyikuraho mubutumwa bwacu cyangwa utwandikire. Menya ko dushobora kukohereza ubutumwa bujyanye n\'ibitambo byawe cyangwa ibibazo byawe.'
+      },
+      thirdParty: {
+        title: 'Serivisi z\'Abandi',
+        text1: 'Ntidukura, dukoresha cyangwa duha abandi amakuru yawe bwite ku mpamvu z\'ubucuruzi. Dushobora gusangira amakuru n\'abafasha bafatanya natwe mu mikorere y\'urubuga rwacu no mu itangwa ry\'ibikorwa byacu, hakurikijwe amasezerano yo kubika amakuru.',
+        text2: 'Urubuga rwacu rushobora kugira amahu y\'izindi rubuga. Ntidushinzwe imikorere y\'amakuru bwite kuri izo rubuga kandi turakuhugira kugusuzuma politike zabo wenyine.'
+      },
+      international: {
+        title: 'Inyandiko ku Batterankunga Bo Mu Bindi Bihugu',
+        text1: 'Fondation Mariam yakira inkunga ziva mu bihugu byose. Niba uri hanze y\'Uburundi, menya ko amakuru yawe azoherezwa no gukorwa mu Burundi, aho amategeko yo kurinda amakuru ashobora gutandukana n\'ayo mu gihugu cawe.',
+        text2: 'Mugutanga igitambo cyangwa kohereza amakuru binyuze kurubuga rwacu, wemera ko amakuru yawe aherezwa. Dufata ingamba zose zikwiye kugira ngo amakuru yawe arindwe neza kandi hakurikijwe iyi Politike y\'Amakuru bwite.'
+      },
+      contactPrivacy: {
+        title: 'Twandikire ku Birebana n\'Amakuru bwite',
+        text: 'Niba ufite ibibazo kuri iyi Politike y\'Amakuru bwite cyangwa ushaka gukoresha uburenganzira bwawe, twandikire :'
+      },
+      footer: 'Iyi politike yavuguruwe ku wa 1 Mutarama 2026. Tugumana uburenganzira bwo kuyivugurura igihe cyose. Impinduka zizashirwa kuri uru rupapuro hamwe n\'itariki yavuguruwe.'
+    },
+    terms: {
+      lastUpdated: 'Yavuguruwe ku: Mutarama 2026',
+      subtitle: 'Soma amategeko yose mbere yo gukoresha urubuga rwa Fondation Mariam.',
+      intro: 'Aya Mabwirizwa yo Gukoresha agenga uburyo ukoresha urubuga rwa Fondation Mariam, umuryango udafite inyungu w\'ubutabazi wemewe mu Burundi (Ord. Min. N°550/936 du 05/06/2020), ufite icyicaro gikuru i Kinama, Quartier Ruyigi, 24e Avenue N°57, Bujumbura. Aya mabwirizwa akurikira abasura bose, abaterankunga, abitanga ku bushake, abafatanyabikorwa, n\'abandi bakoresha urubuga.',
+      acceptance: {
+        title: 'Kwemera Amategeko',
+        text: 'Ugukoresha urubuga rwa Fondation Mariam, uba wemeye kandi wiyemeje gukurikiza aya Mabwirizwa yo Gukoresha. Niba utemera rimwe muri aya mabwirizwa, ntugomba gukoresha urubuga. Dufite uburenganzira bwo guhindura aya mabwirizwa igihe cyose. Ugukoresha urubuga nyuma y\'impinduka bigaragara, ni ukwemera impinduka.'
+      },
+      use: {
+        title: 'Gukoresha Urubuga',
+        item1: 'Urubuga rwatangijwe ku mpamvu zo kumenyesha, kwigisha, no gushaka inkunga bijyanye n\'ubutumwa bwa Fondation Mariam.',
+        item2: 'Urashobora kureba ibiri kurubuga ku mpamvu zawe bwite, utari ugucuruza.',
+        item3: 'Ntugomba gukoresha urubuga mu kohereza ubutumwa bubi, ibintu bibi, cyangwa gukora ibintu bishobora kwangiza urubuga, umuryango wacu, cyangwa abandi bakoresha.',
+        item4: 'Ntugomba kugerageza kwinjira mu bice by\'urubuga utemerewe cyangwa mu bikoresho byacyo.',
+        item5: 'Gukoresha ibiri kurubuga mu bucuruzi nta ruhushya rwanditse bibujijwe.'
+      },
+      donations: {
+        title: 'Ibitambo',
+        text: 'Ibitambo byose bitangwa kuri Fondation Mariam ni ubushake kandi ntibisubizwa keretse habaye amakosa yo gutunganya. Fondation Mariam ni umuryango udafite inyungu wemewe (Ord. Min. N°550/936 du 05/06/2020) mu Burundi. Ibitambo bikoreshwa mu bikorwa byacu by\'ubutabazi birimo uburezi, ubuvuzi, ibiribwa, gushigikira abagore, gufasha abafise ubumuga, no guteza imbere umuryango.',
+        item1: 'Ibitambo bitunganywa binyuze mu banki zigenga. Banki : Banque de Crédit de Bujumbura (BCB), Konti : 20311600016, SWIFT : BCBUBIBI.',
+        item2: 'Impapuro z\'imisoro cyangwa inyandiko zo kwemeza zizatangwa iyo bisabwe ku bitambo bihagije.',
+        item3: 'Fondation Mariam iriyemeje gukoresha ibitambo mu buryo bugaragara kandi bwiza nk\'uko biteganywa n\'ubutumwa bwacu.',
+        item4: 'Ibitambo byagenerwe ibikorwa runaka (uburezi, ubuvuzi, n\'ibindi) birakurikizwa uko dushoboye, ariko bishobora guhindurwa iyo hari ikibazo gikomeye.',
+        item5: 'Fondation Mariam ntiyemeza ibizava mu gitambo cyose.'
+      },
+      ip: {
+        title: 'Uburenganzira bw\'Ubugeni',
+        text: 'Ibiri kurubuga rwose, harimo ariko ntibigarukira ku nyandiko, amafoto, ibishushanyo, logos, n\'izina na logo ya Fondation Mariam, ni umutungo wa Fondation Mariam kandi birarenganwa n\'amategeko agenga uburenganzira bw\'ubugeni.',
+        item1: 'Urashobora gusangira amahu y\'ibiri kurubuga ku mpamvu zidacuruza, uvuga aho byakomotse.',
+        item2: 'Ntugomba kwandukura, gukwirakwiza, cyangwa gukora ibindi bishya bishingiye ku biri kurubuga nta ruhushya rwanditse.',
+        item3: 'Izina Fondation Mariam, logo, n\'amagambo "La Lumière de la Nation" ni ibimenyetso by\'umuryango.',
+        item4: 'Amafoto akoreshwa kurubuga afite uruhushya rwo gukoreshwa kandi ntashobora gukurwamo cyangwa gukoreshwa ukundi.'
+      },
+      liability: {
+        title: 'Ibiwogira Icyubahiro',
+        text: 'Amakuru ari kurubuga atangwa nk\'ameze nta cyemezo cy\'ubwoko bwose. Fondation Mariam ntabwo ivuga cyangwa isezeranya ko amakuru ari yo yose, yuzuye, cyangwa akwiye ku mpamvu runaka.',
+        item1: 'Fondation Mariam ntabwo ishobora guhanwa ku bwangiza bwose buturuka ku gukoresha urubuga.',
+        item2: 'Ntidusezeranya ko urubuga ruzakora iteka nta nkengera.',
+        item3: 'Fondation Mariam ntabwo ishinzwe ibiri kurubuga rw\'abandi ruherekejwe n\'urubuga rwacu.',
+        item4: 'Nubwo dufata ingamba zose zikwiye, ntidushobora kusezeranya umutekano w\'amakuru yoherezwa kuri interineti.'
+      },
+      responsibilities: {
+        title: 'Ibyo Ukora',
+        item1: 'Uri inshingano zo kugenzura ko amakuru yose utanga ari yo kandi agezweho.',
+        item2: 'Ntugomba kwiyitirira Fondation Mariam cyangwa abayihagarariye.',
+        item3: 'Ntugomba gukoresha urubuga mu gukusanya amakuru y\'abandi bakoresha.',
+        item4: 'Uraemeranya ko utazakora ibikorwa byo gushaka inkunga mu izina rya Fondation Mariam nta ruhushya rwanditse.',
+        item5: 'Abasaba kwitanga n\'abafatanyabikorwa ni bo bishinzwe amakuru batanga.',
+        item6: 'Uraemeranya ko uzakoresha urubuga hakurikijwe amategeko yose y\'igihugu, y\'akarere, n\'impuzamahanga.'
+      },
+      governingLaw: {
+        title: 'Amategeko Agenga',
+        text: 'Aya Mabwirizwa yo Gukoresha agengwa kandi asobanurwa hakurikijwe amategeko ya Republika y\'Uburundi. Impaka zose zituruka kuri aya mabwirizwa cyangwa ugukoresha urubuga rwacu zizakemurwa n\'inkiko z\'Uburundi. Abakoresha bo mu bindi bihugu bemera ko gukoresha urubuga ari ubushake kandi hakurikijwe aya mabwirizwa.'
+      },
+      contactTerms: {
+        title: 'Ibibazo kuri Aya Mabwirizwa?',
+        text: 'Niba ufite ibibazo kuri aya Mabwirizwa yo Gukoresha, twandikire :'
+      },
+      footer: 'Aya Mabwirizwa yo Gukoresha yavuguruwe ku wa 1 Mutarama 2026. Fondation Mariam ifite uburenganzira bwo kuyavugurura igihe cyose ishyiraho impinduka kuri uru rupapuro.'
     },
   },
   sw: {
@@ -1769,133 +1769,133 @@ export const translations = {
       benefit4: 'Kupata mwongozo na msaada kutoka kwa timu yetu',
       benefit5: 'Uzoefu mzuri Burundi',
       benefit6: 'Cheti cha shukrani',
-      privacy: {
-        lastUpdated: 'Imesasishwa mwisho: Januari 2026',
-        subtitle: 'Fondation Mariam imejitolea kulinda faragha yako na kushughulikia taarifa zako za kibinafsi kwa uangalifu mkubwa na uwazi.',
-        intro: 'Sera hii ya Faragha inaeleza jinsi Fondation Mariam ("sisi"), yenye makao yake makuu Kinama, Quartier Ruyigi, 24e Avenue N°57, Bujumbura, Burundi (Ord. Min. N°550/936 du 05/06/2020), inavyokusanya, kutumia na kulinda taarifa zinazotumwa kwetu kupitia tovuti yetu na huduma zinazohusiana. Kwa kutumia tovuti yetu au kushirikiana na shirika letu, unakubali sheria zilizoelezwa katika sera hii.',
-        collection: {
-          title: 'Taarifa Tunazokusanya',
-          personalInfo: 'Taarifa za Kibinafsi',
-          personalInfoText: 'Unaposhirikiana na Fondation Mariam, tunaweza kukusanya taarifa za kibinafsi zikiwemo: jina kamili, anwani ya barua pepe, anwani ya posta, nambari ya simu, na taarifa za malipo wakati wa kuchakata michango.',
-          contactForms: 'Fomu za Mawasiliano',
-          contactFormsText: 'Unapotuma fomu ya mawasiliano, maombi ya kujitolea, au uchunguzi wa ushirikiano, tunakusanya taarifa unazotoa ili kujibu ombi lako na kuweka rekodi ya mawasiliano yetu.',
-          newsletter: 'Kujiandikisha kwa Jarida',
-          newsletterText: 'Unapojiandikisha kwa jarida letu, tunakusanya anwani yako ya barua pepe na, kwa hiari, jina lako. Unaweza kujiondoa wakati wowote kwa kubofya kiungo katika barua pepe zetu.',
-          donations: 'Taarifa za Michango',
-          donationsText: 'Kwa michango inayochakatwa kupitia jukwaa letu, tunakusanya maelezo muhimu ili kuchakata mchango wako na kukupa risiti za kodi na barua za uthibitisho kama inavyotakiwa.'
-        },
-        cookies: {
-          title: 'Vidakuzi na Uchambuzi',
-          essential: 'Vidakuzi Muhimu',
-          essentialText: 'Tunatumia vidakuzi muhimu ili kuhakikisha utendaji wa kimsingi wa tovuti yetu, ikiwa ni pamoja na mapendeleo ya lugha na usimamizi wa vipindi. Haviwezi kuzimwa bila kuathiri utendaji wa tovuti.',
-          analytics: 'Uchambuzi',
-          analyticsText: 'Tunaweza kutumia zana za uchambuzi kuelewa jinsi wageni wanavyoingiliana na tovuti yetu. Data hii inakusanywa na kutokutambulisha, ikitusaidia kuboresha uzoefu wa mtumiaji. Hatuuzi data hii kwa wahusika wengine.',
-          choices: 'Chaguo Zako za Vidakuzi',
-          choicesText: 'Unaweza kuzima vidakuzi visivyo muhimu kupitia mipangilio ya kivinjari chako. Tafadhali kumbuka kuwa baadhi ya vipengele vya tovuti yetu vinaweza visifanye kazi vizuri ikiwa vidakuzi vimezimwa.'
-        },
-        use: {
-          title: 'Jinsi Tunavyotumia Taarifa Zako',
-          service: 'Utoaji wa Huduma',
-          serviceText: 'Tunatumia taarifa zako kuchakata michango, kutuma risiti na nyaraka za kodi, kujibu maswali, kusimamia udhamini, na kuwasilisha jarida letu au sasisho za mpango ulizojitolea.',
-          communication: 'Mawasiliano',
-          communicationText: 'Kwa ridhaa yako, tunaweza kuwasiliana nawe kuhusu programu zetu, ripoti za athari, kampeni za uchangishaji fedha, na matangazo muhimu yanayohusiana na Fondation Mariam.',
-          legal: 'Wajibu wa Kisheria',
-          legalText: 'Tunaweza kutumia au kufichua taarifa zako pale inapotakiwa na sheria, ikiwa ni pamoja na madhumuni ya kodi na utiifu wa sheria kama shirika lisilo la faida linalotambuliwa nchini Burundi.'
-        },
-        security: {
-          title: 'Usalama wa Data',
-          protection: 'Hatua za Ulinzi',
-          protectionText: 'Tunatekeleza hatua zinazofaa za kiufundi na kiusimamizi ili kulinda data yako ya kibinafsi dhidi ya ufikiaji usioidhinishwa, upotezaji wa bahati mbaya, mabadiliko, au ufichuzi. Usafirishaji wote wa data umeambatanishwa kwa kutumia teknolojia ya SSL/TLS.',
-          retention: 'Uhifadhi wa Data',
-          retentionText: 'Tunahifadhi taarifa zako za kibinafsi kwa muda mrefu kama inavyohitajika kwa madhumuni yaliyoelezwa katika sera hii, au kama inavyotakiwa na sheria zinazotumika. Rekodi za wafadhili kwa kawaida huhifadhiwa kwa miaka saba kwa madhumuni ya kisheria na kodi.',
-          transfers: 'Uhamisho wa Kimataifa',
-          transfersText: 'Kama shirika la kimataifa la kibinadamu, data yako inaweza kufikiwa au kuhamishwa kuvuka mipaka. Tunahakikisha ulinzi unaofaa unapatikana popote data yako inapochakatwa, kwa kuzingatia kanuni za kimataifa za ulinzi wa data.'
-        },
-        rights: {
-          title: 'Haki Zako',
-          access: 'Ufikiaji na Marekebisho',
-          accessText: 'Una haki ya kuomba ufikiaji wa taarifa za kibinafsi tunazokuhifadhia, na kuomba taarifa zisizo sahihi zirekebishwe. Tafadhali wasiliana nasi kwa maandishi ili kutumia haki hii.',
-          deletion: 'Kufuta',
-          deletionText: 'Unaweza kuomba kufutwa kwa data yako ya kibinafsi. Tutatii isipokuwa tukiwa na wajibu wa kisheria wa kuhifadhi taarifa (kwa mfano, kwa rekodi za kifedha au utiifu wa sheria).',
-          optout: 'Kujiondoa',
-          optoutText: 'Unaweza kujiondoa kutoka kwa mawasiliano ya uuzaji na jarida wakati wowote. Tumia kiungo cha kujiondoa katika barua pepe zetu au wasiliana nasi moja kwa moja. Kumbuka kuwa bado tunaweza kutuma ujumbe wa miamala kuhusu michango au maombi yako.'
-        },
-        thirdParty: {
-          title: 'Huduma za Watu Wengine',
-          text1: 'Hatuuzi, kubadilishana, au kukodisha taarifa zako za kibinafsi kwa wahusika wengine kwa madhumuni ya uuzaji. Tunaweza kushiriki taarifa na watoa huduma wanaoaminika ambao wanatusaidia kuendesha tovuti yetu na kutoa huduma zetu, chini ya makubaliano ya usiri.',
-          text2: 'Tovuti yetu inaweza kuwa na viungo vya tovuti za wahusika wengine. Hatujibikii mazoea ya faragha ya tovuti hizo na tunakuhimiza ukague sera zao za faragha kwa uhuru.'
-        },
-        international: {
-          title: 'Ujumbe kwa Wafadhili wa Kimataifa',
-          text1: 'Fondation Mariam inapokea msaada kutoka kwa wafadhili duniani kote. Ikiwa uko nje ya Burundi, tafadhali kumbuka kuwa taarifa zako zitahamishiwa na kuchakatwa nchini Burundi, ambayo inaweza kuwa na sheria tofauti za ulinzi wa data kuliko nchi yako.',
-          text2: 'Kwa kuchangia au kuwasilisha taarifa kupitia tovuti yetu, unakubali uhamisho huu. Tunachukua hatua zote zinazofaa ili kuhakikisha data yako inashughulikiwa kwa usalama na kwa kufuata Sera hii ya Faragha.'
-        },
-        contact: {
-          title: 'Wasiliana Nasi Kuhusu Faragha',
-          text: 'Ikiwa una maswali kuhusu Sera hii ya Faragha au unataka kutumia haki zako, tafadhali wasiliana nasi:'
-        },
-        footer: 'Sera hii ilisasishwa mwisho tarehe 1 Januari 2026. Tunahifadhi haki ya kusasisha sera hii wakati wowote. Mabadiliko yatatumwa kwenye ukurasa huu kwa tarehe iliyorekebishwa.'
+    },
+    privacy: {
+      lastUpdated: 'Imesasishwa mwisho: Januari 2026',
+      subtitle: 'Fondation Mariam imejitolea kulinda faragha yako na kushughulikia taarifa zako za kibinafsi kwa uangalifu mkubwa na uwazi.',
+      intro: 'Sera hii ya Faragha inaeleza jinsi Fondation Mariam ("sisi"), yenye makao yake makuu Kinama, Quartier Ruyigi, 24e Avenue N°57, Bujumbura, Burundi (Ord. Min. N°550/936 du 05/06/2020), inavyokusanya, kutumia na kulinda taarifa zinazotumwa kwetu kupitia tovuti yetu na huduma zinazohusiana. Kwa kutumia tovuti yetu au kushirikiana na shirika letu, unakubali sheria zilizoelezwa katika sera hii.',
+      collection: {
+        title: 'Taarifa Tunazokusanya',
+        personalInfo: 'Taarifa za Kibinafsi',
+        personalInfoText: 'Unaposhirikiana na Fondation Mariam, tunaweza kukusanya taarifa za kibinafsi zikiwemo: jina kamili, anwani ya barua pepe, anwani ya posta, nambari ya simu, na taarifa za malipo wakati wa kuchakata michango.',
+        contactForms: 'Fomu za Mawasiliano',
+        contactFormsText: 'Unapotuma fomu ya mawasiliano, maombi ya kujitolea, au uchunguzi wa ushirikiano, tunakusanya taarifa unazotoa ili kujibu ombi lako na kuweka rekodi ya mawasiliano yetu.',
+        newsletter: 'Kujiandikisha kwa Jarida',
+        newsletterText: 'Unapojiandikisha kwa jarida letu, tunakusanya anwani yako ya barua pepe na, kwa hiari, jina lako. Unaweza kujiondoa wakati wowote kwa kubofya kiungo katika barua pepe zetu.',
+        donations: 'Taarifa za Michango',
+        donationsText: 'Kwa michango inayochakatwa kupitia jukwaa letu, tunakusanya maelezo muhimu ili kuchakata mchango wako na kukupa risiti za kodi na barua za uthibitisho kama inavyotakiwa.'
       },
-      terms: {
-        lastUpdated: 'Imesasishwa mwisho: Januari 2026',
-        subtitle: 'Tafadhali soma masharti haya kwa uangalifu kabla ya kutumia tovuti ya Fondation Mariam.',
-        intro: 'Masharti haya ya Matumizi yanasimamia ufikiaji wako na matumizi ya tovuti ya Fondation Mariam, shirika lisilo la faida la kibinadamu lililosajiliwa nchini Burundi (Ord. Min. N°550/936 du 05/06/2020), lenye makao yake makuu Kinama, Quartier Ruyigi, 24e Avenue N°57, Bujumbura. Masharti haya yanatumika kwa wageni wote, wafadhili, wajitoleaji, washirika, na watumiaji wengine wowote wa Tovuti.',
-        acceptance: {
-          title: 'Kukubali Masharti',
-          text: 'Kwa kufikia na kutumia tovuti ya Fondation Mariam ( "Tovuti"), unakubali na kukubali kufungwa na Masharti haya ya Matumizi. Ikiwa hukubaliani na masharti haya yoyote, hutakiwi kutumia Tovuti. Tunahifadhi haki ya kurekebisha masharti haya wakati wowote. Kuendelea kwako kutumia Tovuti baada ya kubandikwa kwa mabadiliko kunamaanisha kukubali kwako mabadiliko hayo.'
-        },
-        use: {
-          title: 'Matumizi Yanayoruhusiwa ya Tovuti Hii',
-          item1: 'Tovuti hii imetolewa kwa madhumuni ya habari, elimu, na uchangishaji fedha yanayohusiana na misheni ya kibinadamu ya Fondation Mariam.',
-          item2: 'Unaweza kufikia na kutazama maudhui kwenye Tovuti hii kwa matumizi ya binafsi, yasiyo ya kibiashara.',
-          item3: 'Huruhusiwi kutumia Tovuti kusambaza barua taka, maudhui mabaya, au kufanya shughuli yoyote ambayo inaweza kudhuru Tovuti, shirika letu, au watumiaji wengine.',
-          item4: 'Huruhusiwi kujaribu kupata ufikiaji usioidhinishwa wa sehemu yoyote ya Tovuti au mifumo yake ya msingi.',
-          item5: 'Matumizi ya kibiashara ya maudhui yoyote kutoka Tovuti hii bila ruhusa ya maandishi ni marufuku kabisa.'
-        },
-        donations: {
-          title: 'Kanusho la Michango',
-          text: 'Michango yote inayotolewa kwa Fondation Mariam ni ya hiari na hairudishwi isipokuwa katika kesi za makosa ya usindikaji yaliyoandikwa. Fondation Mariam ni shirika lisilo la faida linalotambuliwa (Ord. Min. N°550/936 du 05/06/2020) nchini Burundi. Michango inatumika kufadhili programu zetu za kibinadamu ikiwa ni pamoja na elimu, afya, msaada wa chakula, uwezeshaji wa wanawake, msaada wa walemavu, na maendeleo ya jamii.',
-          item1: 'Michango inachakatwa kupitia njia salama za benki. Benki: Banque de Crédit de Bujumbura (BCB), Akaunti: 20311600016, SWIFT: BCBUBIBI.',
-          item2: 'Risiti za kodi au nyaraka za uthibitisho zitatolewa kwa ombi kwa michango inayostahiki.',
-          item3: 'Fondation Mariam inajitolea kutumia michango kwa uwazi na ufanisi kulingana na dhamira yetu iliyotangazwa.',
-          item4: 'Uteuzi maalum wa mfuko (elimu, afya, n.k.) unaheshimiwa kwa kadiri ya uwezo wetu lakini unaweza kuelekezwa upya pale ambapo kuna haja ya dharura.',
-          item5: 'Fondation Mariam haitoi hakikisho la matokeo maalum kutoka kwa mchango wowote.'
-        },
-        ip: {
-          title: 'Haki Miliki',
-          text: 'Maudhui yote kwenye Tovuti hii, ikiwa ni pamoja na lakini sio tu maandishi, picha, michoro, nembo, na jina na nembo ya Fondation Mariam, ni mali ya Fondation Mariam na inalindwa na sheria zinazotumika za haki miliki.',
-          item1: 'Unaweza kushiriki viungo vya maudhui yetu kwa madhumuni yasiyo ya kibiashara, kwa kutaja vyema.',
-          item2: 'Huruhusiwi kunakili, kusambaza, au kuunda kazi zinazotokana na maudhui yetu bila ruhusa ya maandishi ya awali.',
-          item3: 'Jina la Fondation Mariam, nembo, na kauli mbiu "La Lumière de la Nation" ni alama za biashara za shirika.',
-          item4: 'Picha za hisa zinazoonyeshwa kwenye Tovuti hii zimepewa leseni kwa matumizi na haziwezi kutolewa au kutumika tena kwa kujitegemea.'
-        },
-        liability: {
-          title: 'Ukomo wa Dhima',
-          text: 'Taarifa kwenye Tovuti hii zimetolewa "kama zilivyo" bila dhamana ya aina yoyote. Fondation Mariam haitoi uwakilishi au dhamana yoyote kuhusu usahihi, ukamilifu, au kufaa kwa taarifa kwa madhumuni yoyote maalum.',
-          item1: 'Fondation Mariam haitawajibika kwa uharibifu wowote wa moja kwa moja, usio wa moja kwa moja, wa bahati mbaya, au unaofuata unaotokana na matumizi ya Tovuti hii.',
-          item2: 'Hatuhakikishii ufikiaji usiokatizwa au usio na makosa kwa Tovuti.',
-          item3: 'Fondation Mariam haiwajibiki kwa maudhui ya tovuti za nje zilizounganishwa kutoka Tovuti hii.',
-          item4: 'Ingawa tunachukua tahadhari zote zinazofaa, hatuwezi kuhakikisha usalama kamili wa taarifa zinazotumwa kupitia mtandao.'
-        },
-        responsibilities: {
-          title: 'Majukumu ya Mtumiaji',
-          item1: 'Wewe ni wajibu wa kuhakikisha kwamba taarifa zozote unazotupa ni sahihi na za sasa.',
-          item2: 'Huruhusiwi kujifanya kuwa Fondation Mariam au mwakilishi wake yeyote.',
-          item3: 'Huruhusiwi kutumia Tovuti hii kukusanya taarifa kuhusu watumiaji wengine.',
-          item4: 'Unakubali kutofanya uchangishaji fedha wowote kwa jina la Fondation Mariam bila idhini yetu ya maandishi.',
-          item5: 'Waombaji wa kujitolea na washirika wanawajibika kwa usahihi wa taarifa wanazowasilisha.',
-          item6: 'Unakubali kutumia Tovuti hii kwa kufuata sheria zote zinazotumika za mitaa, kitaifa na kimataifa.'
-        },
-        governingLaw: {
-          title: 'Sheria Inayotumika',
-          text: 'Masharti haya ya Matumizi yatatawaliwa na kutafsiriwa kwa mujibu wa sheria za Jamhuri ya Burundi. Migogoro yoyote inayotokana na masharti haya au matumizi yako ya Tovuti hii itakuwa chini ya mamlaka ya mahakama za Burundi. Watumiaji wa kimataifa wanakubali kwamba matumizi yao ya Tovuti hii ni ya hiari na chini ya masharti haya ya utawala.'
-        },
-        contact: {
-          title: 'Maswali Kuhusu Masharti Haya?',
-          text: 'Ikiwa una maswali kuhusu Masharti haya ya Matumizi, tafadhali wasiliana nasi:'
-        },
-        footer: 'Masharti haya ya Matumizi yalisasishwa mwisho tarehe 1 Januari 2026. Fondation Mariam inahifadhi haki ya kusasisha masharti haya wakati wowote kwa kubandika toleo lililorekebishwa kwenye ukurasa huu.'
+      cookies: {
+        title: 'Vidakuzi na Uchambuzi',
+        essential: 'Vidakuzi Muhimu',
+        essentialText: 'Tunatumia vidakuzi muhimu ili kuhakikisha utendaji wa kimsingi wa tovuti yetu, ikiwa ni pamoja na mapendeleo ya lugha na usimamizi wa vipindi. Haviwezi kuzimwa bila kuathiri utendaji wa tovuti.',
+        analytics: 'Uchambuzi',
+        analyticsText: 'Tunaweza kutumia zana za uchambuzi kuelewa jinsi wageni wanavyoingiliana na tovuti yetu. Data hii inakusanywa na kutokutambulisha, ikitusaidia kuboresha uzoefu wa mtumiaji. Hatuuzi data hii kwa wahusika wengine.',
+        choices: 'Chaguo Zako za Vidakuzi',
+        choicesText: 'Unaweza kuzima vidakuzi visivyo muhimu kupitia mipangilio ya kivinjari chako. Tafadhali kumbuka kuwa baadhi ya vipengele vya tovuti yetu vinaweza visifanye kazi vizuri ikiwa vidakuzi vimezimwa.'
       },
+      use: {
+        title: 'Jinsi Tunavyotumia Taarifa Zako',
+        service: 'Utoaji wa Huduma',
+        serviceText: 'Tunatumia taarifa zako kuchakata michango, kutuma risiti na nyaraka za kodi, kujibu maswali, kusimamia udhamini, na kuwasilisha jarida letu au sasisho za mpango ulizojitolea.',
+        communication: 'Mawasiliano',
+        communicationText: 'Kwa ridhaa yako, tunaweza kuwasiliana nawe kuhusu programu zetu, ripoti za athari, kampeni za uchangishaji fedha, na matangazo muhimu yanayohusiana na Fondation Mariam.',
+        legal: 'Wajibu wa Kisheria',
+        legalText: 'Tunaweza kutumia au kufichua taarifa zako pale inapotakiwa na sheria, ikiwa ni pamoja na madhumuni ya kodi na utiifu wa sheria kama shirika lisilo la faida linalotambuliwa nchini Burundi.'
+      },
+      security: {
+        title: 'Usalama wa Data',
+        protection: 'Hatua za Ulinzi',
+        protectionText: 'Tunatekeleza hatua zinazofaa za kiufundi na kiusimamizi ili kulinda data yako ya kibinafsi dhidi ya ufikiaji usioidhinishwa, upotezaji wa bahati mbaya, mabadiliko, au ufichuzi. Usafirishaji wote wa data umeambatanishwa kwa kutumia teknolojia ya SSL/TLS.',
+        retention: 'Uhifadhi wa Data',
+        retentionText: 'Tunahifadhi taarifa zako za kibinafsi kwa muda mrefu kama inavyohitajika kwa madhumuni yaliyoelezwa katika sera hii, au kama inavyotakiwa na sheria zinazotumika. Rekodi za wafadhili kwa kawaida huhifadhiwa kwa miaka saba kwa madhumuni ya kisheria na kodi.',
+        transfers: 'Uhamisho wa Kimataifa',
+        transfersText: 'Kama shirika la kimataifa la kibinadamu, data yako inaweza kufikiwa au kuhamishwa kuvuka mipaka. Tunahakikisha ulinzi unaofaa unapatikana popote data yako inapochakatwa, kwa kuzingatia kanuni za kimataifa za ulinzi wa data.'
+      },
+      rights: {
+        title: 'Haki Zako',
+        access: 'Ufikiaji na Marekebisho',
+        accessText: 'Una haki ya kuomba ufikiaji wa taarifa za kibinafsi tunazokuhifadhia, na kuomba taarifa zisizo sahihi zirekebishwe. Tafadhali wasiliana nasi kwa maandishi ili kutumia haki hii.',
+        deletion: 'Kufuta',
+        deletionText: 'Unaweza kuomba kufutwa kwa data yako ya kibinafsi. Tutatii isipokuwa tukiwa na wajibu wa kisheria wa kuhifadhi taarifa (kwa mfano, kwa rekodi za kifedha au utiifu wa sheria).',
+        optout: 'Kujiondoa',
+        optoutText: 'Unaweza kujiondoa kutoka kwa mawasiliano ya uuzaji na jarida wakati wowote. Tumia kiungo cha kujiondoa katika barua pepe zetu au wasiliana nasi moja kwa moja. Kumbuka kuwa bado tunaweza kutuma ujumbe wa miamala kuhusu michango au maombi yako.'
+      },
+      thirdParty: {
+        title: 'Huduma za Watu Wengine',
+        text1: 'Hatuuzi, kubadilishana, au kukodisha taarifa zako za kibinafsi kwa wahusika wengine kwa madhumuni ya uuzaji. Tunaweza kushiriki taarifa na watoa huduma wanaoaminika ambao wanatusaidia kuendesha tovuti yetu na kutoa huduma zetu, chini ya makubaliano ya usiri.',
+        text2: 'Tovuti yetu inaweza kuwa na viungo vya tovuti za wahusika wengine. Hatujibikii mazoea ya faragha ya tovuti hizo na tunakuhimiza ukague sera zao za faragha kwa uhuru.'
+      },
+      international: {
+        title: 'Ujumbe kwa Wafadhili wa Kimataifa',
+        text1: 'Fondation Mariam inapokea msaada kutoka kwa wafadhili duniani kote. Ikiwa uko nje ya Burundi, tafadhali kumbuka kuwa taarifa zako zitahamishiwa na kuchakatwa nchini Burundi, ambayo inaweza kuwa na sheria tofauti za ulinzi wa data kuliko nchi yako.',
+        text2: 'Kwa kuchangia au kuwasilisha taarifa kupitia tovuti yetu, unakubali uhamisho huu. Tunachukua hatua zote zinazofaa ili kuhakikisha data yako inashughulikiwa kwa usalama na kwa kufuata Sera hii ya Faragha.'
+      },
+      contactPrivacy: {
+        title: 'Wasiliana Nasi Kuhusu Faragha',
+        text: 'Ikiwa una maswali kuhusu Sera hii ya Faragha au unataka kutumia haki zako, tafadhali wasiliana nasi:'
+      },
+      footer: 'Sera hii ilisasishwa mwisho tarehe 1 Januari 2026. Tunahifadhi haki ya kusasisha sera hii wakati wowote. Mabadiliko yatatumwa kwenye ukurasa huu kwa tarehe iliyorekebishwa.'
+    },
+    terms: {
+      lastUpdated: 'Imesasishwa mwisho: Januari 2026',
+      subtitle: 'Tafadhali soma masharti haya kwa uangalifu kabla ya kutumia tovuti ya Fondation Mariam.',
+      intro: 'Masharti haya ya Matumizi yanasimamia ufikiaji wako na matumizi ya tovuti ya Fondation Mariam, shirika lisilo la faida la kibinadamu lililosajiliwa nchini Burundi (Ord. Min. N°550/936 du 05/06/2020), lenye makao yake makuu Kinama, Quartier Ruyigi, 24e Avenue N°57, Bujumbura. Masharti haya yanatumika kwa wageni wote, wafadhili, wajitoleaji, washirika, na watumiaji wengine wowote wa Tovuti.',
+      acceptance: {
+        title: 'Kukubali Masharti',
+        text: 'Kwa kufikia na kutumia tovuti ya Fondation Mariam ( "Tovuti"), unakubali na kukubali kufungwa na Masharti haya ya Matumizi. Ikiwa hukubaliani na masharti haya yoyote, hutakiwi kutumia Tovuti. Tunahifadhi haki ya kurekebisha masharti haya wakati wowote. Kuendelea kwako kutumia Tovuti baada ya kubandikwa kwa mabadiliko kunamaanisha kukubali kwako mabadiliko hayo.'
+      },
+      use: {
+        title: 'Matumizi Yanayoruhusiwa ya Tovuti Hii',
+        item1: 'Tovuti hii imetolewa kwa madhumuni ya habari, elimu, na uchangishaji fedha yanayohusiana na misheni ya kibinadamu ya Fondation Mariam.',
+        item2: 'Unaweza kufikia na kutazama maudhui kwenye Tovuti hii kwa matumizi ya binafsi, yasiyo ya kibiashara.',
+        item3: 'Huruhusiwi kutumia Tovuti kusambaza barua taka, maudhui mabaya, au kufanya shughuli yoyote ambayo inaweza kudhuru Tovuti, shirika letu, au watumiaji wengine.',
+        item4: 'Huruhusiwi kujaribu kupata ufikiaji usioidhinishwa wa sehemu yoyote ya Tovuti au mifumo yake ya msingi.',
+        item5: 'Matumizi ya kibiashara ya maudhui yoyote kutoka Tovuti hii bila ruhusa ya maandishi ni marufuku kabisa.'
+      },
+      donations: {
+        title: 'Kanusho la Michango',
+        text: 'Michango yote inayotolewa kwa Fondation Mariam ni ya hiari na hairudishwi isipokuwa katika kesi za makosa ya usindikaji yaliyoandikwa. Fondation Mariam ni shirika lisilo la faida linalotambuliwa (Ord. Min. N°550/936 du 05/06/2020) nchini Burundi. Michango inatumika kufadhili programu zetu za kibinadamu ikiwa ni pamoja na elimu, afya, msaada wa chakula, uwezeshaji wa wanawake, msaada wa walemavu, na maendeleo ya jamii.',
+        item1: 'Michango inachakatwa kupitia njia salama za benki. Benki: Banque de Crédit de Bujumbura (BCB), Akaunti: 20311600016, SWIFT: BCBUBIBI.',
+        item2: 'Risiti za kodi au nyaraka za uthibitisho zitatolewa kwa ombi kwa michango inayostahiki.',
+        item3: 'Fondation Mariam inajitolea kutumia michango kwa uwazi na ufanisi kulingana na dhamira yetu iliyotangazwa.',
+        item4: 'Uteuzi maalum wa mfuko (elimu, afya, n.k.) unaheshimiwa kwa kadiri ya uwezo wetu lakini unaweza kuelekezwa upya pale ambapo kuna haja ya dharura.',
+        item5: 'Fondation Mariam haitoi hakikisho la matokeo maalum kutoka kwa mchango wowote.'
+      },
+      ip: {
+        title: 'Haki Miliki',
+        text: 'Maudhui yote kwenye Tovuti hii, ikiwa ni pamoja na lakini sio tu maandishi, picha, michoro, nembo, na jina na nembo ya Fondation Mariam, ni mali ya Fondation Mariam na inalindwa na sheria zinazotumika za haki miliki.',
+        item1: 'Unaweza kushiriki viungo vya maudhui yetu kwa madhumuni yasiyo ya kibiashara, kwa kutaja vyema.',
+        item2: 'Huruhusiwi kunakili, kusambaza, au kuunda kazi zinazotokana na maudhui yetu bila ruhusa ya maandishi ya awali.',
+        item3: 'Jina la Fondation Mariam, nembo, na kauli mbiu "La Lumière de la Nation" ni alama za biashara za shirika.',
+        item4: 'Picha za hisa zinazoonyeshwa kwenye Tovuti hii zimepewa leseni kwa matumizi na haziwezi kutolewa au kutumika tena kwa kujitegemea.'
+      },
+      liability: {
+        title: 'Ukomo wa Dhima',
+        text: 'Taarifa kwenye Tovuti hii zimetolewa "kama zilivyo" bila dhamana ya aina yoyote. Fondation Mariam haitoi uwakilishi au dhamana yoyote kuhusu usahihi, ukamilifu, au kufaa kwa taarifa kwa madhumuni yoyote maalum.',
+        item1: 'Fondation Mariam haitawajibika kwa uharibifu wowote wa moja kwa moja, usio wa moja kwa moja, wa bahati mbaya, au unaofuata unaotokana na matumizi ya Tovuti hii.',
+        item2: 'Hatuhakikishii ufikiaji usiokatizwa au usio na makosa kwa Tovuti.',
+        item3: 'Fondation Mariam haiwajibiki kwa maudhui ya tovuti za nje zilizounganishwa kutoka Tovuti hii.',
+        item4: 'Ingawa tunachukua tahadhari zote zinazofaa, hatuwezi kuhakikisha usalama kamili wa taarifa zinazotumwa kupitia mtandao.'
+      },
+      responsibilities: {
+        title: 'Majukumu ya Mtumiaji',
+        item1: 'Wewe ni wajibu wa kuhakikisha kwamba taarifa zozote unazotupa ni sahihi na za sasa.',
+        item2: 'Huruhusiwi kujifanya kuwa Fondation Mariam au mwakilishi wake yeyote.',
+        item3: 'Huruhusiwi kutumia Tovuti hii kukusanya taarifa kuhusu watumiaji wengine.',
+        item4: 'Unakubali kutofanya uchangishaji fedha wowote kwa jina la Fondation Mariam bila idhini yetu ya maandishi.',
+        item5: 'Waombaji wa kujitolea na washirika wanawajibika kwa usahihi wa taarifa wanazowasilisha.',
+        item6: 'Unakubali kutumia Tovuti hii kwa kufuata sheria zote zinazotumika za mitaa, kitaifa na kimataifa.'
+      },
+      governingLaw: {
+        title: 'Sheria Inayotumika',
+        text: 'Masharti haya ya Matumizi yatatawaliwa na kutafsiriwa kwa mujibu wa sheria za Jamhuri ya Burundi. Migogoro yoyote inayotokana na masharti haya au matumizi yako ya Tovuti hii itakuwa chini ya mamlaka ya mahakama za Burundi. Watumiaji wa kimataifa wanakubali kwamba matumizi yao ya Tovuti hii ni ya hiari na chini ya masharti haya ya utawala.'
+      },
+      contactTerms: {
+        title: 'Maswali Kuhusu Masharti Haya?',
+        text: 'Ikiwa una maswali kuhusu Masharti haya ya Matumizi, tafadhali wasiliana nasi:'
+      },
+      footer: 'Masharti haya ya Matumizi yalisasishwa mwisho tarehe 1 Januari 2026. Fondation Mariam inahifadhi haki ya kusasisha masharti haya wakati wowote kwa kubandika toleo lililorekebishwa kwenye ukurasa huu.'
     },
   },
 };
