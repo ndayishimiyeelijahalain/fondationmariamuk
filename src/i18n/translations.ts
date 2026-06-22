@@ -753,7 +753,7 @@ export const translations = {
       history: 'Our History',
       historyTitle: 'A Journey of Compassion',
       recognition: 'Official Recognition',
-      recognitionText: 'Recognized by the Ministry of Interior of Burundi',
+      recognitionText: 'Recognized by the Ministry of Justice of Burundi',
       ordNumber: 'Ord. Min. N°550/936 du 05/06/2020',
       historyDetails: {
         year1978: '1978',
@@ -1735,7 +1735,7 @@ export const translations = {
       history: 'Historia Yetu',
       historyTitle: 'Safari ya Huruma',
       recognition: 'Utambulisho Rasmi',
-      recognitionText: 'Inayotambuliwa na Wizara ya Mambo ya Ndani ya Burundi',
+      recognitionText: 'Inayotambuliwa na Wizara ya Haki ya Burundi',
       ordNumber: 'Ord. Min. N°550/936 du 05/06/2020',
       historyDetails: {
         year1978: '1978',
