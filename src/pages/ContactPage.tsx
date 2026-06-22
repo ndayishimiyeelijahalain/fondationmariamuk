@@ -73,7 +73,7 @@ export default function ContactPage() {
     } catch (error: any) {
       console.error('❌ Erreur lors de l\'envoi:', error);
       setIsError(true);
-      setErrorMessage(error.message || 'Une erreur est survenue. Veuillez réessayer.');
+      setErrorMessage(error.message || safeT('contact.errorTitle', 'Une erreur est survenue. Veuillez réessayer.'));
     } finally {
       setIsLoading(false);
     }
@@ -148,7 +148,7 @@ export default function ContactPage() {
                 {safeT('contact.sendMessage', 'Envoyer un Message')}
               </h2>
               <p className="text-gray-500 text-sm mb-6">
-                Tous les messages seront envoyés à {''}
+                {safeT('contact.emailInfo', 'Tous les messages seront envoyés à')} {''}
                 <a href="mailto:mariamfondation@gmail.com" className="text-[#D4AF37] hover:underline">
                   mariamfondation@gmail.com
                 </a>
@@ -158,13 +158,13 @@ export default function ContactPage() {
                 <div className="text-center py-12">
                   <CheckCircle className="w-16 h-16 text-[#10B981] mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-[#1E3A5F] mb-2">
-                    Message envoyé avec succès ! ✅
+                    {safeT('contact.successTitle', 'Message envoyé avec succès ! ✅')}
                   </h3>
                   <p className="text-gray-600">
-                    Nous vous répondrons dans les plus brefs délais.
+                    {safeT('contact.emailInfoDesc', 'Nous vous répondrons dans les plus brefs délais.')}
                   </p>
                   <p className="text-gray-400 text-sm mt-2">
-                    Une copie a été envoyée à mariamfondation@gmail.com
+                    {safeT('contact.emailInfoSent', 'Une copie a été envoyée à')} mariamfondation@gmail.com
                   </p>
                 </div>
               ) : (
@@ -226,13 +226,13 @@ export default function ContactPage() {
                       className="w-full px-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:border-[#D4AF37] transition-colors resize-none"
                       required
                       disabled={isLoading}
-                      placeholder="Votre message..."
+                      placeholder={safeT('contact.emailPlaceholder', 'Votre message...')}
                     />
                   </div>
 
                   {isError && (
                     <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-xl text-sm">
-                      ❌ {errorMessage || 'Une erreur est survenue. Veuillez réessayer.'}
+                      ❌ {errorMessage || safeT('contact.errorTitle', 'Une erreur est survenue. Veuillez réessayer.')}
                     </div>
                   )}
 
@@ -244,7 +244,7 @@ export default function ContactPage() {
                     {isLoading ? (
                       <>
                         <Loader2 className="w-5 h-5 animate-spin" />
-                        Envoi en cours...
+                        {safeT('contact.sending', 'Envoi en cours...')}
                       </>
                     ) : (
                       <>
