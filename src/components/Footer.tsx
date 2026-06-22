@@ -40,14 +40,8 @@ export default function Footer() {
     { label: safeT('programs.culture', 'Culture'), path: '/programs' },
   ];
 
-  // Social media links with translations
+  // Social media links with proper colors
   const socialLinks = [
-    {
-      Icon: MessageCircle,
-      label: safeT('social.whatsappLabel', 'WhatsApp'),
-      href: safeT('social.whatsapp', 'https://wa.me/25769298436'),
-      color: 'bg-green-500 hover:bg-green-600'
-    },
     {
       Icon: Facebook,
       label: safeT('social.facebookLabel', 'Facebook'),
@@ -111,11 +105,23 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   aria-label={label}
                   whileHover={{ scale: 1.1, y: -2 }}
-                  className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${color} text-white`}
+                  className={`w-10 h-10 rounded-full flex items-center justify-center transition-all ${color} text-white shadow-lg`}
                 >
                   <Icon className="w-5 h-5" />
                 </motion.a>
               ))}
+              
+              {/* WhatsApp Button - Special Styled */}
+              <motion.a
+                href={safeT('social.whatsapp', 'https://wa.me/25769298436')}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+                whileHover={{ scale: 1.1, y: -2 }}
+                className="w-10 h-10 rounded-full flex items-center justify-center transition-all bg-[#25D366] hover:bg-[#1DA851] text-white shadow-lg relative"
+              >
+                <MessageCircle className="w-5 h-5" />
+              </motion.a>
             </div>
           </div>
 
@@ -190,17 +196,6 @@ export default function Footer() {
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <a
-                  href={safeT('social.whatsapp', 'https://wa.me/25769298436')}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2.5 bg-green-500 hover:bg-green-600 text-white rounded-xl font-semibold transition-all text-sm"
-                >
-                  <MessageCircle className="w-4 h-4" />
-                  {safeT('social.whatsappLabel', 'WhatsApp')}
-                </a>
-              </li>
-              <li className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-[#D4AF37] flex-shrink-0 mt-0.5" />
                 <a
                   href="mailto:mariamfondation@gmail.com"
@@ -211,9 +206,21 @@ export default function Footer() {
               </li>
             </ul>
 
+            {/* WhatsApp Button - Large CTA Style */}
+            <a
+              href={safeT('social.whatsapp', 'https://wa.me/25769298436')}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 mt-5 px-5 py-3 bg-gradient-to-r from-[#25D366] to-[#1DA851] hover:from-[#1DA851] hover:to-[#128C7E] text-white rounded-xl font-semibold transition-all shadow-lg hover:shadow-xl group"
+            >
+              <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform" />
+              <span>{safeT('social.whatsappLabel', 'WhatsApp')}</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 mt-5 px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-[#D4AF37] text-sm font-medium hover:bg-white/10 transition-colors"
+              className="inline-flex items-center gap-2 mt-3 px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-[#D4AF37] text-sm font-medium hover:bg-white/10 transition-colors"
             >
               {safeT('nav.contact', 'Contact')}
               <ArrowRight className="w-3.5 h-3.5" />
