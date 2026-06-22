@@ -249,8 +249,7 @@ export const translations = {
       history: 'Notre Histoire',
       historyTitle: 'Un Voyage de Compassion',
       recognition: 'Reconnaissance Officielle',
-      recognitionText: 'Reconnue par le Ministère de l\'Intérieur du Burundi',
-      ordNumber: 'Ord. Min. N°550/936 du 05/06/2020',
+      recognitionText: 'Reconnue par le Ministère de la Justice du Burundi',      ordNumber: 'Ord. Min. N°550/936 du 05/06/2020',
       historyDetails: {
         year1978: '1978',
         title1978: 'Création de la Fondation',
@@ -1244,8 +1243,7 @@ export const translations = {
       history: 'Amateka Yacu',
       historyTitle: 'Urugendo rw\'Urukundo n\'Ubutabazi',
       recognition: 'Kwemerwa n\'Amategeko',
-      recognitionText: 'Yemewe na Minisiteri y\'Intwaro yo Hagati mu Burundi',
-      ordNumber: 'Ord. Min. N°550/936 du 05/06/2020',
+      recognitionText: 'Yemewe na Minisiteri y\'Ubutungane mu Burundi',      ordNumber: 'Ord. Min. N°550/936 du 05/06/2020',
       historyDetails: {
         year1978: '1978',
         title1978: 'Gushingwa kwa Fondation',
@@ -1735,8 +1733,7 @@ export const translations = {
       history: 'Historia Yetu',
       historyTitle: 'Safari ya Huruma',
       recognition: 'Utambulisho Rasmi',
-      recognitionText: 'Inayotambuliwa na Wizara ya Haki ya Burundi',
-      ordNumber: 'Ord. Min. N°550/936 du 05/06/2020',
+      recognitionText: 'Inayotambuliwa na Wizara ya Haki ya Burundi',      ordNumber: 'Ord. Min. N°550/936 du 05/06/2020',
       historyDetails: {
         year1978: '1978',
         title1978: 'Kuanzishwa kwa Foundation',
