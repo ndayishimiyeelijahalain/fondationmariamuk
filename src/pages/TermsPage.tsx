@@ -16,73 +16,78 @@ export default function TermsPage() {
   const { t } = useI18n();
   const safeT = useSafeT();
 
+  // Helper function pour les traductions avec fallback
+  const getText = (key: string, fallback: string): string => {
+    return safeT(key, fallback);
+  };
+
   const sections: Section[] = [
     {
       id: 'acceptance',
       icon: FileText,
-      title: safeT('terms.acceptance.title', 'Acceptance of Terms'),
-      content: safeT('terms.acceptance.text', 'By accessing and using the Fondation Mariam website (the "Site"), you accept and agree to be bound by these Terms of Use. If you do not agree with any of these terms, you must not use the Site. We reserve the right to modify these terms at any time. Your continued use of the Site following the posting of changes constitutes your acceptance of those changes.')
+      title: getText('terms.acceptance.title', 'Acceptance of Terms'),
+      content: getText('terms.acceptance.text', 'By accessing and using the Fondation Mariam website (the "Site"), you accept and agree to be bound by these Terms of Use. If you do not agree with any of these terms, you must not use the Site. We reserve the right to modify these terms at any time. Your continued use of the Site following the posting of changes constitutes your acceptance of those changes.')
     },
     {
       id: 'use',
       icon: Shield,
-      title: safeT('terms.use.title', 'Permitted Use of This Website'),
+      title: getText('terms.use.title', 'Permitted Use of This Website'),
       items: [
-        safeT('terms.use.item1', 'This website is provided for informational, educational, and fundraising purposes related to the humanitarian mission of Fondation Mariam.'),
-        safeT('terms.use.item2', 'You may access and view content on this Site for personal, non-commercial use.'),
-        safeT('terms.use.item3', 'You must not use the Site to distribute spam, malicious content, or conduct any activity that could harm the Site, our organization, or other users.'),
-        safeT('terms.use.item4', 'You must not attempt to gain unauthorized access to any part of the Site or its underlying systems.'),
-        safeT('terms.use.item5', 'Commercial use of any content from this Site without express written permission is strictly prohibited.')
+        getText('terms.use.item1', 'This website is provided for informational, educational, and fundraising purposes related to the humanitarian mission of Fondation Mariam.'),
+        getText('terms.use.item2', 'You may access and view content on this Site for personal, non-commercial use.'),
+        getText('terms.use.item3', 'You must not use the Site to distribute spam, malicious content, or conduct any activity that could harm the Site, our organization, or other users.'),
+        getText('terms.use.item4', 'You must not attempt to gain unauthorized access to any part of the Site or its underlying systems.'),
+        getText('terms.use.item5', 'Commercial use of any content from this Site without express written permission is strictly prohibited.')
       ]
     },
     {
       id: 'donations',
       icon: Heart,
-      title: safeT('terms.donations.title', 'Donations Disclaimer'),
-      content: safeT('terms.donations.text', 'All donations made to Fondation Mariam are voluntary and non-refundable except in cases of documented processing errors. Fondation Mariam is a recognized non-profit organization (Ord. Min. N°550/936 du 05/06/2020) in Burundi. Donations are used to fund our humanitarian programs including education, healthcare, food assistance, women empowerment, disability support, and community development.'),
+      title: getText('terms.donations.title', 'Donations Disclaimer'),
+      content: getText('terms.donations.text', 'All donations made to Fondation Mariam are voluntary and non-refundable except in cases of documented processing errors. Fondation Mariam is a recognized non-profit organization (Ord. Min. N°550/936 du 05/06/2020) in Burundi. Donations are used to fund our humanitarian programs including education, healthcare, food assistance, women empowerment, disability support, and community development.'),
       items: [
-        safeT('terms.donations.item1', 'Donations are processed through secure banking channels. Bank: Banque de Crédit de Bujumbura (BCB), Account: 20311600016, SWIFT: BCBUBIBI.'),
-        safeT('terms.donations.item2', 'Tax receipts or acknowledgment documentation will be provided upon request for qualifying donations.'),
-        safeT('terms.donations.item3', 'Fondation Mariam commits to using donations transparently and efficiently in accordance with our stated mission.'),
-        safeT('terms.donations.item4', 'Specific fund designations (education, healthcare, etc.) are honored to the best of our ability but may be redirected where urgent need exists.'),
-        safeT('terms.donations.item5', 'Fondation Mariam does not guarantee specific outcomes from any donation.')
+        getText('terms.donations.item1', 'Donations are processed through secure banking channels. Bank: Banque de Crédit de Bujumbura (BCB), Account: 20311600016, SWIFT: BCBUBIBI.'),
+        getText('terms.donations.item2', 'Tax receipts or acknowledgment documentation will be provided upon request for qualifying donations.'),
+        getText('terms.donations.item3', 'Fondation Mariam commits to using donations transparently and efficiently in accordance with our stated mission.'),
+        getText('terms.donations.item4', 'Specific fund designations (education, healthcare, etc.) are honored to the best of our ability but may be redirected where urgent need exists.'),
+        getText('terms.donations.item5', 'Fondation Mariam does not guarantee specific outcomes from any donation.')
       ]
     },
     {
       id: 'ip',
       icon: Scale,
-      title: safeT('terms.ip.title', 'Intellectual Property'),
-      content: safeT('terms.ip.text', 'All content on this Site, including but not limited to text, photographs, graphics, logos, and the Fondation Mariam name and logo, is the property of Fondation Mariam and is protected by applicable intellectual property laws.'),
+      title: getText('terms.ip.title', 'Intellectual Property'),
+      content: getText('terms.ip.text', 'All content on this Site, including but not limited to text, photographs, graphics, logos, and the Fondation Mariam name and logo, is the property of Fondation Mariam and is protected by applicable intellectual property laws.'),
       items: [
-        safeT('terms.ip.item1', 'You may share links to our content for non-commercial purposes, with appropriate attribution.'),
-        safeT('terms.ip.item2', 'You may not reproduce, distribute, or create derivative works of our content without prior written permission.'),
-        safeT('terms.ip.item3', 'The Fondation Mariam name, logo, and "La Lumière de la Nation" slogan are trademarks of the foundation.'),
-        safeT('terms.ip.item4', 'Stock images displayed on this Site are licensed for use and may not be extracted or reused independently.')
+        getText('terms.ip.item1', 'You may share links to our content for non-commercial purposes, with appropriate attribution.'),
+        getText('terms.ip.item2', 'You may not reproduce, distribute, or create derivative works of our content without prior written permission.'),
+        getText('terms.ip.item3', 'The Fondation Mariam name, logo, and "La Lumière de la Nation" slogan are trademarks of the foundation.'),
+        getText('terms.ip.item4', 'Stock images displayed on this Site are licensed for use and may not be extracted or reused independently.')
       ]
     },
     {
       id: 'liability',
       icon: AlertTriangle,
-      title: safeT('terms.liability.title', 'Limitation of Liability'),
-      content: safeT('terms.liability.text', 'The information on this Site is provided "as is" without warranty of any kind. Fondation Mariam makes no representations or warranties about the accuracy, completeness, or suitability of the information for any particular purpose.'),
+      title: getText('terms.liability.title', 'Limitation of Liability'),
+      content: getText('terms.liability.text', 'The information on this Site is provided "as is" without warranty of any kind. Fondation Mariam makes no representations or warranties about the accuracy, completeness, or suitability of the information for any particular purpose.'),
       items: [
-        safeT('terms.liability.item1', 'Fondation Mariam shall not be liable for any direct, indirect, incidental, or consequential damages arising from the use of this Site.'),
-        safeT('terms.liability.item2', 'We do not guarantee uninterrupted or error-free access to the Site.'),
-        safeT('terms.liability.item3', 'Fondation Mariam is not responsible for the content of external websites linked from this Site.'),
-        safeT('terms.liability.item4', 'While we take all reasonable precautions, we cannot guarantee the absolute security of information transmitted over the internet.')
+        getText('terms.liability.item1', 'Fondation Mariam shall not be liable for any direct, indirect, incidental, or consequential damages arising from the use of this Site.'),
+        getText('terms.liability.item2', 'We do not guarantee uninterrupted or error-free access to the Site.'),
+        getText('terms.liability.item3', 'Fondation Mariam is not responsible for the content of external websites linked from this Site.'),
+        getText('terms.liability.item4', 'While we take all reasonable precautions, we cannot guarantee the absolute security of information transmitted over the internet.')
       ]
     },
     {
       id: 'responsibilities',
       icon: Shield,
-      title: safeT('terms.responsibilities.title', 'User Responsibilities'),
+      title: getText('terms.responsibilities.title', 'User Responsibilities'),
       items: [
-        safeT('terms.responsibilities.item1', 'You are responsible for ensuring that any information you provide to us is accurate and up-to-date.'),
-        safeT('terms.responsibilities.item2', 'You must not impersonate Fondation Mariam or any of its representatives.'),
-        safeT('terms.responsibilities.item3', 'You must not use this Site to collect information about other users.'),
-        safeT('terms.responsibilities.item4', 'You agree not to conduct any form of fundraising in the name of Fondation Mariam without our explicit written authorization.'),
-        safeT('terms.responsibilities.item5', 'Volunteer applicants and partners are responsible for the accuracy of information they submit.'),
-        safeT('terms.responsibilities.item6', 'You agree to use this Site in compliance with all applicable local, national, and international laws.')
+        getText('terms.responsibilities.item1', 'You are responsible for ensuring that any information you provide to us is accurate and up-to-date.'),
+        getText('terms.responsibilities.item2', 'You must not impersonate Fondation Mariam or any of its representatives.'),
+        getText('terms.responsibilities.item3', 'You must not use this Site to collect information about other users.'),
+        getText('terms.responsibilities.item4', 'You agree not to conduct any form of fundraising in the name of Fondation Mariam without our explicit written authorization.'),
+        getText('terms.responsibilities.item5', 'Volunteer applicants and partners are responsible for the accuracy of information they submit.'),
+        getText('terms.responsibilities.item6', 'You agree to use this Site in compliance with all applicable local, national, and international laws.')
       ]
     }
   ];
@@ -97,14 +102,14 @@ export default function TermsPage() {
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 mb-6">
               <FileText className="w-4 h-4 text-[#D4AF37]" />
               <span className="text-white/90 text-sm font-medium">
-                {safeT('terms.lastUpdated', 'Last updated: January 2026')}
+                {getText('terms.lastUpdated', 'Last updated: January 2026')}
               </span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-serif font-bold text-white mb-4">
-              {safeT('footer.terms', 'Terms of Use')}
+              {getText('footer.terms', 'Terms of Use')}
             </h1>
             <p className="text-lg text-white/80 max-w-2xl mx-auto">
-              {safeT('terms.subtitle', 'Please read these terms carefully before using the Fondation Mariam website.')}
+              {getText('terms.subtitle', 'Please read these terms carefully before using the Fondation Mariam website.')}
             </p>
           </motion.div>
         </div>
@@ -117,7 +122,7 @@ export default function TermsPage() {
             className="inline-flex items-center gap-2 text-[#1E3A5F] font-medium hover:text-[#D4AF37] transition-colors mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
-            {safeT('common.back', 'Back to Home')}
+            {getText('common.back', 'Back to Home')}
           </Link>
 
           {/* Introduction */}
@@ -127,7 +132,7 @@ export default function TermsPage() {
             className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 mb-6"
           >
             <p className="text-gray-700 leading-relaxed">
-              {safeT('terms.intro', 'These Terms of Use govern your access to and use of the website of Fondation Mariam, a humanitarian non-profit organization registered in Burundi (Ord. Min. N°550/936 du 05/06/2020), headquartered at Kinama, Quartier Ruyigi, 24e Avenue N°57, Bujumbura. These terms apply to all visitors, donors, volunteers, partners, and any other users of the Site.')}
+              {getText('terms.intro', 'These Terms of Use govern your access to and use of the website of Fondation Mariam, a humanitarian non-profit organization registered in Burundi (Ord. Min. N°550/936 du 05/06/2020), headquartered at Kinama, Quartier Ruyigi, 24e Avenue N°57, Bujumbura. These terms apply to all visitors, donors, volunteers, partners, and any other users of the Site.')}
             </p>
           </motion.div>
 
@@ -178,10 +183,10 @@ export default function TermsPage() {
             className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 mt-6"
           >
             <h2 className="text-xl font-serif font-bold text-[#1E3A5F] mb-4">
-              {safeT('terms.governingLaw.title', 'Governing Law')}
+              {getText('terms.governingLaw.title', 'Governing Law')}
             </h2>
             <p className="text-gray-600 leading-relaxed">
-              {safeT('terms.governingLaw.text', 'These Terms of Use shall be governed by and construed in accordance with the laws of the Republic of Burundi. Any disputes arising from these terms or your use of this Site shall be subject to the exclusive jurisdiction of the courts of Burundi. International users acknowledge that their use of this Site is voluntary and subject to these governing terms.')}
+              {getText('terms.governingLaw.text', 'These Terms of Use shall be governed by and construed in accordance with the laws of the Republic of Burundi. Any disputes arising from these terms or your use of this Site shall be subject to the exclusive jurisdiction of the courts of Burundi. International users acknowledge that their use of this Site is voluntary and subject to these governing terms.')}
             </p>
           </motion.div>
 
@@ -196,10 +201,10 @@ export default function TermsPage() {
               <Mail className="w-8 h-8 text-[#D4AF37] flex-shrink-0 mt-1" />
               <div>
                 <h2 className="text-xl font-serif font-bold mb-3">
-                  {safeT('terms.contact.title', 'Questions About These Terms?')}
+                  {getText('terms.contact.title', 'Questions About These Terms?')}
                 </h2>
                 <p className="text-white/80 mb-4">
-                  {safeT('terms.contact.text', 'If you have questions about these Terms of Use, please contact us:')}
+                  {getText('terms.contact.text', 'If you have questions about these Terms of Use, please contact us:')}
                 </p>
                 <div className="space-y-1 text-white/80">
                   <p><strong className="text-white">Fondation Mariam</strong></p>
@@ -218,7 +223,7 @@ export default function TermsPage() {
           </motion.div>
 
           <p className="text-center text-gray-500 text-sm mt-8 pb-8">
-            {safeT('terms.footer', 'These Terms of Use were last updated on January 1, 2026. Fondation Mariam reserves the right to update these terms at any time by posting a revised version on this page.')}
+            {getText('terms.footer', 'These Terms of Use were last updated on January 1, 2026. Fondation Mariam reserves the right to update these terms at any time by posting a revised version on this page.')}
           </p>
         </div>
       </section>
