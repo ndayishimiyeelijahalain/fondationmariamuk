@@ -359,9 +359,9 @@ export default function DonatePage() {
               </motion.div>
             </div>
 
-            {/* Sidebar */}
+            {/* Sidebar - Payment Methods */}
             <div className="space-y-6">
-              {/* Bank Transfer Info */}
+              {/* Bank Transfer USD */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -375,7 +375,7 @@ export default function DonatePage() {
                       <Building2 className="w-5 h-5 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-semibold">{safeT('donate.bankTransfer', 'Bank Transfer')}</h3>
+                      <h3 className="font-semibold">{safeT('donate.bankTransfer', 'Bank Transfer (USD)')}</h3>
                       <p className="text-white/60 text-xs">{safeT('donate.internationalTransfersAccepted', 'International transfers accepted')}</p>
                     </div>
                   </div>
@@ -383,7 +383,7 @@ export default function DonatePage() {
                   <div className="space-y-3 text-sm">
                     <BankRow 
                       label={safeT('donate.bankName', 'Bank')} 
-                      value="BCB — Banque Commerciale du Burundi" 
+                      value="Banque de Crédit de Bujumbura (BCB)" 
                       copiedField={copiedField} 
                       fieldId="bank" 
                       onCopy={copyToClipboard} 
@@ -418,78 +418,117 @@ export default function DonatePage() {
                   </div>
                 </div>
               </motion.div>
-              // Dans la section Bank Transfer Info, ajouter un second bloc pour BIF :
-<div className="mt-6 pt-6 border-t border-white/10">
-  <div className="flex items-center gap-3 mb-4">
-    <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#10B981] to-[#34D399] flex items-center justify-center shadow-lg">
-      <Building2 className="w-5 h-5 text-white" />
-    </div>
-    <div>
-      <h4 className="font-semibold text-white/90 text-sm">{safeT('donate.bankTransferBIF', 'Bank Transfer (BIF)')}</h4>
-      <p className="text-white/60 text-xs">{safeT('donate.internationalTransfersAccepted', 'International transfers accepted')}</p>
-    </div>
-  </div>
 
-  <div className="space-y-3 text-sm">
-    <BankRow 
-      label={safeT('donate.bankNameBIF', 'Bank')} 
-      value={safeT('donate.bankNameBIFValue', 'Banque de Crédit de Bujumbura (BCB)')}
-      copiedField={copiedField} 
-      fieldId="bankBIF" 
-      onCopy={copyToClipboard} 
-    />
-    <BankRow 
-      label={safeT('donate.currency', 'Currency')} 
-      value={safeT('donate.currencyBIF', 'BIF')}
-      copiedField={copiedField} 
-      fieldId="currencyBIF" 
-      onCopy={copyToClipboard} 
-    />
-    <BankRow 
-      label={safeT('donate.accountNumber', 'Account Number')} 
-      value={safeT('donate.accountNumberBIFValue', 'XXXXXXXXXX')}
-      copiedField={copiedField} 
-      fieldId="accountBIF" 
-      onCopy={copyToClipboard} 
-    />
-    <BankRow 
-      label={safeT('donate.swiftCode', 'SWIFT/BIC Code')} 
-      value={safeT('donate.swiftCodeBIFValue', 'BCBUBIBI')}
-      copiedField={copiedField} 
-      fieldId="swiftBIF" 
-      onCopy={copyToClipboard} 
-    />
-  </div>
-</div>
+              {/* Bank Transfer BIF */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+                className="relative bg-gradient-to-br from-[#0F2744] to-[#1E3A5F] rounded-2xl p-6 text-white overflow-hidden"
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#10B981]/10 rounded-full blur-2xl" />
 
-// Ajouter aussi la section Lumicash :
-<div className="mt-6 pt-6 border-t border-white/10">
-  <div className="flex items-center gap-3 mb-4">
-    <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#F59E0B] to-[#D97706] flex items-center justify-center shadow-lg">
-      <Smartphone className="w-5 h-5 text-white" />
-    </div>
-    <div>
-      <h4 className="font-semibold text-white/90 text-sm">{safeT('donate.lumicash', 'Lumicash')}</h4>
-      <p className="text-white/60 text-xs">{safeT('donate.lumicashDesc', 'Mobile payment via Lumicash')}</p>
-    </div>
-  </div>
+                <div className="relative">
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#10B981] to-[#34D399] flex items-center justify-center shadow-lg">
+                      <Building2 className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">{safeT('donate.bankTransferBIF', 'Bank Transfer (BIF)')}</h3>
+                      <p className="text-white/60 text-xs">{safeT('donate.internationalTransfersAccepted', 'International transfers accepted')}</p>
+                    </div>
+                  </div>
 
-  <div className="space-y-3 text-sm">
-    <BankRow 
-      label={safeT('donate.lumicashNumber', 'Lumicash Number')} 
-      value={safeT('donate.lumicashNumberValue', '79 97 64 45')}
-      copiedField={copiedField} 
-      fieldId="lumicash" 
-      onCopy={copyToClipboard} 
-    />
-  </div>
-</div>
+                  <div className="space-y-3 text-sm">
+                    <BankRow 
+                      label={safeT('donate.bankNameBIF', 'Bank')} 
+                      value="Banque de Crédit de Bujumbura (BCB)" 
+                      copiedField={copiedField} 
+                      fieldId="bankBIF" 
+                      onCopy={copyToClipboard} 
+                    />
+                    <BankRow 
+                      label={safeT('donate.currencyBIF', 'Currency')} 
+                      value="BIF" 
+                      copiedField={copiedField} 
+                      fieldId="currencyBIF" 
+                      onCopy={copyToClipboard} 
+                    />
+                    <BankRow 
+                      label={safeT('donate.accountNumberBIF', 'Account Number')} 
+                      value="20311600003" 
+                      copiedField={copiedField} 
+                      fieldId="accountBIF" 
+                      onCopy={copyToClipboard} 
+                    />
+                    <BankRow 
+                      label={safeT('donate.swiftCodeBIF', 'SWIFT/BIC Code')} 
+                      value="BCBUBIBI" 
+                      copiedField={copiedField} 
+                      fieldId="swiftBIF" 
+                      onCopy={copyToClipboard} 
+                    />
+                  </div>
+
+                  <div className="mt-4 pt-4 border-t border-white/10">
+                    <p className="text-white/60 text-xs">
+                      {safeT('donate.pleaseIncludeName', 'Please include your name and "Fondation Mariam Donation" as the payment reference.')}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Lumicash */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="relative bg-gradient-to-br from-[#F59E0B] to-[#D97706] rounded-2xl p-6 text-white overflow-hidden"
+              >
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#FBBF24]/20 rounded-full blur-2xl" />
+
+                <div className="relative">
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className="w-11 h-11 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center shadow-lg">
+                      <Smartphone className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold">{safeT('donate.lumicash', 'Lumicash')}</h3>
+                      <p className="text-white/80 text-xs">{safeT('donate.lumicashDesc', 'Mobile payment via Lumicash - Available on all networks')}</p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-3 text-sm">
+                    <BankRow 
+                      label={safeT('donate.lumicashNumber', 'Lumicash Number')} 
+                      value="69298436" 
+                      copiedField={copiedField} 
+                      fieldId="lumicash" 
+                      onCopy={copyToClipboard} 
+                    />
+                    <BankRow 
+                      label={safeT('donate.lumicashName', 'Account Name')} 
+                      value="Ndayisenga Mariam" 
+                      copiedField={copiedField} 
+                      fieldId="lumicashName" 
+                      onCopy={copyToClipboard} 
+                    />
+                  </div>
+
+                  <div className="mt-4 pt-4 border-t border-white/20">
+                    <p className="text-white/80 text-xs flex items-center gap-2">
+                      <Shield className="w-3 h-3" />
+                      Paiement sécurisé via Lumicash
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
 
               {/* Trust Indicators */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 }}
+                transition={{ delay: 0.3 }}
                 className="bg-white rounded-2xl border border-gray-100 shadow-lg p-6"
               >
                 <p className="text-sm font-semibold text-[#1E3A5F] mb-4">{safeT('donate.trustAndImpact', 'Trust & Impact')}</p>
@@ -506,7 +545,7 @@ export default function DonatePage() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
+                transition={{ delay: 0.4 }}
                 className="relative bg-gradient-to-br from-[#D4AF37]/10 to-[#10B981]/10 rounded-2xl border border-[#D4AF37]/20 p-6 overflow-hidden"
               >
                 <div className="absolute top-2 right-3 text-6xl text-[#D4AF37]/10 font-serif leading-none">"</div>
